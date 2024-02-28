@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../details-shim.css">
+    <script type="text/javascript" src="../../details-shim.js"></script>
+    <title>Body Profile Extruded Area Solid</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 0 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../toc-4.htm#4.4.3.1.1.1");
+//-->
+</script>
+
+<h6 class="std">4.4.3.1.1.1 Body Profile Extruded Area Solid</h6>
+<p>The main representation method, Extruded Area Solid, follows    IfcExtrudedAreaSolid definition in the IFC schema specification except that it only allows to 	use subtypes of IfcParameterizedProfileDef and IfcArbitraryClosedProfileDef.</p>
+<p>Planar pieces (i.e. stiffner plate)  should use Extruded Area Solid and may use Arbitrary Closed Profile Definition (IfcArbitraryClosedProfileDef), only if the plate cannot be represented in Parameterized Profile Definition. Holes in planar pieces are Features. For rectangular pieces with chamfer or round corner may use Property Set or Features.</p>
+<p>The Curve for Arbitrary Closed Profile Definition can be either Polyline (IfcPolyline) or Composite Curve (IfcCompositeCurve). Segments of Composit Curve should be Polyline (IfcPolyline),   Line (IfcLine), or Trimmed Curve(IfcTrimmedCurve). The Basis Curve of Trimmed Curve should  be either Polyine, Line, or Circle (IfcCircle).</p>
+<p>Extruded Area Solid use a direction vector for the direction of extrusion translation, of which length is defined by a distance depth. The bounded planar surface should not have holes which will sweep into holes in the solid, Any hole in EM11 should use Feature Element. Extrusion direction should not be perpendicular to the normal to the plane of the bounded planar surface.</p>
+<p>In EM11, it is <strong>highly recommended</strong> to use the normal to the plane as the translation direciton and all pristmatic steel piece such as I-Beam, W-Beam, Angle and etc. <strong>should use</strong> the normal to the plane as the translation direction.</p><p class="fig-ref">Figure 14 illustrates an instance diagram.</p>
+<table><tr><td><img alt="Body Profile Extruded Area Solid" src="./diagrams/body-profile-extruded-area-solid.png" usemap="#f14"><map name="f14"><area shape="rect" coords="8,8,176,332" href="../ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" /><area shape="rect" coords="208,8,376,80" href="../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm" alt="IfcProductDefinitionShape" /><area shape="rect" coords="408,8,576,116" href="../ifcrepresentationresource/lexical/ifcshaperepresentation.htm" alt="IfcShapeRepresentation" /><area shape="rect" coords="608,8,776,116" href="../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm" alt="IfcGeometricRepresentationContext" /><area shape="rect" coords="608,136,776,148" href="../ifcmeasureresource/lexical/ifclabel.htm" alt="IfcLabel" /><area shape="rect" coords="608,168,776,180" href="../ifcmeasureresource/lexical/ifclabel.htm" alt="IfcLabel" /><area shape="rect" coords="608,200,776,284" href="../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm" alt="IfcExtrudedAreaSolid" /><area shape="rect" coords="808,8,976,56" href="../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm" alt="IfcArbitraryClosedProfileDef" /><area shape="rect" coords="808,76,976,136" href="../ifcprofileresource/lexical/ifccenterlineprofiledef.htm" alt="IfcCenterLineProfileDef" /><area shape="rect" coords="808,156,976,228" href="../ifcprofileresource/lexical/ifcderivedprofiledef.htm" alt="IfcDerivedProfileDef" /><area shape="rect" coords="1008,8,1176,56" href="../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm" alt="IfcArbitraryClosedProfileDef" /><area shape="rect" coords="1008,76,1176,124" href="../ifcprofileresource/lexical/ifcparameterizedprofiledef.htm" alt="IfcParameterizedProfileDef" /><area shape="rect" coords="808,248,976,308" href="../ifcprofileresource/lexical/ifccircleprofiledef.htm" alt="IfcCircleProfileDef" /><area shape="rect" coords="808,328,976,400" href="../ifcprofileresource/lexical/ifccirclehollowprofiledef.htm" alt="IfcCircleHollowProfileDef" /><area shape="rect" coords="808,420,976,540" href="../ifcprofileresource/lexical/ifccshapeprofiledef.htm" alt="IfcCShapeProfileDef" /><area shape="rect" coords="808,560,976,668" href="../ifcprofileresource/lexical/ifcishapeprofiledef.htm" alt="IfcIShapeProfileDef" /><area shape="rect" coords="808,688,976,844" href="../ifcprofileresource/lexical/ifcasymmetricishapeprofiledef.htm" alt="IfcAsymmetricIShapeProfileDef" /><area shape="rect" coords="808,864,976,1008" href="../ifcprofileresource/lexical/ifclshapeprofiledef.htm" alt="IfcLShapeProfileDef" /><area shape="rect" coords="808,1028,976,1100" href="../ifcprofileresource/lexical/ifcrectangleprofiledef.htm" alt="IfcRectangleProfileDef" /><area shape="rect" coords="808,1120,976,1228" href="../ifcprofileresource/lexical/ifcrectanglehollowprofiledef.htm" alt="IfcRectangleHollowProfileDef" /><area shape="rect" coords="808,1248,976,1332" href="../ifcprofileresource/lexical/ifcroundedrectangleprofiledef.htm" alt="IfcRoundedRectangleProfileDef" /><area shape="rect" coords="808,1352,976,1520" href="../ifcprofileresource/lexical/ifctshapeprofiledef.htm" alt="IfcTShapeProfileDef" /><area shape="rect" coords="808,1540,976,1684" href="../ifcprofileresource/lexical/ifcushapeprofiledef.htm" alt="IfcUShapeProfileDef" /><area shape="rect" coords="808,1704,976,1824" href="../ifcprofileresource/lexical/ifczshapeprofiledef.htm" alt="IfcZShapeProfileDef" /><area shape="rect" coords="608,304,776,388" href="../ifcgeometricmodelresource/lexical/ifcrevolvedareasolid.htm" alt="IfcRevolvedAreaSolid" /></map></td></tr><tr><td><p class="figure">Figure 14 &mdash; Body Profile Extruded Area Solid</p></td></tr></table>
+
+<hr/>
+<h4>AISC Model View</h4>
+<table class="exchange">
+<tr><th>Entity</th><th><a href="../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr><tr><td><a href="../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a></td><td>O<br/>O</td>
+</tr>
+</table>
+<p><a href="../../link/body-profile-extruded-area-solid.htm" target="_top" ><img src="../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

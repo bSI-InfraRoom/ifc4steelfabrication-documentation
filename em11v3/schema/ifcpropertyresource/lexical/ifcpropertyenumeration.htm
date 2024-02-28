@@ -1,0 +1,184 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcPropertyEnumeration</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 8 index3 3 index4 3 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.8.3.4");
+//-->
+</script>
+
+<h4 class="num">IfcPropertyEnumeration</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+<p> A collection of simple
+or measure values that define a prescribed set of alternatives from
+which 'enumeration values' are selected. This enables inclusion of
+enumeration values in property sets. <span class="self-ref">IfcPropertyEnumeration</span>
+provides a name for the enumeration as well as a list of unique
+(numeric or descriptive) values (that may have a measure type
+assigned). The entity defines the list of potential enumerators to be
+exchanged together (or separately) with properties of type <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeratedvalue.htm">IfcPropertyEnumeratedValue</a>
+that selects their actual property values from this enumeration. </p>
+<p>The unit is handled by the <i>Unit</i> attribute:</p>
+<ul>
+  <li>If the <i>Unit</i> attribute is not given,
+than the unit is already implied by the type of <i>IfcMeasureValue</i>
+or <i>IfcDerivedMeasureValue</i>. The associated unit can
+be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally defined
+at the project level (<i>IfcProject.UnitsInContext</i>).</li>
+  <li> If the <i>Unit</i> attribute is given, the
+unit assigned by the unit attribute overrides the globally assigned
+unit.</li>
+</ul>
+<table border="1" cellpadding="2" cellspacing="2"
+ width="80%">
+  <tbody>
+    <tr>
+      <td width="30%"><b>Name</b></td>
+      <td width="30%"><b>EnumerationValues</b></td>
+      <td width="25%"><b>Type </b><font
+ size="-1">(through <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>)</font></td>
+      <td width="15%"><b>Unit</b></td>
+    </tr>
+    <tr>
+      <td>PEnum_DamperBladeAction</td>
+      <td>Parallel</td>
+      <td><i>IfcString</i></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Opposed</td>
+      <td><i>IfcString</i></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Other</td>
+      <td><i>IfcString</i></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>Unset</td>
+      <td><i>IfcString</i></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<blockquote>
+  <p> <font color="#0000ff" size="-1">
+HISTORY: New Entity in IFC Release 2.0, capabilities enhanced in IFC
+Release 2x. Entity has been renamed from IfcEnumeration in IFC Release
+2x.</font></p>
+</blockquote></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[1:1]</td><td>
+Name of this enumeration.</td></tr>
+<tr><td>2</td><td>EnumerationValues</td><td><a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a></td><td>~L[1:?]</td><td>
+List of values that form the enumeration.</td></tr>
+<tr><td>3</td><td>Unit</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR01</td><td>
+All values within the list of <i>EnumerationValues</i> shall be of the same measure type.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcpropertyenumeration.png" usemap="#f"/>
+<map name="f">
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th></tr>
+<tr><td colspan="5"><a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[1:1]</td><td>
+Name of this enumeration.</td></tr>
+<tr><td>2</td><td>EnumerationValues</td><td><a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a></td><td>~L[1:?]</td><td>
+List of values that form the enumeration.</td></tr>
+<tr><td>3</td><td>Unit</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcPropertyEnumeration&quot; type=&quot;ifc:<a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a>&quot; substitutionGroup=&quot;ifc:Entity&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcPropertyEnumeration&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:Entity&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;EnumerationValues&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:group ref=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;list-unique&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Name&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+*)<br/>
+<span class="keyword">ENTITY</span> IfcPropertyEnumeration<b>;</b><br/>
+&nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
+&nbsp;&nbsp;EnumerationValues : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>;<br/>
+&nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;<span class="keyword">UNIQUE</span><br/>
+&nbsp;&nbsp;UR1 : Name;<br/>&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR01 : SIZEOF(QUERY(temp &lt;* SELF.EnumerationValues | 
+  NOT(TYPEOF(SELF.EnumerationValues[1]) = TYPEOF(temp))
+  )) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+(*<br/>
+<p class="std"><a href="../../../annex/annex-d/ifcpropertyresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+
+<p class="spec-head">Inheritance Graph:</p>
+<span class="express">
+<span class="keyword">ENTITY</span> IfcPropertyEnumeration<br/>
+&nbsp;<span class="keyword">ENTITY</span> <a href="../../ifcpropertyresource/lexical/ifcpropertyenumeration.htm">IfcPropertyEnumeration</a><br/>
+&nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>;<br/>
+&nbsp;&nbsp;EnumerationValues : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>;<br/>
+&nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+</span>
+</details>
+</section>
+<p><a href="../../../link/ifcpropertyenumeration.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

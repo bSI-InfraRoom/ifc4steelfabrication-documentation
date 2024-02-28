@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcRelDecomposes</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 1 index3 3 index4 11 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.1.3.12");
+//-->
+</script>
+
+<h4 class="num">IfcRelDecomposes</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+	 <P> The decomposition relationship,
+		<span class="self-ref">IfcRelDecomposes</span>, defines the general concept of elements being composed
+		or decomposed. The decomposition relationship denotes a whole/part hierarchy
+		with the ability to navigate from the whole (the composition) to the parts and
+		vice versa.</P>
+	 <P>Decompositions may be constraint by requiring both, the whole and its
+		parts, to be of the same type - thus establishing a nesting relationship. Or
+		they may require some form of physical containment, thus establishing special
+		types of aggregation relationships.</P> 
+	 <BLOCKQUOTE><FONT SIZE="-1"> NOTE: There are two special names for
+		decomposition, which are linguistically distinguished, nesting and aggregation.
+		The subtypes of <span class="self-ref">IfcRelDecomposes</span> will introduce either the nesting or
+		aggregation convention (see <I>IfcRelNests</I> and
+		<a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>).</FONT></BLOCKQUOTE> 
+	 <BLOCKQUOTE><FONT SIZE="-1"> EXAMPLE: A cost element is a nest of other
+		cost elements. Or a structural frame is an aggregation of beams and columns.
+		Both are applications of decomposition relationship.</FONT></BLOCKQUOTE>
+	 <P>Decompositions imply a dependency, i.e. the definition of the whole
+		depends on the definition of the parts and the parts depend on the existence of
+		the whole. The decomposition relationship can be applied in a recursive manner,
+		i.e. a decomposed element can be part in another decomposition. Cyclic
+		references have to be prevented at application level.</P> 
+	 <BLOCKQUOTE> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">HISTORY: New entity in IFC Release 1.5,
+		  it is a generalization of the IFC2.0 entity IfcRelNests.</FONT></P></BLOCKQUOTE></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>5</td><td>RelatingObject</td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></td><td>[1:1]</td><td>
+The object that represents the nest or aggregation.
+</td><td>X</td></tr>
+<tr><td>6</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></td><td>S[1:?]</td><td>
+The objects being nested or aggregated.
+</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR31</td><td>The instance to which the relation <i>RelatingObject</i> points shall not be contained in the List of <i>RelatedObjects</i>.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcreldecomposes.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="42,78,230,90" href="../../../schema/ifckernel/lexical/ifcrelaggregates.htm" alt="IfcRelAggregates" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcrelationship.htm" alt="IfcRelationship" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcrelationship.htm">IfcRelationship</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a></i></td></tr>
+<tr><td>5</td><td>RelatingObject</td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></td><td>[1:1]</td><td>
+The object that represents the nest or aggregation.
+</td><td>X</td></tr>
+<tr><td>6</td><td>RelatedObjects</td><td><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></td><td>S[1:?]</td><td>
+The objects being nested or aggregated.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcRelDecomposes&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcrelationship.htm">IfcRelationship</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcRelDecomposes&quot; abstract=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcrelationship.htm">IfcRelationship</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;RelatingObject&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;RelatedObjects&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcRelDecomposes<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>)<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcrelationship.htm">IfcRelationship</a>)<b>;</b><br/>
+&nbsp;&nbsp;RelatingObject : <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>;<br/>
+&nbsp;&nbsp;RelatedObjects : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR31 : SIZEOF(QUERY(Temp &lt;* RelatedObjects | RelatingObject :=: Temp)) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0005.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcreldecomposes.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

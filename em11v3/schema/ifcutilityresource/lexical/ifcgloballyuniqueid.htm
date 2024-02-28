@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcGloballyUniqueId</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 12 index3 2 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.12.2.1");
+//-->
+</script>
+
+<h4 class="num">IfcGloballyUniqueId</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type definition</summary>
+	<p> Holds an identifier that is unique
+	throughout the software world. This is also known as a Globally
+    Unique Identifier (GUID) or Universal Unique Identifier (UUID) by
+    the Open Group. The identifier is generated using an algorithm published
+    by the Object Management Group. The algorithm is explained at the open
+	group <a href="http://www.opengroup.org/dce/info/draft-leach-uuids-guids-01.txt">
+    website</a>. The Microsoft Foundation Class (MFC) function "CoCreateGuid",
+    which is an implementation of the above algorithm, has been used by
+    many IFC implementers to create an identifier.</p>
+
+	<p>An identifier is a unique 128-bit number. Since this identifier is
+    required for all IFC object instances, it is desirable to compress the
+    identifier size to reduce overhead. Beginning in IFC R1.5.1, IFC
+    implementers agreed to compress the identifier down to 20 characters
+    using an algorithm developed by IAI Implementers. This algorithm maps
+    the identifier bits onto a base 85 digit encoded from the following
+    character set:</p>
+    <p>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&amp;^|*+,-./:;&lt;=&gt;?~`@_</p>
+    <p>An index (0-84) into this character set string determines the "value"
+    for each character (e.g. "A" has a value of 10, "@" has a value of 83, etc.).
+    Note that all characters are case-sensitive. In order to prevent possible
+    problems with some parsers, implementers have agreed not to use the "/*"
+    and "*/" character combinations in the identifier string and instead to
+    use "\*" and "*\".</p>
+	<p>The implementation of the compression algorithm has changed in IFC
+	R2x in order to prevent conflicts with special characters in the ISO
+	10303-21 exchange file and the W3C XML file (such as '&lt;*',
+    '*&gt;', '&lt;' and '&gt;'). Using 64 characters for the base rather
+    than 85, the resulting compressed string now needs 22 characters.
+    The encoding of the base 64 character set is shown below:</p>
+
+    <blockquote>
+		<p><font FACE="Courier New" size="-1">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6
+		<br>&nbsp;0123456789012345678901234567890123456789012345678901234567890123<br>
+		"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_$";
+        </font></p>
+    </blockquote>
+
+	<p>The following code example in C is given as a guideline for creating
+	the base 64 compressed strings and for mapping the previous base 85 strings to
+	the base 64 strings. This code is provided "as-is" with no support or
+    guarantee of suitability provided by the IAI. Use of the code example is at
+    the sole risk of the user.</p>
+
+    <ul>
+		<li><a href="text/CreateGuid_64.h" target="new">CreateGuid_64.h</a></li>
+		<li><a href="text/CreateGuid_64.c" target="new">CreateGuid_64.c</a></li>
+	</ul>
+	<p>The resulting string is a fixed 22 character length string to be
+	exchanged within the IFC exchange file structure.</p>
+	
+    <blockquote>
+	<font size="-1" color="#0000FF">
+    <p>
+    	HISTORY: New type in IFC R1.5.1.<br>
+	        </p>
+	</font>
+    </blockquote>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;IfcGloballyUniqueId&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:normalizedString&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:minLength value=&quot;22&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:maxLength value=&quot;22&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;IfcGloballyUniqueId-wrapper&quot; nillable=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;/xs:element&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">TYPE</span> IfcGloballyUniqueId = <span class="self-ref">STRING</span> (22) FIXED;<br/><span class="keyword">END_TYPE;</span><br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcutilityresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcgloballyuniqueid.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

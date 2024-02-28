@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="8270d37e85cb4e5d8673ff090e68fc3f" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_StatusInformation</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="983ae8c3a28949f5bb2ab2230ad86dcc">
+      <Name>Status</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Status value uses AISC_EM11_Status Property Enumeration
+In this exchange there are three status information as “Ready for procurement/mill ordering”, “Issued for fabrication” or a preliminary fixed status as “Default”. This information is individual to, at least, each assembly.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e8df02451d594c1ba8c6faa64041d014">
+      <Name>ChangeStatus</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Change Status</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Being able to go back and see exactly when a particular assembly changed after officially released would be useful. That could be done in the current scope by comparing the IFC files.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="273c0ef0db934b6fb7f6f8a083cfe8db">
+      <Name>StatusApproved</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Status Approved</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">StatusApproved indicates the status of whether it has been approved</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en" />
+  </PsetDefinitionAliases>
+</PropertySetDef>

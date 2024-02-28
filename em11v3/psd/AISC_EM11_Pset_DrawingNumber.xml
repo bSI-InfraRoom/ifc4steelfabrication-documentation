@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="8fcc505986e54e5a9bde6b6b7cae0807" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_DrawingNumber</Name>
+  <Definition>&lt;p&gt;Drawing number is optional value that can be associated with assembly. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Information Item Mapping&lt;/strong&gt;&lt;/p&gt;
+&lt;table width="100%" border="1" cellspacing="0" cellpadding="5"&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;&lt;strong&gt;Steel Detailing Information&lt;/strong&gt;&lt;/td&gt;
+    &lt;td width="220"&gt;&lt;strong&gt;IFC Entity \ Attribute&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;Drawing number&lt;/td&gt;
+    &lt;td width="220"&gt;IfcProperty \ ListValues&lt;/td&gt;
+    &lt;td&gt;Drawing number of assembly, or piece&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</Definition>
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="67ca83e9085b4087bb574add2ddacc62">
+      <Name>DrawingNumber</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Drawing Number</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Drawing number of assembly, or piece</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">Drawing number is optional value that can be associated with assembly. </PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

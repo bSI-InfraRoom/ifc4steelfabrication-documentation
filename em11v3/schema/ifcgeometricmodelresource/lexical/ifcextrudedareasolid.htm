@@ -1,0 +1,163 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcExtrudedAreaSolid</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 3 index3 3 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.3.3.1");
+//-->
+</script>
+
+<h4 class="num">IfcExtrudedAreaSolid</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+	 <P> The extruded area solid
+		(<span class="self-ref">IfcExtrudedAreaSolid</span>) is defined by sweeping a bounded planar surface.
+		The direction of the extrusion is given by the <I>ExtrudedDirection</I>
+		attribute and the length of the extrusion is given by the <I>Depth</I>
+		attribute. If the planar area has inner boundaries, i.e. holes defined, then
+		those holes shall be swept into holes of the solid.</P> 
+	 <BLOCKQUOTE> 
+		<P><FONT SIZE="-1"><U>New</U>: The <I>IfcExtrudedArea</I> solid now
+		  directly defines the linear extrusion of a cross section (also referred to as
+		  profile). It thereby combines the functionality of the previous
+		  IfcAttDrivenExtrudedSegment entity. In contrary to the previous
+		  IfcAttDrivenExtrudedSegment, the extruded direction can be any which is not
+		  perpendicular to the z axis of the position coordinate
+		  system.</FONT></P></BLOCKQUOTE> 
+	 <P>The <I>ExtrudedDirection</I> is given within the position coordinate
+		system as defined by <I>IfcSweptAreaSolid.Position</I>. Extrusions are not
+		longer restricted to be perpendicular to the extruded surface of the
+		profile.</P> 
+	 <BLOCKQUOTE> 
+		<P><FONT COLOR="#0000FF" SIZE="-1"><FONT COLOR="#0000FF" SIZE="-1">NOTE
+		  Corresponding STEP entity: extruded_area_solid. Please refer to ISO/IS
+		  10303-42:1994, p. 183 for the final definition of the formal standard. The data
+		  type of the inherited <I>SweptArea</I> attribute is different, i.e. of type
+		  <a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a>. The <I>Position</I> attribute has been added to position
+		  the cross section used for the linear extrusion.</FONT></FONT></P> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">HISTORY New entity in IFC Release 1.5,
+		  capabilities of this entity have been enhanced in IFC Release 2x.
+		  </FONT></P></BLOCKQUOTE> 
+	 <P><U>Illustration</U>:</P> 
+	 <TABLE CELLPADDING="2" CELLSPACING="2" BORDER="0"> 
+		<TR> 
+		  <TD VALIGN="TOP" ALIGN="LEFT"><A
+			 HREF="drawings/IfcExtrudedAreaSolid-Layout1.dwf"><IMG
+			 SRC="figures/ifcextrudedareasolid-layout1.gif" ALT="extruded area solid"
+			 WIDTH="400" HEIGHT="300" BORDER="0"></A></TD> 
+		  <TD VALIGN="TOP" ALIGN="LEFT"> 
+			 <P><FONT SIZE="-1"><U>Purpose</U><BR>The extruded area solid defines
+				the extrusion of a 2D area (given by a profile definition) by an direction and
+				depth. The result is a solid.</FONT></P> 
+			 <P><FONT SIZE="-1"><U>Parameter</U><BR>The swept area is given by a
+				profile definition. This profile is defined </FONT></P> 
+			 <UL> 
+				<LI><FONT SIZE="-1">as a 2D bounded curve within the xy plane of
+				  the position coordinate system, </FONT></LI> 
+				<LI><FONT SIZE="-1">as a 2D bounded curve with holes within the xy
+				  plane of the position coordinate system, </FONT></LI> 
+				<LI><FONT SIZE="-1">or as a 2D primitive, defined within a 2D
+				  position coordinate system, that is placed relative to the xy plane of the
+				  position coordinate system</FONT></LI> 
+			 </UL></TD> 
+		</TR> 
+	 </TABLE></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>3</td><td>ExtrudedDirection</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td>[1:1]</td><td>
+The direction in which the surface is to be swept.</td><td>X</td></tr>
+<tr><td>4</td><td>Depth</td><td><a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a></td><td>[1:1]</td><td>
+The distance the surface is to be swept.</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR31</td><td>The ExtrudedDirection shall not be perpendicular to the local z-axis.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcextrudedareasolid.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="42,78,254,90" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm" alt="IfcSweptAreaSolid" />
+<area shape="rect" coords="30,54,266,66" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsolidmodel.htm" alt="IfcSolidModel" />
+<area shape="rect" coords="18,30,278,42" href="../../../schema/ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm" alt="IfcGeometricRepresentationItem" />
+<area shape="rect" coords="6,6,290,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a></i></td></tr>
+<tr><td></td><td>Dim<br/>:=3</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td>[1:1]</td><td>The space dimensionality of this class, it is always 3.</td>
+<td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a></i></td></tr>
+<tr><td>1</td><td>SweptArea</td><td><a href="../../ifcprofileresource/lexical/ifcprofiledef.htm">IfcProfileDef</a></td><td>[1:1]</td><td>
+The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.</td><td>X</td></tr>
+<tr><td>2</td><td>Position</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement3d.htm">IfcAxis2Placement3D</a></td><td>[1:1]</td><td>
+Position coordinate system for the swept area.</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a></td></tr>
+<tr><td>3</td><td>ExtrudedDirection</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td>[1:1]</td><td>
+The direction in which the surface is to be swept.</td><td>X</td></tr>
+<tr><td>4</td><td>Depth</td><td><a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a></td><td>[1:1]</td><td>
+The distance the surface is to be swept.</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcExtrudedAreaSolid&quot; type=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcExtrudedAreaSolid&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;ExtrudedDirection&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;Depth&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcExtrudedAreaSolid<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometricmodelresource/lexical/ifcsweptareasolid.htm">IfcSweptAreaSolid</a>)<b>;</b><br/>
+&nbsp;&nbsp;ExtrudedDirection : <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>;<br/>
+&nbsp;&nbsp;Depth : <a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR31 : IfcDotProduct(IfcRepresentationItem() || IfcGeometricRepresentationItem() || IfcDirection([0.0,0.0,1.0]), SELF.ExtrudedDirection) &lt;&gt; 0.0;<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcgeometricmodelresource/diagram_0004.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcextrudedareasolid.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

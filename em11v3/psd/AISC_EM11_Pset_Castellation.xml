@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="cf8677206d30461eabc507f9e01e38e3" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_Castellation</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="be9b85742c0942e5a3270521a38f1323">
+      <Name>CastellationType</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation Type</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation Type declares the classification of the type of longitudinal repeating feature by its shape. Value can be one of : 
+			&lt;ul&gt;
+			  &lt;li&gt;Circular&lt;/li&gt;
+			  &lt;li&gt;Hexagonal&lt;/li&gt;
+			  &lt;li&gt;Octagonal&lt;/li&gt;
+			  &lt;li&gt;Undefined&lt;/li&gt;
+			&lt;/ul&gt;  </DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="59311ddda66f419ea4a229d5fb788613">
+      <Name>CastellationEndPostWidth1</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation End Post Width 1</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation End Post Width 1	in IfcLengthMeasure	type, provides the numerical value with an appropriate unit of the linear dimension to the first web opening measured from the first cut end.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="59502c4edf1047de88cc0037d823873a">
+      <Name>CastellationEndPostWidth2</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation End Post Width 2</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation End Post Width 2	in IfcLengthMeasure	type, provides the numerical value with an appropriate unit of the linear dimension to the last web opening measured from the last cut end.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="9cd094857ae84183b58ed4131808a56e">
+      <Name>CastellationSpacing</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation Spacing</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation Spacing		in IfcLengthMeasure	type,	specifis the numerical value with an appropriate unit of the linear distance between each feature, measured along the length of the part.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="1caf3ce4796641ba8430ab7aef536edb">
+      <Name>CastellationHeight</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation Height</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation Height		in IfcLengthMeasure	type,	specifies the numerical value with an appropriate unit of the linear distance between the top and bottom of each feature, measured across the depth of the part.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="8c6528e6db9a4d8db81ca397a440e1c1">
+      <Name>CastellationWidth</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation Width</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation Width		in IfcLengthMeasure	type,	specifies the numerical value with an appropriate unit of the linear distance between the extreme edges of each feature, measured along the length of the part.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="6a80f88a6d2c48b48a752de4c425f58d">
+      <Name>CastellationDepth</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Castellation Depth</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Castellation Depth			in IfcLengthMeasure	type,		specifies the numerical value with an appropriate unit of the linear distance between the top of the part and the extreme edges of each feature, measured down the depth of the part.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">Castellation has a repeating hole feature along its length. The repeating feature may be given by its type. It may also define spacing, height and width.
+
+&lt;p&gt;&lt;img src="../../../img/castellation.PNG" width="581" height="237"&gt;&lt;/p&gt;</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

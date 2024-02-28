@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="6716dce2fc76444eabbfea5ef21421e0" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_TubeMitreSaddle</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="56f50c8813a648fd938db7184786abb0">
+      <Name>Type</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fa2cbdc3c96f4d789a1b7f0090a1f594">
+      <Name>MinBurnAngle</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="7921e2b852af4cd2846ba626f8e9ea9e">
+      <Name>MaxBurnAngle</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="01df169d94a54a1a8658e6527ecb7f45">
+      <Name>Bevel</Name>
+      <Definition>The bevel is nothing more than a kerf with a continuous opening angle between the cut and connecting material. Internally in the machine software the bevel is created mathematically by calculating the dihedral angle and subtracting the bevel from it.</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="e059bb93461e48b9a2760d0d473bd801">
+      <Name>RootOpening</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="fd2a9cf6eedb49398d07222be0081cad">
+      <Name>Shrinkage</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="89c90f41edc5476495005af367c9d408">
+      <Name>Side</Name>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">&lt;p&gt;&lt;img src="../../../img/mitresaddle.png"&gt;&lt;/p&gt;
+&lt;p&gt;image source : Tube NC &lt;/p&gt;</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

@@ -1,0 +1,180 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcGeometricRepresentationContext</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 10 index3 3 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.10.3.1");
+//-->
+</script>
+
+<h4 class="num">IfcGeometricRepresentationContext</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+<p><u>Definition from ISO/CD 10303-42:1992</u>: A
+geometric representation context is a representation context in which
+the geometric representation items are geometrically founded. A
+geometric representation context is a distinct coordinate space,
+spatially unrelated to other coordinate spaces. </p>
+<p><u>Definition
+from IAI</u>: The <span class="self-ref">IfcGeometricRepresentationContext</span>
+defines the context that applies to several shape representations of
+products within a project. It defines the type of the context in which
+the shape representation is defined, and the numeric precision
+applicable to the geometric representation items defined in this
+context. In addition it can be used to offset the project coordinate
+system from a global point of origin, using the <i>WorldCoordinateSystem</i>
+attribute. The <i>TrueNorth</i> attribute can be given,
+if the y axis of the <i>WorldCoordinateSystem</i> does not
+point to the global northing.
+</p><blockquote> <p><font size="-1">NOTE
+&nbsp;The inherited attribute <i>ContextType</i>
+shall have one of the following recognized values: <strike>'Sketch',
+'Outline', 'Design', 'Detail',</strike> <font color="#ff0000">'Model',
+'Plan'</font>,
+'NotDefined'.</font></p>
+</blockquote>The use of one instance of <span class="self-ref">IfcGeometricRepresentationContext</span>
+to represent the model (3D) view is mandatory, the use of a second
+instance of <span class="self-ref">IfcGeometricRepresentationContext</span>
+to represent the plan (2D) view is optional (but needs to be given, if
+there are scale dependent plan views), the additional scale or view
+dependent contexts need to be handled by using the subtype <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a>
+pointing to the model view (or the plan view) as the <i>ParentContext</i>.
+<blockquote><font color="#0000ff"><small>NOTE
+&nbsp;The definition
+of this class relates to the STEP entity
+geometric_representation_context. Please refer to ISO/IS 10303-42:1994
+for the final definition of the formal standard.</small> </font></blockquote>
+<blockquote><small><font color="#0000ff">HISTORY
+&nbsp;New Entity in IFC Release 2.0<br> <font
+ color="#ff0000">IFC2x Edition 3 CHANGE &nbsp;Applicable
+values for <i>ContextType</i>
+are only 'Model',&nbsp; 'Plan', and&nbsp; 'NotDefined'. All
+other sub contexts
+are now handled by the new subtype in IFC2x Edition 2 <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a>.
+Upward compatibility for file based exchange is guaranteed.</font></font>
+</small></blockquote></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>3</td><td>CoordinateSpaceDimension</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td>[1:1]</td><td>
+<EPM-HTML>The integer dimension count of the coordinate space modeled in a geometric representation context.
+<br>
+<EPM-HTML></td><td>X</td></tr>
+<tr><td>4</td><td>Precision</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>5</td><td>WorldCoordinateSystem</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a></td><td>[1:1]</td><td>
+
+Establishment of the engineering coordinate system (often referred to as the world coordinate system in CAD) for all representation contexts used by the project. 
+<blockquote><small> 
+Note&nbsp; it can be used to provide better numeric stability if the placement of the building(s) is far away from the origin. In most cases however it would be set to origin: (0.,0.,0.) and directions x(1.,0.,0.), y(0.,1.,0.), z(0.,0.,1.).
+</small> </blockquote></td><td>X</td></tr>
+<tr><td>6</td><td>TrueNorth</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td>[0:1]</td><td>
+
+Direction of the true north relative to the underlying coordinate system as established by the attribute <i>WorldCoordinateSystem</i>. It is given by a direction within the xy-plane of the underlying coordinate system. If not given, it defaults to the positive direction of the y-axis of the <i>WorldCoordinateSystem</i>.
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>HasSubContexts</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a><br/>@ParentContext</td><td>S[0:?]</td><td>
+The set of <i>IfcGeometricRepresentationSubContexts</i> that refer to this <span class="self-ref">IfcGeometricRepresentationContext</span>.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcgeometricrepresentationcontext.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,218,66" href="../../../schema/ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm" alt="IfcGeometricRepresentationSubContext" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcrepresentationresource/lexical/ifcrepresentationcontext.htm" alt="IfcRepresentationContext" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td></tr>
+<tr><td>1</td><td>ContextIdentifier</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+The optional identifier of the representation context as used within a project.</td><td>X</td></tr>
+<tr><td>2</td><td>ContextType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+The description of the type of a representation context. The supported values for context type are to be specified by implementers agreements.</td><td>X</td></tr>
+<tr><td></td><td><i>RepresentationsInContext</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a><br/>@ContextOfItems</td><td>S[0:?]</td><td>All shape representations that are defined in the same representation context.</td><td></td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a></td></tr>
+<tr><td>3</td><td>CoordinateSpaceDimension</td><td><a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a></td><td>[1:1]</td><td>
+<EPM-HTML>The integer dimension count of the coordinate space modeled in a geometric representation context.
+<br>
+<EPM-HTML></td><td>X</td></tr>
+<tr><td>4</td><td>Precision</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>5</td><td>WorldCoordinateSystem</td><td><a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a></td><td>[1:1]</td><td>
+
+Establishment of the engineering coordinate system (often referred to as the world coordinate system in CAD) for all representation contexts used by the project. 
+<blockquote><small> 
+Note&nbsp; it can be used to provide better numeric stability if the placement of the building(s) is far away from the origin. In most cases however it would be set to origin: (0.,0.,0.) and directions x(1.,0.,0.), y(0.,1.,0.), z(0.,0.,1.).
+</small> </blockquote></td><td>X</td></tr>
+<tr><td>6</td><td>TrueNorth</td><td><a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a></td><td>[0:1]</td><td>
+
+Direction of the true north relative to the underlying coordinate system as established by the attribute <i>WorldCoordinateSystem</i>. It is given by a direction within the xy-plane of the underlying coordinate system. If not given, it defaults to the positive direction of the y-axis of the <i>WorldCoordinateSystem</i>.
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>HasSubContexts</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a><br/>@ParentContext</td><td>S[0:?]</td><td>
+The set of <i>IfcGeometricRepresentationSubContexts</i> that refer to this <span class="self-ref">IfcGeometricRepresentationContext</span>.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcGeometricRepresentationContext&quot; type=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationcontext.htm">IfcGeometricRepresentationContext</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcGeometricRepresentationContext&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;WorldCoordinateSystem&quot; minOccurs=&quot;0&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:group ref=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;TrueNorth&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>&quot; nillable=&quot;true&quot; minOccurs=&quot;0&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;CoordinateSpaceDimension&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcGeometricRepresentationContext<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a>)<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a>)<b>;</b><br/>
+&nbsp;&nbsp;CoordinateSpaceDimension : <a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a>;<br/>
+&nbsp;&nbsp;Precision : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;WorldCoordinateSystem : <a href="../../ifcgeometryresource/lexical/ifcaxis2placement.htm">IfcAxis2Placement</a>;<br/>
+&nbsp;&nbsp;TrueNorth : <span class="keyword">OPTIONAL</span> <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>;<br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;HasSubContexts : <span class="keyword">SET</span> [0:?] <span class="keyword">OF</span> <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a> <span class="keyword">FOR</span> ParentContext;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcgeometricrepresentationcontext.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

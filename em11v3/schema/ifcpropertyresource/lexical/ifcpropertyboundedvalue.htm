@@ -1,0 +1,209 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcPropertyBoundedValue</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 8 index3 3 index4 1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.8.3.2");
+//-->
+</script>
+
+<h4 class="num">IfcPropertyBoundedValue</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+	 <P> A property with a bounded value
+		(<span class="self-ref">IfcPropertyBoundedValue</span>) defines a property object which has a maximum
+		of two (numeric or descriptive) values assigned, the first value specifying the
+		upper bound and the second value specifying the lower bound. It defines a
+		property - value bound (min-max) combination for which the property name, the
+		upper bound value with measure type, the lower bound value with measure type
+		(and optional the unit) is given.</P> 
+	 <P>The unit is handled by the <I>Unit</I> attribute:</P> 
+	 <UL> 
+		<LI>If the <I>Unit</I> attribute is not given, then the unit is already
+		  implied by the type of <I>IfcMeasureValue</I> or <I>IfcDerivedMeasureValue</I>.
+		  The associated unit can be found at the <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a> globally
+		  defined at the project level (<I>IfcProject.UnitsInContext</I>).</LI> 
+		<LI> If the <I>Unit</I> attribute is given, then the unit assigned by the
+		  <I>Unit</I> attribute overrides the globally assigned unit.</LI> 
+	 </UL> 
+	 <P>The <span class="self-ref">IfcPropertyBoundedValue</span> allows for the specification of an
+		interval for the value component of the property description.
+		<FONT COLOR="#0000FF">If either the <I>LowerBoundValue</I> or the
+		<I>UpperBoundValue</I> is not given, then it indicates an open bound (either a
+		minimum value or a maximum value). The interval is by definition inclusive,
+		i.e. the value given for the <I>LowerBoundValue</I> or the
+		<I>UpperBoundValue</I> is included in the interval.</FONT></P> 
+	 <P>Examples of a property with bounded value are:</P> 
+	 <TABLE BORDER="1"> 
+		<TR VALIGN="TOP"> 
+		  <TD VALIGN="TOP" WIDTH="15%"><B>Name</B></TD> 
+		  <TD VALIGN="TOP" WIDTH="15%"><B>UpperBoundValue</B></TD> 
+		  <TD VALIGN="TOP" WIDTH="15%"><B>LowerBoundValue</B></TD> 
+		  <TD VALIGN="TOP" WIDTH="25%"><B>Type <BR></B><FONT SIZE="-1">(through
+			 <a href="../../ifcmeasureresource/lexical/ifcvalue.htm">IfcValue</a>, WR1 ensures same type for both values)</FONT></TD> 
+		  <TD VALIGN="TOP" WIDTH="30%"><B>Unit <BR></B></TD> 
+		</TR> 
+		<TR VALIGN="TOP"> 
+		  <TD WIDTH="15%" VALIGN="TOP" ALIGN="LEFT">OverallHeight</TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT">1930</TD> 
+		  <TD WIDTH="25%" VALIGN="TOP" ALIGN="LEFT">2300</TD> 
+		  <TD WIDTH="25%" VALIGN="TOP"
+			ALIGN="LEFT"><a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a></TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT">- </TD> 
+		</TR> 
+		<TR VALIGN="TOP"> 
+		  <TD WIDTH="15%" VALIGN="TOP" ALIGN="LEFT">OverallWidth</TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT">0.9</TD> 
+		  <TD WIDTH="25%" VALIGN="TOP" ALIGN="LEFT">1.25</TD> 
+		  <TD WIDTH="25%" VALIGN="TOP"
+			ALIGN="LEFT"><a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a></TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT">m</TD> 
+		</TR> 
+		<TR VALIGN="TOP"> 
+		  <TD WIDTH="15%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">MaxHeight</FONT></TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">20.0</FONT></TD> 
+		  <TD WIDTH="25%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">&lt;nil&gt;</FONT></TD> 
+		  <TD WIDTH="25%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF"><a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a></FONT></TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">-</FONT></TD> 
+		</TR> 
+		<TR VALIGN="TOP"> 
+		  <TD WIDTH="15%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">MinWeight</FONT></TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">&lt;nil&gt;</FONT></TD> 
+		  <TD WIDTH="25%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">20</FONT></TD> 
+		  <TD WIDTH="25%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF"><I>IfcMassMeasure</I></FONT></TD> 
+		  <TD WIDTH="30%" VALIGN="TOP" ALIGN="LEFT"><FONT
+			 COLOR="#0000FF">kg</FONT></TD> 
+		</TR> 
+	 </TABLE> 
+	 <BLOCKQUOTE> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">HISTORY: New entity in IFC Release 2x.
+		  </FONT></P> </BLOCKQUOTE> 
+	 <BLOCKQUOTE><FONT COLOR="#FF0000" SIZE="-1">IFC2x PLATFORM CHANGE: The
+		attribute type of the attribute <I>UpperBoundValue</I> and
+		<I>LowerBoundValue</I> has been changed from mandatory to optional with upward
+		compatibility for file based exchange.</FONT></BLOCKQUOTE> 
+	 <P>Informal proposition:</P> 
+	 <OL> 
+		<LI>If the measure type for the upper and lover bound value is a numeric
+		  measure, then the following shall be true: <I>UpperBoundValue</I> &gt;
+		  <I>LowerBoundValue</I>.</LI> 
+	 </OL></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th></tr>
+<tr><td>3</td><td>UpperBoundValue</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+<tr><td>4</td><td>LowerBoundValue</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+<tr><td>5</td><td>Unit</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR21</td><td>The measure type of the upper bound value shall be the same as the measure type of the lower bound value, if both (upper and lower bound) are given.</td></tr>
+<tr><td>WR22</td><td>Either the upper bound, or the lower bound, or both bounds shall be given.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcpropertyboundedvalue.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,230,42" href="../../../schema/ifcpropertyresource/lexical/ifcsimpleproperty.htm" alt="IfcSimpleProperty" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcpropertyresource/lexical/ifcproperty.htm" alt="IfcProperty" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th></tr>
+<tr><td colspan="5"><i><a href="../../ifcpropertyresource/lexical/ifcproperty.htm">IfcProperty</a></i></td></tr>
+<tr><td>1</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a></td><td>[1:1]</td><td>
+Name for this property. This label is the significant name string that defines the semantic meaning for the property.</td></tr>
+<tr><td>2</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+<tr><td colspan="5"><i><a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a></i></td></tr>
+<tr><td colspan="5"><a href="../../ifcpropertyresource/lexical/ifcpropertyboundedvalue.htm">IfcPropertyBoundedValue</a></td></tr>
+<tr><td>3</td><td>UpperBoundValue</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+<tr><td>4</td><td>LowerBoundValue</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+<tr><td>5</td><td>Unit</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcPropertyBoundedValue&quot; type=&quot;ifc:<a href="../../ifcpropertyresource/lexical/ifcpropertyboundedvalue.htm">IfcPropertyBoundedValue</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcPropertyBoundedValue&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+*)<br/>
+<span class="keyword">ENTITY</span> IfcPropertyBoundedValue<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a>)<b>;</b><br/>
+&nbsp;&nbsp;UpperBoundValue : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;LowerBoundValue : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR21 : NOT(EXISTS(UpperBoundValue)) OR NOT(EXISTS(LowerBoundValue)) OR
+(TYPEOF(UpperBoundValue) = TYPEOF(LowerBoundValue));<br/>&nbsp;&nbsp;WR22 : EXISTS(UpperBoundValue) OR EXISTS(LowerBoundValue);<br/><span class="keyword">END_ENTITY;</span><br/>
+(*<br/>
+<p class="std"><a href="../../../annex/annex-d/ifcpropertyresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+
+<p class="spec-head">Inheritance Graph:</p>
+<span class="express">
+<span class="keyword">ENTITY</span> IfcPropertyBoundedValue<br/>
+&nbsp;<span class="keyword">ENTITY</span> <a href="../../ifcpropertyresource/lexical/ifcproperty.htm">IfcProperty</a><br/>
+&nbsp;&nbsp;Name : <a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>;<br/>
+&nbsp;&nbsp;Description : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;<span class="keyword">ENTITY</span> <a href="../../ifcpropertyresource/lexical/ifcsimpleproperty.htm">IfcSimpleProperty</a><br/>
+&nbsp;<span class="keyword">ENTITY</span> <a href="../../ifcpropertyresource/lexical/ifcpropertyboundedvalue.htm">IfcPropertyBoundedValue</a><br/>
+&nbsp;&nbsp;UpperBoundValue : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;LowerBoundValue : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Unit : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+</span>
+</details>
+</section>
+<p><a href="../../../link/ifcpropertyboundedvalue.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

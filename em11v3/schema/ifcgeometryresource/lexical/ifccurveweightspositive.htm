@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcCurveWeightsPositive</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 4 index3 4 index4 5 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.4.4.6");
+//-->
+</script>
+
+<h4 class="num">IfcCurveWeightsPositive</h4>
+<section>
+<h5 class="num">Semantic definitions at the function</h5>
+<details open="open"><summary>Function Definition</summary><p>
+
+<p> This function checks
+whether the curve weights of a b-spline are positive.</p>
+<blockquote> <small><font color="#0000ff">NOTE
+&nbsp;Corresponding STEP function: curve_weights_positive. Please
+refer
+to ISO/IS
+10303-42:1994, p.115 for the final definition of the formal
+standard.&nbsp; <br>
+  <br>
+HISTORY&nbsp; New function in IFC Release 2x Edition 2. </font></small>
+</blockquote></p>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details open="open"><summary>EXPRESS Specification</summary><span class="express">
+
+<p>
+<span class="keyword">FUNCTION</span> IfcCurveWeightsPositive<br/>
+
+(B: IfcRationalBezierCurve) : BOOLEAN;<br/>&nbsp;&nbsp;&nbsp;LOCAL<br/>&nbsp;&nbsp;&nbsp;&nbsp; Result : BOOLEAN := TRUE;<br/>&nbsp;&nbsp;&nbsp;END_LOCAL;<br/><br/>&nbsp;&nbsp;&nbsp;REPEAT i := 0 TO B.UpperIndexOnControlPoints;<br/>&nbsp;&nbsp;&nbsp;&nbsp; IF B.Weights[i] &lt;= 0.0&nbsp;&nbsp;THEN<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Result := FALSE;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RETURN(Result);<br/>&nbsp;&nbsp;&nbsp;&nbsp; END_IF;<br/>&nbsp;&nbsp;&nbsp;END_REPEAT;<br/>&nbsp;&nbsp;&nbsp;RETURN(Result);
+<br/>
+
+<span class="keyword">END_FUNCTION</span>;
+
+</p>
+
+</span>
+
+</details>
+</section>
+<p><a href="../../../link/ifccurveweightspositive.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="2862113eb950466ba827c74211571b93" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_Opening</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="89fd0350ef8048e8b8a246463e7c9a9f">
+      <Name>FeatureSubType</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Feature Sub Type</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Feature Sub Type indicates special types. Value can be one of:
+			&lt;ul&gt;
+				&lt;li&gt;BeveledHole&lt;/li&gt;
+				&lt;li&gt;TappedHole&lt;/li&gt;
+				&lt;li&gt;ThreadedHole&lt;/li&gt;
+			&lt;/ul&gt;</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0a8863f024b344c89f4cc47d712d43fa">
+      <Name>RectangleOpeningWidth</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Rectangle Opening Width</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Rectangle Opening Width</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="a1d51239d58a4fed9a3bc79f0c341a9d">
+      <Name>RectangleOpeningHeight</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="9ae831baa331451b9318e6a89346c378">
+      <Name>RectangleOpeningRoundEdgeRadius</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Rectangle Opening Round Edge Radius</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Rectangle Opening Round Edge Radius</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">Opening can be rectangular, rounded rectangle or free form opening. Retangle and rounded rectangle may use properties for additional representation of parmeters.
+&lt;p&gt;&lt;img src="../../../img/opening.png"&gt;&lt;/p&gt;</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

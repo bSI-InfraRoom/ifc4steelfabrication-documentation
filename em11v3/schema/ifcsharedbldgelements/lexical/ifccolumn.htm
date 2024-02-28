@@ -1,0 +1,733 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcColumn</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 1 index3 3 index4 1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.1.3.2");
+//-->
+</script>
+
+<h4 class="num">IfcColumn</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+<p><u>Definition from ISO 6707-1:1989</u>:
+Structural member of slender form, usually vertical, that transmits to
+its base the forces, primarily in compression, that are applied to it.</p>
+<p> An <span class="self-ref">IfcColumn</span>
+is a vertical structural member which often is aligned with a
+structural grid intersection. It represents a vertical, or nearly
+vertical, structural member from an architectural point of view. It is
+not required to be load bearing.</p> <blockquote> <p><small>NOTE
+&nbsp;For any longitudial structural member, not constrained to
+be predominately horizontal nor vertical, or where this semantic
+information is irrelevant, the entity <a href="../../ifcsharedbldgelements/lexical/ifcmember.htm">IfcMember</a>
+exists.</small></p>
+</blockquote> <blockquote><font color="#0000ff"
+ size="-1">HISTORY New entity in IFC Release 1.0 </font>
+</blockquote> <p><u><b>Type Use Definition</b></u></p>
+<p><span class="self-ref">IfcColumn</span> defines the occuurence of any
+column,
+common information
+about beam types (or styles) is handled by <i>IfcColumnType</i>.
+The <i>IfcColumnType</i>
+(if present) may establish the common&nbsp;type name, usage (or
+predefined) type, common material layer set, common set of properties
+and common shape
+representations (using <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>). The <i>IfcColumnType</i>
+is attached using the <i>IfcRelDefinedByType.RelatingType</i>
+objectified relationship and is accessible by the inverse <i>IsDefinedBy</i>
+attribute.</p>
+<p>If no <span style="font-style: italic;">IfcColumnType</span>
+is attached&nbsp;(i.e. if only occurrence information is given) the
+predefined type may be given by using the <i>ObjectType</i>
+attribute.&nbsp;Recommended values are 'column' (the default).</p>
+<p><u><b>Property Set Use Definition</b></u>:</p>
+<p>The property sets relating to the <span class="self-ref">IfcColumn</span>
+are defined by the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> and attached by
+the <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> relationship. It is
+accessible by the inverse <i>IsDefinedBy</i> relationship.
+The following property set definitions specific to the <span class="self-ref">IfcColumn</span>
+are part of this IFC release:</p> <ul> <li><a
+ href="../../ifcsharedbldgelements/pset/pset_columncommon.htm"
+ target="info">Pset_ColumnCommon</a>: common property
+set for all column occurrences</li> </ul> <p><u><b>Material
+Use Definition</b></u></p>
+<p>The material of the <i>Ifc</i><i>Column</i>
+is defined by
+the <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> or <i>IfcMaterialList</i>
+and attached by the <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a><i>.RelatingMaterial</i>.
+It is accessible by the inverse <i>HasAssociations</i>
+relationship. Material information can also be given at the <i>Ifc</i><i>Column</i><i>Type</i>,
+defining the common attribute data for all occurrences of the same
+type.&nbsp;It is then accessible by the inverse <i>IsDefinedBy</i>
+relationship pointing to <i>Ifc</i><i>Column</i><i>Type</i><i>.HasAssociations</i>
+and via <i>IfcRelAssociatesMaterial.RelatingMaterial</i>
+to <a href="../../ifcmaterialresource/lexical/ifcmaterial.htm">IfcMaterial</a> or <i>IfcMaterialList</i>.
+If both are given, then the material directly assigned to <i>Ifc</i><i>Column</i>
+overrides the material assigned to <i>Ifc</i><i>Column</i><i>Type</i>.</p>
+<p><u><b>Quantity Use Definition</b></u>:</p>
+<p>The quantities relating to the <span class="self-ref">IfcColumn</span>
+are defined by the <a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a> and attached
+by the <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a>. It is accessible
+by the inverse <i>IsDefinedBy</i> relationship. The
+following quantities are foreseen, but will be subjected to the local
+standard of measurement used:</p> <table border="1"
+ cellpadding="2" cellspacing="2"> <tbody> <tr
+ valign="top"> <td align="left" valign="top"><font
+ size="-1"><i><b>Name</b></i></font></td>
+<td align="left" valign="top" width="60%"><font
+ size="-1"><i><b>Description</b></i></font></td>
+<td align="left" valign="top"><font size="-1"><i><b>Value
+Type</b></i></font></td> </tr> <tr>
+<td align="left" valign="top"><font size="-1">NominalLength</font></td>
+<td align="left" valign="top" width="60%"><font
+ size="-1">Total nominal length of the column, not taking
+into account any cut-out's or other processing features.</font></td>
+<td align="left" valign="top"><font size="-1"><i>IfcQuantityLength</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">CrossSectionArea</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1">Total area of the cross section (or profile) of
+the column. The exact definition and calculation rules depend on the
+method of measurement used.</font></td> <td align="left"
+ valign="top"><font size="-1"><i>IfcQuantityArea</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">OuterSurfaceArea</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1">Total area of the extruded surfaces of the column
+(not taking into account the end cap areas), normally generated as
+perimeter * length.</font></td> <td align="left"
+ valign="top"><font size="-1"><i>IfcQuantityArea</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">TotalSurfaceArea</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1">Total area of the column, normally generated as
+perimeter * length + 2 * cross section area.</font></td> <td
+ align="left" valign="top"><font size="-1"><i>IfcQuantityArea</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">GrossVolume</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1">Total gross volume of the column, not taking into
+account possible processing features (cut-out's, etc.) or openings and
+recesses. The exact definition and calculation rules depend on the
+method of measurement used.</font></td> <td align="left"
+ valign="top"><font size="-1"><i>IfcQuantityVolume</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">NetVolume</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1">Total net volume of the column, taking into
+account possible processing features (cut-out's, etc.) or openings and
+recesses. The exact definition and calculation rules depend on the
+method of measurement used.</font></td> <td align="left"
+ valign="top"><font size="-1"><i>IfcQuantityVolume</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">GrossWeight</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1"> Total gross weight of the column without add-on
+parts, not taking into account possible processing features (cut-out's,
+etc.) or openings and recesses.</font></td> <td
+ align="left" valign="top"><font size="-1"><i>IfcQuantityWeight</i></font></td>
+</tr> <tr> <td align="left" valign="top"><font
+ size="-1">NetWeight</font></td> <td
+ align="left" valign="top" width="60%"><font
+ size="-1"> Total net weight of the column without add-on
+parts, taking into account possible processing features (cut-out's,
+etc.) or openings and recesses.</font></td> <td
+ align="left" valign="top"><font size="-1"><i>IfcQuantityWeight</i></font></td>
+</tr> </tbody>
+</table> <p><u><b>Containment Use Definition</b></u></p>
+<p>The <span class="self-ref">IfcColumn</span>, as any subtype of <a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>,
+may participate in two different containment relationships. The first
+(and in most implementation scenarios mandatory) relationship is the
+hierachical spatial containment, the second (optional) relationship is
+the aggregation within an&nbsp;element assembly.</p>
+<ul> <li>The <span class="self-ref">IfcColumn</span>, is placed
+within the
+project spatial hierarchy using the objectified relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>,
+referring to it by its inverse attribute <i>SELF\IfcElement.ContainedInStructure</i>.
+Subtypes of&nbsp;<a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> are
+valid spatial containers, with <a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a>
+being the default container.</li> <li>The <span class="self-ref">IfcColumn</span>,
+may be aggregated into an
+element assembly using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>,
+referring to it by its inverse attribute <i>SELF\IfcObjectDefinition.Decomposes</i>.
+Any subtype of <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> can be an element
+assembly, with <a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a> as a special
+focus subtype. In this case it should not be additionally contained in
+the project
+spatial hierarchy, i.e.&nbsp;<i>SELF\IfcElement.ContainedInStructure
+</i>should be <i>NIL.</i></li>
+</ul> <p><u><b>Geometry Use Definitions</b></u>:</p>
+<p>The geometric representation of <span class="self-ref">IfcColumn</span>
+is given by the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, allowing
+multiple geometric representations. Included are: </p> <p><b>Local
+Placement</b></p> <p>The local placement for <span class="self-ref">IfcColumn</span>
+is defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is
+defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the
+local coordinate system that is referenced by all geometric
+representations. </p> <ul> <li>The <i>PlacementRelTo</i>
+relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if
+given) to the local placement of the same <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>,
+which is used in the <i>ContainedInStructure</i> inverse
+attribute, or to a spatial structure element at a higher level,
+referenced by that. </li> <li>If the relative placement
+is not used, the absolute placement is defined within the world
+coordinate system. </li> </ul> <p><b><i>Geometric
+Representations</i></b></p> <p>Currently, the
+use of 'SweptSolid', 'Clipping', and 'MappedRepresentation'
+representations is supported. In addition the general representation
+types 'SurfaceModel', 'Brep' and 'BoundingBox' are allowed. The
+geometry use definition for 'BoundingBox', 'SurfaceModel' and 'Brep' is
+explained at <a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>.</p> <p><b>Swept
+Solid Representation</b></p> <p>The standard
+geometric representation of <span class="self-ref">IfcColumn</span> is defined
+using the 'SweptSolid' representation. The following attribute values
+for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this
+geometric representation shall be used: </p> <ul> <li><i>RepresentationIdentifier</i>
+: 'Body'</li> <li><i>RepresentationType</i> :
+'SweptSolid'</li> </ul> <p>The following additional
+constraints apply to the 'SweptSolid' representation: </p> <ul>
+<li><u>Solid</u>: <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>
+shall be supported </li> <li><u>Profile</u>: <a href="../../ifcprofileresource/lexical/ifcrectangleprofiledef.htm">IfcRectangleProfileDef</a>,
+<a href="../../ifcprofileresource/lexical/ifccircleprofiledef.htm">IfcCircleProfileDef</a>, <i>IfcEllipseProfileDef</i>,
+and&nbsp;<a href="../../ifcprofileresource/lexical/ifcarbitraryclosedprofiledef.htm">IfcArbitraryClosedProfileDef</a> (including
+the subtype <i>IfcArbitraryProfileDefWithVoids</i>)
+shall be supported, in addition the support of basic steel profiles,
+such as <a href="../../ifcprofileresource/lexical/ifcishapeprofiledef.htm">IfcIShapeProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifclshapeprofiledef.htm">IfcLShapeProfileDef</a>,
+<a href="../../ifcprofileresource/lexical/ifcushapeprofiledef.htm">IfcUShapeProfileDef</a>, <a href="../../ifcprofileresource/lexical/ifccshapeprofiledef.htm">IfcCShapeProfileDef</a>,
+<a href="../../ifcprofileresource/lexical/ifczshapeprofiledef.htm">IfcZShapeProfileDef</a>,
+and <a href="../../ifcprofileresource/lexical/ifctshapeprofiledef.htm">IfcTShapeProfileDef</a>
+can be agreed. </li> <li><u>Extrusion</u>:&nbsp;All
+extrusion directions shall be supported</li> </ul> <blockquote>EXAMPLE
+for standard geometric representation. </blockquote> <table
+ cellpadding="2" cellspacing="2"> <tbody> <tr
+ valign="top"> <td align="left" valign="top"><a
+ href="drawings/IfcColumn_Standard-Layout1.dwf"><img
+ src="figures/ifccolumn_standard-layout1.gif"
+ alt="standard column" border="0" height="290"
+ width="399"></a></td> <td align="left"
+ valign="top"><small> </small> <blockquote><small>
+</small> <p><small>The following interpretation of
+dimension parameter applies for rectangular columns: </small></p>
+<small> </small> <ul> <small> </small><li><small><i>IfcRectangleProfileDef.YDim</i>
+interpreted as column width</small></li> <small> </small><li><small><i>IfcRectangleProfileDef.XDim</i>
+interpreted as column height.</small></li> <small> </small>
+</ul> <small> </small> <blockquote><small>
+</small> <p><small>The following interpretation of
+dimension parameter applies for round columns:</small></p> <small>
+</small></blockquote> <small> </small> <ul>
+<small> </small><li><small><i>IfcCircleProfileDef.Radius</i>
+interpreted as column radius</small></li> <small> </small>
+</ul> <small> </small></blockquote> </td>
+</tr> <tr> <td><a
+ href="drawings/IfcColumn_Advanced-Layout1.dwf"><img
+ src="figures/ifccolumn_advanced-layout1.gif"
+ alt="advanced column" border="0" height="290"
+ width="399"></a></td> <td align="left"
+ valign="top"> <blockquote><font size="-1">Use
+of a special profile type (here <a href="../../ifcprofileresource/lexical/ifcishapeprofiledef.htm">IfcIShapeProfileDef</a>)
+for the definition of the <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>.</font></blockquote>
+</td> </tr> </tbody>
+</table> <p><b>Advanced SweptSolid and Clipping
+Representation</b></p> <p>The advanced geometric
+representation of <span class="self-ref">IfcColumn</span> is defined using the
+'SweptSolid' (enhanced by additional profile types) or 'Clipping'
+geometry. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>
+holding this geometric representation shall be used:</p> <ul>
+<li><i>RepresentationIdentifier</i> : 'Body'</li>
+<li><i>RepresentationType</i> : 'SweptSolid', or
+'Clipping'</li> </ul> <p>The following constraints
+apply to the advanced representation: </p> <ul> <li><u>Solid</u>:
+see 'SwptSolid' geometric representation </li> <li><u>Profile</u>:
+see 'SwptSolid' geometric representation </li> <li><u>Extrusion</u>:
+see 'SwptSolid' geometric representation </li> <li><u>Boolean
+result</u>: The <i>IfcBooleanClippingResult</i>
+shall be supported, allowing for Boolean differences between the swept
+solid (here <a href="../../ifcgeometricmodelresource/lexical/ifcextrudedareasolid.htm">IfcExtrudedAreaSolid</a>) and one or
+several <i>IfcHalfSpaceSolid</i>. </li> </ul>
+<blockquote>EXAMPLE for advanced geometric representation.</blockquote>
+<table cellpadding="2" cellspacing="2"> <tbody>
+<tr valign="top"> <td align="left" valign="top"><a
+ href="drawings/IfcColumn_Advanced-Layout1.dwf"><br> </a></td>
+<td align="left" valign="top"><br> </td>
+</tr> </tbody>
+</table><p><b>MappedRepresentation</b></p>
+<p>In addition to the standard and advanced geometric
+representation of <span class="self-ref">IfcColumn</span> that is defined using
+the 'SweptSolid' or 'Clipping' geometry, also the
+'MappedRepresentation' shall be supported as it allows for reusing the
+geometry definition of the column type at all occurrences of the same
+type. The following attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>
+holding this geometric representation shall be used:</p> <ul>
+<li><i>RepresentationIdentifier</i> : 'Body'</li>
+<li><i>RepresentationType</i> : 'MappedRepresentation'</li>
+</ul> <p>The same constraints, as given for the&nbsp;
+'SweptSolid' and&nbsp;'Clipping' geometric representation, shall
+apply to the <i>MappedRepresentation</i> of the <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>.</p></details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifccolumn.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="66,126,278,138" href="../../../schema/ifcproductextension/lexical/ifcbuildingelement.htm" alt="IfcBuildingElement" />
+<area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,326,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,338,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></i></td></tr>
+<tr><td>8</td><td>Tag</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ConnectedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element to which this element is connected to.
+</td><td></td></tr>
+<tr><td></td><td><i>HasOpenings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatingBuildingElement</td><td>S[0:?]</td><td>Reference to the Voids Relationship that creates an opening in an element. An element can incorporate zero-to-many openings.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsConnectionRealization</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a><br/>@RealizingElements</td><td>S[0:?]</td><td>Reference to the connection relationship with realizing element. The relationship then refers to the realizing element which provides the physical manifestation of the connection relationship.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ConnectedFrom</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatedElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element that is connected to this element.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Containment relationship to the spatial structure element, to which the element is primarily associated.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifccolumn.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<p>A  piece is major element of an assembly and is mapped to different IFC entity data types (IfcMember, IfcColumn, or IfcBeam) for its represenation depending on its position. Column is for a vertical steel element, Beam is for a horizontal steel member, and Member is for a diagonally placed element. There can be multiple pieces in an assembly, and one main piece that is identifed by a property attribute.</p>
+<p><span class="std">A piece may have attributes listed below should use Defines By Property Set (IfcRelDefinesByPropertyies) in order to represent required information items listed below and  are described in the corresponding sections of this document.</span></p>
+<p><strong>Piece Identification</strong></p>
+<ul>
+  <li>GUID</li>
+  <li>Part name</li>
+  <li>Piece mark</li>
+  <li>Indication mark</li>
+  <li>Main piece tag</li>
+  <li>Prelim mark</li>
+  <li>Bar code </li>
+</ul>
+<p><strong>Material Information </strong></p>
+<ul>
+  <li>Material class</li>
+  <li>Material ID</li>
+  <li>Material certification</li>
+  <li>Material grade</li>
+  <li>Material type</li>
+</ul>
+<p><strong>Status Information</strong></p>
+<ul>
+  <li>Status flags</li>
+</ul>
+<p><strong>Version</strong></p>
+<ul>
+  <li>Version number</li>
+</ul>
+
+<p><strong>Quantity Information </strong></p>
+<ul>
+  <li>Count</li>
+</ul>
+<p><strong>Finish/ Treatment</strong></p>
+<ul>
+  <li>Surface treatment</li>
+</ul>
+<p><strong>Tolerance for Layout </strong></p>
+<ul>
+  <li>Tolerance</li>
+</ul>
+<p><strong>Castellation</strong></p>
+<ul>
+  <li>Castellation type</li>
+  <li>Castellation End Post Width 1</li>
+  <li>Castellation End Post Width 2</li>
+  <li>Castellation spacing</li>
+  <li>Castellation height</li>
+  <li>Castellation width</li>
+  <li>Castellation depth</li>
+</ul>
+<p><strong>Information Item Mapping</strong></p>
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="220"><strong>Steel Detailing Information</strong></td>
+    <td width="220"><strong>IFC Entity\Attribute</strong></td>
+    <td><strong>Note</strong></td>
+  </tr>
+  <tr>
+    <td width="220">Host Assembly</td>
+    <td width="220">IfcRelAggregates</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Critical end point</td>
+    <td width="220">IfcDiscreteAccessory \ Representation</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Angle of end cuts</td>
+    <td width="220">IfcOpeningElement \ Representation</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Location in Assembly</td>
+    <td width="220">IfcProduct \ ObjectPlacement</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Profile</td>
+    <td width="220">IfcParameterizedProfileDef</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Length</td>
+    <td width="220">IfcExtrudedAreaSolid \ Depth</td>
+    <td>&nbsp;</td>
+  </tr>
+</table><details>
+<summary>Concept usage</summary>
+<a id="properties-on-occurrences" />
+<p class="use-head">Properties on Occurrences</p>
+<p>The <a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a> concept applies to this entity as shown in Table 13.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_castellation.htm">AISC_EM11_Pset_Castellation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 13 &mdash; IfcColumn Properties on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="placement" />
+<p class="use-head">Placement</p>
+<p>The <a href="../../templates/placement.htm">Placement</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="body-geometry" />
+<p class="use-head">Body Geometry</p>
+<p>The <a href="../../templates/body-geometry.htm">Body Geometry</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<details>
+<summary>Concept alternates</summary>
+<a id="body-profile-extruded-area-solid" />
+<p class="use-head">Body Profile Extruded Area Solid</p>
+<p>The <a href="../../templates/body-profile-extruded-area-solid.htm">Body Profile Extruded Area Solid</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="mapped-geometry" />
+<p class="use-head">Mapped Geometry</p>
+<p>The <a href="../../templates/mapped-geometry.htm">Mapped Geometry</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="body-brep-geometry-polyloop" />
+<p class="use-head">Body Brep Geometry PolyLoop</p>
+<p>The <a href="../../templates/body-brep-geometry-polyloop.htm">Body Brep Geometry PolyLoop</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<a id="feature-substraction" />
+<p class="use-head">Feature Substraction</p>
+<p>The <a href="../../templates/feature-substraction.htm">Feature Substraction</a> concept applies to this entity as shown in Table 14.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+<tr><td>TubeChamfer</td><td>Represents an instance of a Tube Chamfer</td></tr>
+<tr><td>TubeSaddle</td><td>Represents an instance of a Tube Saddle</td></tr>
+<tr><td>TubeEdgeSaddle</td><td>Represents an instance of a Tube Edge Saddle</td></tr>
+<tr><td>TubeCrossingSaddle</td><td>Represents an instance of a Tube Crossing Saddle</td></tr>
+<tr><td>TubeHoleSetIn</td><td>Represents an instance of a Tube Hole Set In</td></tr>
+<tr><td>TubeHoleSetOut</td><td>Represents an instance of a Tube Hole Set Out</td></tr>
+<tr><td>TubeMitreHole</td><td>Represents an instance of a Tube Hole Mitre Hole</td></tr>
+<tr><td>TubeMitreSaddle</td><td>Represents an instance of a Tube Hole Mitre Saddle</td></tr>
+<tr><td>TubeOblongHole</td><td>Represents an instance of a Tube Oblong Hole</td></tr>
+<tr><td>TubeOffshoreSaddle</td><td>Represents an instance of a Tube Offshore Saddle</td></tr>
+<tr><td>TubeOffshoreChamfer</td><td>Represents an instance of a Tube Offshore Chamfer</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 14 &mdash; IfcColumn Feature Substraction</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="element-decomposition" />
+<p class="use-head">Element Decomposition</p>
+<p>The <a href="../../templates/element-decomposition.htm">Element Decomposition</a> concept applies to this entity as shown in Table 15.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td>Represents each plate for 3-Plate structural piece</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 15 &mdash; IfcColumn Element Decomposition</td></tr></table>
+
+W or I shaped structural steel piece (column, beam or member) can be assembled with three plates. 
+IfcRelAggregate\RelatedObject should refer to IfcBeam, IfcColumn or IfcMember, and IfcRelAggregate\RelatedObject should refer to IfcPlate
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="material-solid" />
+<p class="use-head">Material Solid</p>
+<p>The <a href="../../templates/material-solid.htm">Material Solid</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="quantities-on-occurrences" />
+<p class="use-head">Quantities on Occurrences</p>
+<p>The <a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a> concept applies to this entity as shown in Table 16.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 16 &mdash; IfcColumn Quantities on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a></td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#properties-on-occurrences">Properties on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#placement">Placement</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#body-geometry">Body Geometry</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#feature-substraction">Feature Substraction</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#element-decomposition">Element Decomposition</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#material-solid">Material Solid</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm#quantities-on-occurrences">Quantities on Occurrences</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcColumn&quot; type=&quot;ifc:<a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcColumn&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcColumn<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifccolumn.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

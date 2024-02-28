@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="e20e8daa4d9f43baac52fa9c114a0f08" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_Bolt</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="41a4a2319e3f433d89b42fb870a94e56">
+      <Name>BoltStandard</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Standard</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Name of Bolt Type Library</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="2adea3c003a943589f7eee39e3744b91">
+      <Name>BoltType</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Type</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Bolt Type designation as specified in the Standard</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f00add83e11348fd8bd1efba7b1d501f">
+      <Name>BoltGrade</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Grade</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Grade of Bolt</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="cb23f6741d3548acbecaf564324b49d2">
+      <Name>BoltDiameter</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Diameter</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="ce7be8e2208f4e86b6965e0d73b49f45">
+      <Name>BoltLength</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Length</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en" />
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="be03c7ce7b7744818c99670e76fd505b">
+      <Name>BoltFieldAssembled</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Field Assembled</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Indicates whether the bolt assembly is tightened in the field or in the shop. True for field</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">&lt;p class="std"&gt;A Bolt Assembly is  a bolt assoicated with nuts and washers, which should be mapped to  instance of Fastener (IfcMechanicalFastener). A bolt assembly can be assembled in shop or field. Shop assembled Bolt Assembly connects  parts or other objects which should be included to the assembly when it is shipped from the shop. Thus it should have a relationship between two connecting pieces. Field assembled Bolt Assembly might not have any relationship to connecting pieces. A shop assembled bolt shall be located in relation to the location of the hosting assembly. &lt;/p&gt;
+&lt;p class="std"&gt;Bolt Assembly components (Bolt, Washer and Nut) may not have explicit geometry representation. A bolt may use polyline (IfcPolyline) with two points (starting point and end point) as a geometric representation method in order to represent the direction of bolt, where location of bolt head is required for data exchange. The polyline (IfcPolyline)  should indicate the direction from bolt head (starting point, first point in the LIST) toward thread (end point, second point in the LIST). The location should use the Bolt Assembly's local placement as the reference placement. Bolt standard, Nominal Bolt diameter, and Bolt length should be populated through property set.&lt;/p&gt;
+    &lt;table width="100%" border="0" cellspacing="0" cellpadding="0"&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="../../../img/fastenerassembly.png" alt="" width="538" height="360"&gt;&lt;/td&gt;
+        &lt;td rowspan="2"&gt;&lt;p&gt;The location of nut and washer can use both geometrical representation and parameterized property set. The Head Side property indicates whether it is located on the bolt head side. The Sequential Order indicates the sequential order of Washer and Nut from the bolt head, the order counts both washer and nut altogether.&lt;/p&gt;
+          &lt;p&gt;Image Source : CIS/2&lt;/p&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;img src="../../img/fastenerassemblyrepo.png" alt="" width="577" height="446"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+&lt;/table&gt;</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

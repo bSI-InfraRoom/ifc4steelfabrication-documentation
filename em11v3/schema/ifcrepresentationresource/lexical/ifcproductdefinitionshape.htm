@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcProductDefinitionShape</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 10 index3 3 index4 2 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.10.3.3");
+//-->
+</script>
+
+<h4 class="num">IfcProductDefinitionShape</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+<p><u>Definition
+from ISO/CD 10303-42:1992</u>: A
+product definition shape identifies a product&rsquo;s shape as the
+conceptual idea of the form of a product.<br>
+</p>
+<p><u>Definition
+from IAI</u>: The <span class="self-ref">IfcProductDefinitionShape</span>
+defines all shape relevant information about an <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.
+It allows for multiple geometric shape representations of the same
+product. </p>
+<blockquote><font
+ color="#0000ff" size="-1">NOTE: The definition
+of this entity relates to the STEP entity product_definition_shape.
+Please refer to ISO/IS 10303-41:1994 for the final definition of the
+formal standard. </font></blockquote>
+<blockquote><font
+ color="#0000ff" size="-1">HISTORY: New Entity
+in IFC Release 1.5</font></blockquote></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td></td><td><i>ShapeOfProduct</i></td><td><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a><br/>@Representation</td><td>S[1:1]</td><td>
+The <span class="self-ref">IfcProductDefinitionShape</span> shall be used to provide a representation for a single instance of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.
+</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR11</td><td>
+Only representations of type <i>IfcShapeModel<i>, i.e. either <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> or <i>IfcTopologyRepresentation</i> should be used to represent a product through the <span class="self-ref">IfcProductDefinitionShape</span>.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcproductdefinitionshape.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="6,6,218,18" href="../../../schema/ifcrepresentationresource/lexical/ifcproductrepresentation.htm" alt="IfcProductRepresentation" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td></tr>
+<tr><td>1</td><td>Name</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>2</td><td>Description</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>3</td><td>Representations</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a></td><td>L[1:?]</td><td>
+Contained list of representations (including shape representations). Each member defines a valid representation of a particular type within a particular representation context.</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a></td></tr>
+<tr><td></td><td><i>ShapeOfProduct</i></td><td><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a><br/>@Representation</td><td>S[1:1]</td><td>
+The <span class="self-ref">IfcProductDefinitionShape</span> shall be used to provide a representation for a single instance of <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>.
+</td><td></td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcProductDefinitionShape&quot; type=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcProductDefinitionShape&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcProductDefinitionShape<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;ShapeOfProduct : <span class="keyword">SET</span> [1:1] OF <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a> <span class="keyword">FOR</span> Representation;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR11 : SIZEOF(QUERY(temp &lt;* Representations | 
+  (NOT('IFCREPRESENTATIONRESOURCE.IFCSHAPEMODEL' IN TYPEOF(temp)))
+)) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0003.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcproductdefinitionshape.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

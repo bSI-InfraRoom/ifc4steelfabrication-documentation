@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcChangeActionEnum</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 12 index3 2 index4 1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.12.2.2");
+//-->
+</script>
+
+<h4 class="num">IfcChangeActionEnum</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type definition</summary>
+	<p>
+    Enumeration identifying the type of change that might have occurred
+    to the object during the last session (e.g., unchanged, added,
+    deleted, etc.). This information is required in a partial model
+    exchange scenario so that an application or model server will know
+    how an object might have been affected by the previous application.
+    Valid enumerations are:</p>
+	<ul>
+		<li><b>NOCHANGE</b>:       Object has not been modified. This is the
+        					       default state.</li>
+		<li><b>MODIFIED</b>:       A modification to the object has been made
+        					       by the user and application defined by the
+                                   LastModifyingUser and LastModifyingApplication
+                                   respectively.</li>
+		<li><b>ADDED</b>:          The object has been added by the user and
+        					       application defined by the LastModifyingUser
+                                   and LastModifyingApplication respectively.</li>
+		<li><b>DELETED</b>:        The object has been deleted by the user and
+        					       application defined by the LastModifyingUser
+                                   and LastModifyingApplication respectively.</li>
+		<li><b>MODIFIEDADDED</b>:  The object has been added and modified
+        					       by the user and application defined by the
+                                   LastModifyingUser and LastModifyingApplication
+                                   respectively.</li>
+		<li><b>MODIFIEDDELETED</b>:  The object has been modified and deleted
+        					       by the user and application defined by the
+                                   LastModifyingUser and LastModifyingApplication
+                                   respectively.</li>
+	</ul>
+
+    <p>Note that only the first four enumerations should be used. The MODIFIEDADDED
+    and MODIFIEDDELETED are left for compatibility purposes but should not be used.
+    </p>
+    <p>Consider Application A receives an IFC dataset, adds a new object
+    and sets <span class="self-ref">IfcChangeActionEnum</span> to ADDED. Application B then receives
+    this IFC dataset but doesn't do anything to the object added by
+    Application A. Consequently, the object's <span class="self-ref">IfcChangeActionEnum</span>
+    remains set at ADDED. Consequently, the intent is that an
+    application only modifies the value of <span class="self-ref">IfcChangeActionEnum</span> when
+    it does something to the object, with the further intent that a
+    model server is responsible for clearing the <span class="self-ref">IfcChangeActionEnum</span>
+    back to UNCHANGED when it is checked back into the repository.</p>
+
+	<blockquote>
+		<font color="#0000FF" size="-1">
+		<p>
+    	HISTORY: New enumeration in IFC R2.0.<br>
+	    </p>
+    	</font>
+    </blockquote></details>
+<details open="open"><summary>Enumeration definition</summary><table class="attributes">
+<tr><th>Constant</th><th>Description</th></tr>
+<tr><td>NOCHANGE</td><td></td></tr><tr><td>MODIFIED</td><td></td></tr><tr><td>ADDED</td><td></td></tr><tr><td>DELETED</td><td></td></tr><tr><td>MODIFIEDADDED</td><td></td></tr><tr><td>MODIFIEDDELETED</td><td></td></tr></table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;IfcChangeActionEnum&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;nochange&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;modified&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;added&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;deleted&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;modifiedadded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;modifieddeleted&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">TYPE</span> IfcChangeActionEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
+&nbsp;NOCHANGE, <br/>&nbsp;MODIFIED, <br/>&nbsp;ADDED, <br/>&nbsp;DELETED, <br/>&nbsp;MODIFIEDADDED, <br/>&nbsp;MODIFIEDDELETED);<br/><span class="keyword">END_TYPE;</span><br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcutilityresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcchangeactionenum.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

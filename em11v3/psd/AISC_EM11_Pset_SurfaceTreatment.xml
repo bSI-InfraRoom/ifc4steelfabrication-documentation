@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="1652e0a019b347ddb086e64515074993" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_SurfaceTreatment</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="0bf36073272c4ec58f3c444f03eb2c5a">
+      <Name>SurfaceTreatement</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyListValue>
+          <ListValue>
+            <DataType type="IfcIdentifier" />
+          </ListValue>
+        </TypePropertyListValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Surface Treatment</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">An element may have multiple coverings, which should have sequential order number that shows application order. Possible values include and not limited to:
+			&lt;ul&gt;
+			  &lt;li&gt;Blast&lt;/li&gt;
+			  &lt;li&gt;Painted&lt;/li&gt;
+			  &lt;li&gt;Galvanized&lt;/li&gt;
+			  &lt;li&gt;Primed&lt;/li&gt;
+			&lt;/ul&gt;</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">&lt;p&gt;Surface Treatment represents blasted, galvanized, painted, primed and etc on Assembly or Element.  Covering may have optional geometric representation if the covering only applied partially. In this regards, Assembly cannot have partial covering as it does not have geometric representation by definition. Therefore, partial covering should be applied to its components. This rule applied to all other element without geometric representation.&lt;/p&gt;
+&lt;p&gt;An element may have multiple coverings, which should have sequential order number that shows application order.&lt;/p&gt;</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

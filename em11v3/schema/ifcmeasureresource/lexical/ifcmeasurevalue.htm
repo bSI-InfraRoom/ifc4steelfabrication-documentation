@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcMeasureValue</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 6 index3 2 index4 19 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.6.2.20");
+//-->
+</script>
+
+<h4 class="num">IfcMeasureValue</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type definition</summary>
+
+<P><U>Definition from ISO/CD 10303-41:1992</U>: A measure value is a value as defined in ISO 31-0 (clause 2). 
+
+<BLOCKQUOTE><FONT SIZE="-1">NOTE <span class="self-ref">IfcMeasureValue</span> is a select data type for most basic measure types coming 
+from ISO/CD 10303:41.
+</FONT></BLOCKQUOTE>
+
+<BLOCKQUOTE><FONT SIZE="-1">
+  NOTE Corresponding STEP name: measure_value, please refer to ISO/IS 10303-41:1994
+  for the final definition of the formal standard.
+</FONT>
+</BLOCKQUOTE>
+
+
+<P>SELECT</P>
+	<UL>
+	<LI><B>IfcAmountOfSubstanceMeasure</B> </LI> 
+	<LI><B>IfcAreaMeasure</B> </LI> 
+	<LI><B>IfcContextDependentMeasure</B> </LI>
+	<LI><B>IfcCountMeasure</B> </LI> 
+	<LI><B>IfcDescriptiveMeasure</B> </LI> 
+	<LI><B>IfcElectricCurrentMeasure</B> </LI>
+	<LI><B>IfcLengthMeasure</B> </LI> 
+	<LI><B>IfcLuminousIntensityMeasure</B> </LI> 
+	<LI><B>IfcMassMeasure</B> </LI>
+	<LI><B>IfcNormalisedRatioMeasure</B> </LI> 
+	<LI><B>IfcNumericMeasure</B> </LI> 
+	<LI><B>IfcParameterValue</B> </LI>
+	<LI><B>IfcPlaneAngleMeasure</B> </LI> 
+	<LI><B>IfcPositiveLengthMeasure</B> </LI> 
+	<LI><B>IfcPositivePlaneAngleMeasure</B> </LI>
+	<LI><B>IfcPositiveRatioMeasure</B> </LI>
+	<LI><B>IfcRatioMeasure</B> </LI>
+	<LI><B>IfcSolidAngleMeasure</B> </LI>
+	<LI><B>IfcThermodynamicTemperatureMeasure</B> </LI>
+	<LI><B>IfcTimeMeasure</B> </LI>
+	<LI><B>IfcVolumeMeasure</B> </LI>
+	<LI><B>IfcComplexNumber</B> </LI>
+	</UL>
+
+<BLOCKQUOTE><FONT SIZE="-1" COLOR="#0000FF">
+  HISTORY New type in IFC Release 1.5.1.
+</FONT>
+</BLOCKQUOTE>
+</details>
+<details open="open"><summary>Enumeration definition</summary><table class="attributes">
+<tr><th>Constant</th><th>Description</th></tr>
+<tr><td>IfcVolumeMeasure</td><td></td></tr><tr><td>IfcTimeMeasure</td><td></td></tr><tr><td>IfcThermodynamicTemperatureMeasure</td><td></td></tr><tr><td>IfcSolidAngleMeasure</td><td></td></tr><tr><td>IfcPositiveRatioMeasure</td><td></td></tr><tr><td>IfcRatioMeasure</td><td></td></tr><tr><td>IfcPositivePlaneAngleMeasure</td><td></td></tr><tr><td>IfcPlaneAngleMeasure</td><td></td></tr><tr><td>IfcParameterValue</td><td></td></tr><tr><td>IfcNumericMeasure</td><td></td></tr><tr><td>IfcMassMeasure</td><td></td></tr><tr><td>IfcPositiveLengthMeasure</td><td></td></tr><tr><td>IfcLengthMeasure</td><td></td></tr><tr><td>IfcElectricCurrentMeasure</td><td></td></tr><tr><td>IfcDescriptiveMeasure</td><td></td></tr><tr><td>IfcCountMeasure</td><td></td></tr><tr><td>IfcContextDependentMeasure</td><td></td></tr><tr><td>IfcAreaMeasure</td><td></td></tr><tr><td>IfcAmountOfSubstanceMeasure</td><td></td></tr><tr><td>IfcLuminousIntensityMeasure</td><td></td></tr><tr><td>IfcNormalisedRatioMeasure</td><td></td></tr><tr><td>IfcComplexNumber</td><td></td></tr></table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:group name=&quot;IfcMeasureValue&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:choice&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcCountMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcLengthMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcParameterValue-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcPlaneAngleMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcPositiveLengthMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcPositivePlaneAngleMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcPositiveRatioMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcRatioMeasure-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
+&nbsp;&lt;/xs:group&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">TYPE</span> IfcMeasureValue = <span class="keyword">SELECT</span> (<br/>
+&nbsp;<a href="../../ifcmeasureresource/lexical/ifcpositiveratiomeasure.htm">IfcPositiveRatioMeasure</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcratiomeasure.htm">IfcRatioMeasure</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcpositiveplaneanglemeasure.htm">IfcPositivePlaneAngleMeasure</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcplaneanglemeasure.htm">IfcPlaneAngleMeasure</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcparametervalue.htm">IfcParameterValue</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclengthmeasure.htm">IfcLengthMeasure</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcmeasureresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcmeasurevalue.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

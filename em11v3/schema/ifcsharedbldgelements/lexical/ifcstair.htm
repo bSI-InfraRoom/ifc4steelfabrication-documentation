@@ -1,0 +1,426 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcStair</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 1 index3 3 index4 5 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.1.3.6");
+//-->
+</script>
+
+<h4 class="num">IfcStair</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+	 <P><U>Definition from ISO 6707-1:1989</U>: Construction comprising a
+		succession of horizontal stages (steps or landings) that make it possible to
+		pass on foot to other levels.</P>
+	 <P> A vertical passageway allowing occupants to
+		walk (step) from one floor level to another floor level at a different
+		elevation. It may include a landing as an intermediate floor slab. </P> 
+	 <P>The stair is a container entity that aggregates all components of the
+		stair, it represents. The aggregation is handled via the
+		<a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a> relationship, relating an <span class="self-ref">IfcStair</span> with the
+		related flights (<a href="../../ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a>) and landings (<I>IfcSlab</I> with type
+		'Landing').</P> 
+	 <BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1">HISTORY: New Entity in IFC
+		Release 2.0.</FONT></BLOCKQUOTE> 
+	 <P><U><B>Property Set Use Definition</B></U>:</P> 
+	 <P>The property sets relating to the <span class="self-ref">IfcStair</span> are defined by the
+		<a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> and attached by the <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a>
+		relationship. It is accessible by the inverse <I>IsDefinedBy</I> relationship.
+		The following property set definitions specific to the <span class="self-ref">IfcStair</span> are part
+		of this IFC release:</P> 
+	 <UL> 
+		<LI><A
+		  HREF="../../ifcsharedbldgelements/pset/pset_staircommon.htm"
+		  TARGET="SOURCE">Pset_StairCommon</A>: common property set for all stair
+		  occurrences</LI> 
+	 </UL>
+	 <P><U><B>Geometry Use Definitions</B></U>:</P> 
+	 <P>The geometric representation of <span class="self-ref">IfcStair</span> is given by the
+		<a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, allowing multiple geometric representations.
+		Independent geometric representations should only be used when the IfcStair is
+		not defined as an aggregate. If defined as an aggregate, the geometric
+		representation is the sum of the representation of the components within the
+		aggregate. </P> 
+	 <P><B>Local placement</B></P> 
+	 <P>The local placement for <span class="self-ref">IfcStair</span> is defined in its supertype
+		<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines
+		the local coordinate system that is referenced by all geometric
+		representations. </P> 
+	 <UL> 
+		<LI>The <I>PlacementRelTo</I> relationship of <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>
+		  shall point (if given) to the local placement of the same
+		  <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> that is used in the
+		  <I>ContainedInStructure</I> inverse attribute or to a referenced spatial
+		  structure element at a higher level. </LI> 
+		<LI>If the relative placement is not used, the absolute placement is
+		  defined within the world coordinate system. </LI> 
+	 </UL> 
+	 <P>If the <I>LocalPlacement</I> is given for the <span class="self-ref">IfcStair</span>, then all
+		components, which are aggregated to the stair should use this placement as
+		their relative placement.</P> 
+	 <P><B><I>Geometric Representation</I></B></P> 
+	 <P>If the <span class="self-ref">IfcStair</span> has components (referenced by
+		<I>SELF\IfcObject.IsDecomposedBy</I>) then no independent geometric
+		representation shall defined for the <span class="self-ref">IfcStair</span>. The <span class="self-ref">IfcStair</span> is
+		then geometrically represented by the geometric representation of its
+		components. The components are accessed via
+		<I>SELF\IfcObject.IsDecomposedBy[1].RelatedObjects</I>.</P> 
+	 <P>If the <span class="self-ref">IfcStair</span> has no components defined (empty set of
+		<I>SELF\IfcObject.IsDecomposedBy</I>) then the <span class="self-ref">IfcStair</span> may be
+		represented by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> with the RepresentationType =
+		'Brep'.</P> 
+	 <P><U>Illustration</U>:</P> 
+	 <TABLE CELLPADDING="2" CELLSPACING="2"> 
+		<TR> 
+		  <TD><A HREF="drawings/IfcStair-Layout1.dwf"><IMG
+			 SRC="figures/ifcstair-layout1.gif" ALT="stair" WIDTH="393" HEIGHT="299"
+			 BORDER="0"></A></TD> 
+		  <TD VALIGN="TOP" ALIGN="LEFT"><span class="self-ref">IfcStair</span> defining only the local
+			 placement for all components.</TD> 
+		</TR> 
+	 </TABLE></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>9</td><td>ShapeType</td><td><a href="../../ifcsharedbldgelements/lexical/ifcstairtypeenum.htm">IfcStairTypeEnum</a></td><td>[1:1]</td><td>
+Predefined shape types for a stair that are specified in an Enum.</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR1</td><td>Either the stair is not decomposed into its flights and landings (the stair can have independent geometry), or the geometry shall not be given at IfcStair directly.
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcstair.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="66,126,278,138" href="../../../schema/ifcproductextension/lexical/ifcbuildingelement.htm" alt="IfcBuildingElement" />
+<area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,326,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,338,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></i></td></tr>
+<tr><td>8</td><td>Tag</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ConnectedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element to which this element is connected to.
+</td><td></td></tr>
+<tr><td></td><td><i>HasOpenings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatingBuildingElement</td><td>S[0:?]</td><td>Reference to the Voids Relationship that creates an opening in an element. An element can incorporate zero-to-many openings.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsConnectionRealization</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a><br/>@RealizingElements</td><td>S[0:?]</td><td>Reference to the connection relationship with realizing element. The relationship then refers to the realizing element which provides the physical manifestation of the connection relationship.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ConnectedFrom</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatedElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element that is connected to this element.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Containment relationship to the spatial structure element, to which the element is primarily associated.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a></td></tr>
+<tr><td>9</td><td>ShapeType</td><td><a href="../../ifcsharedbldgelements/lexical/ifcstairtypeenum.htm">IfcStairTypeEnum</a></td><td>[1:1]</td><td>
+Predefined shape types for a stair that are specified in an Enum.</td><td>X</td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifcstair.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<p>Stair shall be represented in an aggregation structure similar to the Assembly,  where the stair is decomposed into stair flight and landing, and railing. Stair flight can be futher decomposed into stair steps (Building Components). However, when stair is an External Element that is not fabricated in the shop, it may not use the aggregation structure.</p>
+<p><span class="std">A stair and its components may have attributes listed below should use Defines By Property Set (IfcRelDefinesByPropertyies) in order to represent required information items listed below and  are described in the corresponding sections of this document.</span></p>
+<p><strong>Piece Identification</strong></p>
+<ul>
+  <li>GUID</li>
+  <li>Part name</li>
+  <li>Piece mark</li>
+  <li>Indication mark</li>
+</ul>
+<p><strong>Material Information </strong></p>
+<ul>
+  <li>Material class</li>
+  <li>Material ID</li>
+  <li>Material certification</li>
+  <li>Material grade</li>
+  <li>Material type</li>
+</ul>
+<p><strong>Status Information</strong></p>
+<ul>
+  <li>Status flags</li>
+</ul>
+<p> <strong>Scheduling information</strong></p>
+<ul>
+  <li>Sequence ID</li>
+  <li>Sequence level</li>
+  <li>On site by date</li>
+</ul>
+<p><strong>Drawing Information</strong></p>
+<ul>
+  <li>Drawing numbers</li>
+</ul>
+<p><strong>Quantity Information </strong></p>
+<ul>
+  <li>Count</li>
+</ul>
+<p><strong>Tolerance for Layout </strong></p>
+<ul>
+  <li>Tolerance</li>
+</ul>
+<p><strong>Information Item Mapping</strong></p>
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="220"><strong>Steel Detailing Information</strong></td>
+    <td width="220"><strong>IFC Entity \ Attribute</strong></td>
+    <td><strong>Note</strong></td>
+  </tr>
+  <tr>
+    <td width="220">Location in space</td>
+    <td width="220">IfcProduct \ ObjectPlacement</td>
+    <td>Location of Stair is relative to the location of IfcRelContainedInSpatialStructure \ RelatingStructure</td>
+  </tr>
+  <tr>
+  <tr>
+    <td width="220">Components</td>
+    <td width="220">IfcRelAggregates</td>
+    <td>Pieces belong to Assembly</td>
+  </tr>
+</table><details>
+<summary>Concept usage</summary>
+<a id="properties-on-occurrences" />
+<p class="use-head">Properties on Occurrences</p>
+<p>The <a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a> concept applies to this entity as shown in Table 24.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_surfacetreatment.htm">AISC_EM11_Pset_SurfaceTreatment</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 24 &mdash; IfcStair Properties on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="placement" />
+<p class="use-head">Placement</p>
+<p>The <a href="../../templates/placement.htm">Placement</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="body-brep-geometry-polyloop" />
+<p class="use-head">Body Brep Geometry PolyLoop</p>
+<p>The <a href="../../templates/body-brep-geometry-polyloop.htm">Body Brep Geometry PolyLoop</a> concept applies to this entity as shown in Table 25.<table>
+<tr><td>
+</td></tr>
+<tr><td><p class="table">Table 25 &mdash; IfcStair Body Brep Geometry PolyLoop</td></tr></table>
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="feature-substraction" />
+<p class="use-head">Feature Substraction</p>
+<p>The <a href="../../templates/feature-substraction.htm">Feature Substraction</a> concept applies to this entity as shown in Table 26.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 26 &mdash; IfcStair Feature Substraction</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="element-decomposition" />
+<p class="use-head">Element Decomposition</p>
+<p>The <a href="../../templates/element-decomposition.htm">Element Decomposition</a> concept applies to this entity as shown in Table 27.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>RelatedObjects</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a></td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcrailing.htm">IfcRailing</a></td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 27 &mdash; IfcStair Element Decomposition</td></tr></table>
+
+W or I shaped structural steel piece (column, beam or member) can be assembled with three plates. 
+IfcRelAggregate\RelatedObject should refer to IfcBeam, IfcColumn or IfcMember, and IfcRelAggregate\RelatedObject should refer to IfcPlate
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a></td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm#properties-on-occurrences">Properties on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm#placement">Placement</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm#body-brep-geometry-polyloop">Body Brep Geometry PolyLoop</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm#feature-substraction">Feature Substraction</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm#element-decomposition">Element Decomposition</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcStair&quot; type=&quot;ifc:<a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcStair&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;ShapeType&quot; type=&quot;ifc:<a href="../../ifcsharedbldgelements/lexical/ifcstairtypeenum.htm">IfcStairTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcStair<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>)<b>;</b><br/>
+&nbsp;&nbsp;ShapeType : <a href="../../ifcsharedbldgelements/lexical/ifcstairtypeenum.htm">IfcStairTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR1 :  (HIINDEX(SELF\IfcObjectDefinition.IsDecomposedBy) = 0) OR 
+((HIINDEX(SELF\IfcObjectDefinition.IsDecomposedBy) = 1) AND (NOT(EXISTS(SELF\IfcProduct.Representation))));<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcsharedbldgelements/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcstair.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcDimensionCount</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 4 index3 2 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.4.2.1");
+//-->
+</script>
+
+<h4 class="num">IfcDimensionCount</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type definition</summary> 
+	 <P><U>Definition from ISO/CD 10303-42</U>:1992: A dimension count is a
+		positive integer used to define the coordinate space dimensionality. </P> 
+	 <P> The <span class="self-ref">IfcDimensionCount</span> is restricted
+		to have the dimensionality of either 1, 2, or 3 - the WR1 had been added as an
+		addition to the STEP P42 entity dimension_count. In contrary to the STEP P42
+		constraint, that all geometric representation items within a geometric
+		representation context are forced to have the same dimension count, the IFC
+		geometry allows mixed dimensions, particularly when defining the boundary of
+		planar surfaces. </P> 
+	 <BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1">NOTE Corresponding STEP type:
+		dimension_count, please refer to ISO/IS 10303-42:1994, p. 14 for the final
+		definition of the formal standard.</FONT> </BLOCKQUOTE> 
+	 <BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1">HISTORY New Type in IFC Release
+		1.5</FONT></BLOCKQUOTE> </details>
+</section>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR1</td><td>The dimension count should be an integer between 1 and 3 NOTE: This is a further constraint by IFC, the upper limit does not exist in STEP.</td></tr>
+</table>
+
+</details>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;IfcDimensionCount&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:long&quot;/&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+&nbsp;&lt;xs:element name=&quot;IfcDimensionCount-wrapper&quot; nillable=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:simpleContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcdimensioncount.htm">IfcDimensionCount</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attributeGroup ref=&quot;ifc:instanceAttributes&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:simpleContent&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&lt;/xs:element&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">TYPE</span> IfcDimensionCount = <span class="self-ref">INTEGER</span>;<br/>&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR1 : { 0 &lt; SELF &lt;= 3 }<br/><span class="keyword">END_TYPE;</span><br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcdimensioncount.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

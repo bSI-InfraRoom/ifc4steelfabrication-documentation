@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="4e23198b220d408388b7ba27cbc17e55" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_SchedulingInformation</Name>
+  <Definition>&lt;p&gt;Schedule information specifies properties related scheduling as as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Phase/ Sequence&lt;/li&gt;
+  &lt;li&gt;Sequence level&lt;/li&gt;
+  &lt;li&gt;A property that allows for a sequence to have an “On site by” date. &lt;/li&gt;
+  &lt;li&gt;It may need to be considered as optional.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Information Item Mapping&lt;/strong&gt;&lt;/p&gt;
+&lt;table width="100%" border="1" cellspacing="0" cellpadding="5"&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;&lt;strong&gt;Steel Detailing Information&lt;/strong&gt;&lt;/td&gt;
+    &lt;td width="220"&gt;&lt;strong&gt;IFC Entity \ Attribute&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;Phase / Sequence&lt;/td&gt;
+    &lt;td width="220"&gt;IfcProperty \ NominalValue&lt;/td&gt;
+    &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;Sequence level&lt;/td&gt;
+    &lt;td width="220"&gt;IfcProperty \ NominalValue&lt;/td&gt;
+    &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;On site by (date)&lt;/td&gt;
+    &lt;td width="220"&gt;IfcProperty \ NominalValue&lt;/td&gt;
+    &lt;td&gt;A property that allows for a sequence to have an “On site by” date.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</Definition>
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="2e856cb7a3d448d09b956373d04b13a7">
+      <Name>PhaseSequenceID</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Phase or Sequence ID</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Identifier for Phase or Sequence</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="d555713db9fc471eacede3b049867b84">
+      <Name>SequenceLevel</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Sequence level</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Sequence level</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="70c0369070264d10b534f16f048865a6">
+      <Name>OnSiteBy</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">On Site By</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">A property that allows for a sequence to have an “On site by” date.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">This occurence driven property set represents simplified way of assigning scheduling information instead of using dedicated IFC entities</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

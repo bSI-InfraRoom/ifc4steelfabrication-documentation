@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcFace</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 11 index3 3 index4 2 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.11.3.3");
+//-->
+</script>
+
+<h4 class="num">IfcFace</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+	 <P><U>Definition from ISO/CD 10303-42:1992</U>: A face is a topological
+		entity of dimensionality 2 corresponding to the intuitive notion of a piece of
+		surface bounded by loops. Its domain, if present, is an oriented, connected,
+		finite 2-manifold in <I>R<SUP>m</SUP></I>. A face domain shall not have handles
+		but it may have holes, each hole bounded by a loop. The domain of the
+		underlying geometry of the face, if present, does not contain its bounds, and 0
+		&lt; &Xi; &lt; &infin;.</P> 
+	 <P>A face is represented by its bounding loops, which are defined as face
+		bounds. A face has a topological normal n and the tangent to a loop is t. For a
+		loop bounding a face with defined geometry, the cross product n x t points
+		toward the interior of the face. That is, each loop runs counter-clockwise
+		around the face when viewed from above, if we consider the normal n to point
+		up. With each loop is associated a BOOLEAN flag to signify whether the loop
+		direction is oriented with respect to the face normal (TRUE) or should be
+		reversed (FALSE). </P> 
+	 <P>A face shall have at least one bound, and the loops shall not intersect.
+		One loop is optionally distinguished as the outer loop of the face. If so, it
+		establishes a preferred way of embedding the face domain in the plane, in which
+		the other bounding loops of the face are inside the outer bound. Because the
+		face domain is arcwise connected, no inner loop will contain any other loop.
+		This is true regardless of which embedding in the plane is chosen. </P> 
+	 <P>The edges and vertices referenced by the loops of a face form a graph,
+		of which the individual loops are the connected components. The Euler equation
+		(1) for this graph becomes:</P> 
+	 <BLOCKQUOTE> 
+		<BLOCKQUOTE> 
+		  <P><IMG SRC="figures/ifcface-math1.gif" WIDTH="176"
+			 HEIGHT="48"></P></BLOCKQUOTE></BLOCKQUOTE> 
+	 <P>where <I>G<SUP>l</SUP><SUB>i</SUB></I> is the graph genus of the<I>
+		i</I> <SUP>th</SUP> loop.</P> 
+	 <BLOCKQUOTE> 
+		<P><FONT COLOR="#0000FF" SIZE="-1"><FONT COLOR="#0000FF" SIZE="-1">NOTE
+		  Corresponding STEP entity: face. No subtypes of face have been incorporated
+		  into this IFC Release. Please refer to ISO/IS 10303-42:1994, p. 140 for the
+		  final definition of the formal standard. The WR1 has not been incorporated,
+		  since it is always satisfied, due to the fact that only poly loops exist for
+		  face bounds. </FONT></FONT></P> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">HISTORY New class in IFC Release 1.0
+		  </FONT></P></BLOCKQUOTE> 
+	 <P><U>Informal propositions</U>:</P> 
+	 <OL> 
+		<LI>No edge shall be referenced by the face more than twice. </LI> 
+		<LI>Distinct face bounds of the face shall have no common vertices. </LI>
+		
+		<LI>If geometry is present, distinct loops of the same face shall not
+		  intersect. </LI> 
+		<LI>The face shall satisfy the Euler Equation: (number of vertices) -
+		  (number of edges) - (number of loops) + (sum of genus for loops) = 0.</LI> 
+	 </OL> </details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>1</td><td>Bounds</td><td><a href="../../ifctopologyresource/lexical/ifcfacebound.htm">IfcFaceBound</a></td><td>S[1:?]</td><td>
+Boundaries of the face.
+</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR1</td><td>At most one of the bounds shall be of the type IfcFaceOuterBound
+</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcface.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="42,78,230,90" href="../../../schema/ifctopologyresource/lexical/ifcfacesurface.htm" alt="IfcFaceSurface" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm" alt="IfcTopologicalRepresentationItem" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifctopologyresource/lexical/ifcface.htm">IfcFace</a></td></tr>
+<tr><td>1</td><td>Bounds</td><td><a href="../../ifctopologyresource/lexical/ifcfacebound.htm">IfcFaceBound</a></td><td>S[1:?]</td><td>
+Boundaries of the face.
+</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcFace&quot; type=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifcface.htm">IfcFace</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcFace&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Bounds&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifcfacebound.htm">IfcFaceBound</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifcfacebound.htm">IfcFaceBound</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcFace<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="../../ifctopologyresource/lexical/ifcfacesurface.htm">IfcFaceSurface</a>)<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a>)<b>;</b><br/>
+&nbsp;&nbsp;Bounds : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifctopologyresource/lexical/ifcfacebound.htm">IfcFaceBound</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR1 : SIZEOF(QUERY(temp &lt;* Bounds | 'IFCGEOMETRYRESOURCE.IFCFACEOUTERBOUND' IN TYPEOF(temp))) &lt;= 1;<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifctopologyresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcface.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

@@ -1,0 +1,295 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcProject</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 1 index3 3 index4 3 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.1.3.4");
+//-->
+</script>
+
+<h4 class="num">IfcProject</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+<p> The undertaking of
+some design, engineering, construction, or maintenance activities
+leading towards a product. The project establishes the context for
+information to be exchanged or shared, and it may represent a
+construction project but does not have to. </p>
+<p>The representation context, in the case of a geometric
+representation context, which is referenced from the <span class="self-ref">IfcProject</span>,
+includes:</p>
+<ul>
+  <li>the default units used</li>
+  <li>the world coordinate system</li>
+  <li>the coordinate space dimension</li>
+  <li>the precision used within the geometric representations, and</li>
+  <li>optionally the indication of the true north relative to the
+world coordinate system</li>
+</ul>
+<blockquote><small><font color="#0000ff">HISTORY&nbsp;
+New Entity in IFC Release 1.0</font></small></blockquote>
+<p><u><b>Property Set Use Definition</b></u>:</p>
+<p>The property sets relating to the <span class="self-ref">IfcProject</span>
+are defined by the <a href="../../ifckernel/lexical/ifcpropertyset.htm">IfcPropertySet</a> and attached by
+the <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> relationship. It is
+accessible by the inverse <i>IsDefinedBy</i> relationship.
+The following property set definitions specific to the <span class="self-ref">IfcProject</span>
+are part of this IFC release:</p>
+<ul>
+  <li><a href="../../ifckernel/pset/pset_projectcommon.htm"
+ target="info">Pset_ProjectCommon</a>: common
+property set for the single project occurrence.</li>
+</ul>
+<p><u><b>Spatial Structure Use Definition</b></u></p>
+<p>The <span class="self-ref">IfcProject</span>
+is used to reference the root of&nbsp;the spatial structure of a
+building (that serves as
+the primary project breakdown and is required to be hierarchical). The
+spatial structure elements are linked together, and to the <span class="self-ref">IfcProject</span>,
+by using the objectified
+relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>.
+The <span class="self-ref">IfcProject</span> references them
+by its inverse relationship:</p>
+<ul>
+  <li><i>IfcProject.Decomposes</i>
+-- referencing (<a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a> || <a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a>)
+by <i>IfcRelAggregates.RelatingObject</i>. The IfcSite or
+IfcBuilding referenced shall be the root of the spatial structure.</li>
+  <li><i>IfcProject.IsDecomposedBy</i>
+-- it shall be NIL, i.e. the <span class="self-ref">IfcProject</span> shall not
+be decomposed into any parts.</li>
+</ul>
+<u>Informal propositions</u>:
+<ol>
+  <li>There shall only be one project within the exchange
+context. This is enforced by the global rule <a href="../../ifckernel/lexical/ifcsingleprojectinstance.htm">IfcSingleProjectInstance</a>.</li>
+</ol></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>7</td><td>Phase</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>8</td><td>RepresentationContexts</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td>S[1:?]</td><td>
+Context of the representations used within the project. When the project includes shape representations for its components, one or several geometric representation contexts need to be included that define e.g. the world coordinate system, the coordinate space dimensions, and/or the precision factor.</td><td>X</td></tr>
+<tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a></td><td>[1:1]</td><td>
+Units globally assigned to measure types used within the context of this project.</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR31</td><td>
+The <i>Name</i> attribute has to be provided for the project. It is the short name for the project.</td></tr>
+<tr><td>WR32</td><td>
+There shall be no instance of <a href="../../ifcrepresentationresource/lexical/ifcgeometricrepresentationsubcontext.htm">IfcGeometricRepresentationSubContext</a> directly included in the set of <i>RepresentationContexts</i>.</td></tr>
+<tr><td>WR33</td><td>
+The <span class="self-ref">IfcProject</span> represents the root of the any decomposition tree. It shall therefore not be used to decompose any other object definition.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcproject.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></td></tr>
+<tr><td>6</td><td>LongName</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>7</td><td>Phase</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>8</td><td>RepresentationContexts</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td>S[1:?]</td><td>
+Context of the representations used within the project. When the project includes shape representations for its components, one or several geometric representation contexts need to be included that define e.g. the world coordinate system, the coordinate space dimensions, and/or the precision factor.</td><td>X</td></tr>
+<tr><td>9</td><td>UnitsInContext</td><td><a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a></td><td>[1:1]</td><td>
+Units globally assigned to measure types used within the context of this project.</td><td>X</td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifcproject.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<details>
+<summary>Concept usage</summary>
+<a id="project-representation-context" />
+<p class="use-head">Project Representation Context</p>
+<p>The <a href="../../templates/project-representation-context.htm">Project Representation Context</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="si-units" />
+<p class="use-head">SI Units</p>
+<p>The <a href="../../templates/si-units.htm">SI Units</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="conversion-units" />
+<p class="use-head">Conversion Units</p>
+<p>The <a href="../../templates/conversion-units.htm">Conversion Units</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="derived-units" />
+<p class="use-head">Derived Units</p>
+<p>The <a href="../../templates/derived-units.htm">Derived Units</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#project-representation-context">Project Representation Context</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#si-units">SI Units</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#conversion-units">Conversion Units</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifckernel/lexical/ifcproject.htm#derived-units">Derived Units</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcProject&quot; type=&quot;ifc:<a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcProject&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;RepresentationContexts&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;UnitsInContext&quot; type=&quot;ifc:<a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcProject<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>)<b>;</b><br/>
+&nbsp;&nbsp;LongName : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Phase : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;RepresentationContexts : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a>;<br/>
+&nbsp;&nbsp;UnitsInContext : <a href="../../ifcmeasureresource/lexical/ifcunitassignment.htm">IfcUnitAssignment</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR31 : EXISTS(SELF\IfcRoot.Name);<br/>&nbsp;&nbsp;WR32 : SIZEOF(QUERY(Temp &lt;* RepresentationContexts |
+ 'IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONSUBCONTEXT' IN TYPEOF(Temp)
+)) = 0 ;<br/>&nbsp;&nbsp;WR33 : SIZEOF(SELF\IfcObjectDefinition.Decomposes) = 0;<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifckernel/diagram_0008.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcproject.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

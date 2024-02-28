@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>AISC_EM11_Pset_PieceIdentification</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 4 index4 2 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.4.3");
+//-->
+</script>
+
+<h4 class="std">5.2.4.3 AISC_EM11_Pset_PieceIdentification</h4>
+<table>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b> Piece Identification:</b> A piece can have identification information</td></tr>
+</table>
+<p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/2kcr_BKGD3dR$E3PqAU$U8/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/AISC_EM11_Pset_PieceIdentification.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>PieceMark</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Piece Mark</b></td><td>A short text reference for the piece. A means of identifying the piece within the fabrication shop</td></tr>
+</table>
+
+</td></tr>
+<tr><td>IndicationMark</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Indication Mark</b></td><td>Mark for indication on part (may differ from Piece or assembly mark)</td></tr>
+</table>
+
+</td></tr>
+<tr><td>MainPieceTag</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Main Piece Tag</b></td><td>Indicates if it is main piece or not</td></tr>
+</table>
+
+</td></tr>
+<tr><td>PrelimMark</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Prelim Mark</b></td><td>A short text reference that may be used to identify the located_part (piece) at the bidding or tender stages of its production life.</td></tr>
+</table>
+
+</td></tr>
+<tr><td>BarCode</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Barcode</b></td><td>A numerical interpretaion of the bar code associated with the located_part (piece). The bar code is sometime used to identify the piece in the fabrication shop, during transportation, and during erection using a bar code scanner.</td></tr>
+</table>
+
+</td></tr>
+<tr><td>CustomType</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Custom Type</b></td><td>Indicate if the piece has custom profile that can be either user defined custom profile such as I type, or custom multi plates piece. This property is only needed if it is a custom piece and the value should be 'true'.
+When representing a custom multi plates piece, either individual piece can be modeled as a geometrical object or as a plate object. Representing as a collection of geometrical objects should only be used if receiving application does not need to process individual pieces, such as use of bought out item. Representing as a collection of plate object should be should in all other cases when fabrication information of each component of the  custom piece is required.</td></tr>
+</table>
+
+</td></tr>
+</table>
+<p><a href="../../../link/aisc_em11_pset_pieceidentification.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

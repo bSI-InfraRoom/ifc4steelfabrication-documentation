@@ -1,0 +1,273 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>AISC_EM11_Pset_Weld</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 2 index3 3 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.2.3.1");
+//-->
+</script>
+
+<h4 class="std">6.2.3.1 AISC_EM11_Pset_Weld</h4>
+<table>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b> Weld:</b> <p class="std">Weld property set is assigned to an instance of Weld. Weld shall use Fastener (IfcFastener) for representing location and use Connects With Realizing Elements (IfcRelConnectWsithRealizingElements) for relation between connecting piece. Weld for rolled plate pipe cannot use Connects With Realizing Elements as it violates IFC schema definition. Therefore, it should use Connects Elements (IfcRelConnectsElements) and set IfcFastener as Related Element. Geometric Representation of welding should be curve that shows welding path.</p>
+<p class="std">Weld Size of weld. Physical extents and dimensions of weld. Weld is modeled and shown as a theoretical physical object using throat/size etc so that a weight and estimate can be produced from the model.</p>
+<img src="../../../img/convexfilletweld.png">
+<p>image source : CIS/2</p></td></tr>
+</table>
+<p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/0$NAPs$HD12OA6XP0fKeSF/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/AISC_EM11_Pset_Weld.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>Type1</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Type1</b></td><td><p>Type of weld according to ISO. It could be any of the following values:</p>
+<ul><li>Square Groove Weld</li><li>Single V Groove Weld</li><li>Single Bevel Groove Weld</li><li>Single V Groove Weld with Broad Root Face</li><li>Single Bevel Groove Weld with Broad Root Face</li><li>Single U Groove Weld</li><li>Single J Groove Weld</li><li>Double V Groove Weld</li><li>Double Bevel Groove Weld</li><li>Double U Groove Weld</li><li>Double J Groove Weld</li><li>Backing Weld, Fillet Weld</li><li>Plug/Slot Weld, Spot Weld</li><li>Seam Weld</li><li>Edge Weld</li><li>Surfacing</li><li>Peripheral Weld</li><li>Spot weld</li><li>Seam Weld</li><li>Plug Weld</li><li>Slot Weld</li></ul></td></tr>
+</table>
+
+</td></tr>
+<tr><td>Intermittent</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Intermittent</b></td><td>If intermittent or not</td></tr>
+</table>
+
+</td></tr>
+<tr><td>Staggered</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Staggered</b></td><td>If staggered or not</td></tr>
+</table>
+
+</td></tr>
+<tr><td>Process</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Process</b></td><td>Reference number of the welding process according to ISO 4063</td></tr>
+</table>
+
+</td></tr>
+<tr><td>ProcessName</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Process Name</b></td><td>Name of the welding process according to ISO</td></tr>
+</table>
+
+</td></tr>
+<tr><td>a</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>a</b></td><td>Throat thickness- Measure a according to ISO 2553</td></tr>
+</table>
+
+</td></tr>
+<tr><td>c</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>c</b></td><td>	
+
+Width of weld- Measure c according to ISO 2553
+</td></tr>
+</table>
+
+</td></tr>
+<tr><td>d</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>d</b></td><td>Spot diameter/ diameter of the hole - Measure d according to ISO 2553 </td></tr>
+</table>
+
+</td></tr>
+<tr><td>e</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>e</b></td><td>Spacing- Measure e according to ISO 2553</td></tr>
+</table>
+
+</td></tr>
+<tr><td>l</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>l</b></td><td>Length of weld- Measure l according to ISO 2553</td></tr>
+</table>
+
+</td></tr>
+<tr><td>n</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifccountmeasure.htm">IfcCountMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>n</b></td><td>Number of weld elements- Count n according to ISO 2553</td></tr>
+</table>
+
+</td></tr>
+<tr><td>s</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>s</b></td><td>Weld thickness, minimum distance from the external surface of the weld to the bottom of the penetration- Measure s according to ISO 2553</td></tr>
+</table>
+
+</td></tr>
+<tr><td>z</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcpositivelengthmeasure.htm">IfcPositiveLengthMeasure</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>z</b></td><td>Leg length- Measure z according to ISO 2553</td></tr>
+</table>
+
+</td></tr>
+<tr><td>WPSCode</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+
+</td></tr>
+<tr><td>WeldGrade</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Weld Grades</b></td><td>List of weld grades
+</td></tr>
+</table>
+
+</td></tr>
+<tr><td>WeldID</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Weld ID</b></td><td>Name or number to identify the weld in the model</td></tr>
+</table>
+
+</td></tr>
+<tr><td>WeldDescription</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Weld Description</b></td><td>Textual description for weld</td></tr>
+</table>
+
+</td></tr>
+<tr><td>WeldCategory</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Weld Category</b></td><td>WeldCategory represents Test methods for NDT (Non Destructive Test). The value is one of listed value below but not limited to the listed value
+<ul>
+<li>Acoustic Emission Testing</li>
+<li>Blue Etch Anodize</li>
+<li>Dye Penetrant Inspection Liquid Penetrant</li> 
+<li>Testing</li>
+<li>Electromagnetic Testing</li>
+<li>Ellipsometry</li>
+<li>Endoscope Inspection</li>
+<li>Guided Wave Testing</li>
+<li>Hardness Testing</li>
+<li>Impulse Excitation Technique</li>
+<li>Infrared And Thermal Testing</li>
+<li>Laser Testing</li>
+<li>Electronic Speckle Pattern Interferometry</li>
+<li>Holographic Interferometry</li>
+<li>Low Coherence Interferometry</li>
+<li>Profilometry</li>
+<li>Shearography</li>
+<li>Leak Testing</li>
+<li>Magnetic Resonance Imaging</li>
+<li>Metallographic Replicas</li>
+<li>Near-Infrared Spectroscopy</li>
+<li>Optical Microscopy</li>
+<li>Positive Material Identification</li>
+<li>Radiographic Testing</li>
+<li>Scanning Electron Microscopy</li>
+<li>Surface Temper Etch</li>
+<li>Ultrasonic Testing</li>
+<li>Vibration Analysis</li>
+<li>Visual Inspection</li>
+<li>Corroscan/C-Scan</li>
+<li>Internal Rotary Inspection System</li>
+<li>3D Computed Tomography</li>
+<li>Heat Exchanger Life Assessment System</li>
+<li>Rtj Flange Special Ultrasonic Testing</li>
+</ul></td></tr>
+</table>
+
+</td></tr>
+<tr><td>FieldWeld</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Field Weld</b></td><td>If it is field weld or not</td></tr>
+</table>
+
+</td></tr>
+</table>
+<p><a href="../../../link/aisc_em11_pset_weld.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

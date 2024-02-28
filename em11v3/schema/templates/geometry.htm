@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../details-shim.css">
+    <script type="text/javascript" src="../../details-shim.js"></script>
+    <title>Geometry</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 0 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../toc-4.htm#4.4.3");
+//-->
+</script>
+
+<h3 class="std">4.4.3 Geometry</h3>
+
+<p>
+
+The shape of products may be represented in multiple ways
+ for different purposes. Each representation has a
+ well-known string identifier and a particular
+ representation context. There may be multiple
+ representation contexts to describe a shape at various levels of detail. Most building elements have a 'Body'
+ representation which defines or approximates the physical shape and volume. In addition to physical building elements, non-physical elements may have representations
+ such as spaces and openings.
+
+</p>
+
+
+
+<p>Final Steel Detailing  for Fabrication as specified in Exchange Model #11 (EM11) uses &quot;feature-based modeling&quot; described in Feature Element (IfcFeatureElement) for geometric representation.</p>
+<p>Base geometric representation method is the Extruded Area Solid (IfcExtrudedAreaSolid) defined by sweeping a bounded planar surface and assoicated Feature Elements  manipulating the host element shape. Any prismatic steel pieces with standard profile should use Parameterized Profile Definition (IfcParameterizedProfileDef) for the Sweep Area of Extruded Area Solid.</p>
+<p>Features are generalization of all existence dependent elements that modify the shape and appearance of the associated host element. It also handle semantic relationship to the master element in the context of &quot;feature-based modeling&quot;. Therefore, features shall have no independent relatioship to other elements other than the master element.</p>
+<p>Features shall have their own geometry representation and shall use the extruded area solid as  the primary representation method. The features of interest in EM11 is features substration, which offers the ability to handle shape modifiers as semantic objects within the IFC object model that subtract from the shape of the master element.</p>
+<p>Boundary Representation may be used for very special cases where &quot;feature-based modeling&quot; with extruded solid cannot address the required geometric representation properly.</p><p class="fig-ref">Figure 11 illustrates an instance diagram.</p>
+<table><tr><td><img alt="Geometry" src="./diagrams/geometry.png" usemap="#f11"><map name="f11"><area shape="rect" coords="8,8,176,176" href="../ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" /><area shape="rect" coords="208,8,376,80" href="../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm" alt="IfcProductDefinitionShape" /><area shape="rect" coords="408,8,576,116" href="../ifcrepresentationresource/lexical/ifcshaperepresentation.htm" alt="IfcShapeRepresentation" /></map></td></tr><tr><td><p class="figure">Figure 11 &mdash; Geometry</p></td></tr></table>
+
+<hr/>
+<h4>AISC Model View</h4>
+<table class="exchange">
+<tr><th>Entity</th><th><a href="../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr><tr><td><a href="../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a></td><td>-<br/>-</td>
+</tr>
+<tr><td><a href="../ifcproductextension/lexical/ifccovering.htm">IfcCovering</a></td><td>O<br/>O</td>
+</tr>
+<tr><td><a href="../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a></td><td>-<br/>-</td>
+</tr>
+</table>
+<p><a href="../../link/geometry.htm" target="_top" ><img src="../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

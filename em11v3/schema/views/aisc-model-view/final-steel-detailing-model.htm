@@ -1,0 +1,464 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>Final Steel Detailing Model</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 1 index2 1 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-1.htm#1.1.1.0");
+//-->
+</script>
+
+<h4><a id="final steel detailing model" name="final steel detailing model">1.1.1 Final Steel Detailing Model</a></h4>
+<p class="std">
+<table class="gridtable">
+<tr><th>Process</th><th>Sender</th><th>Receiver</th></tr>
+<tr><td>31-60 00 00	Implementation Phase</td><td>34-20 11 21	Engineer</td><td>34-35 10 14	Fabricator</td></tr>
+</table>
+<p class="std">The function of the model is to provide enough detailed information about the steel members to enable the fabricator to manufacture the steel pieces. The model is the finalized version of "Steel Detailing Model" which is provided as the output any modification and integration of final detailing model. During the steel fabrication the plant management software will add member status to the model.</p>
+<p class="std">The exchange model includes all the finalized information of 'Advanced Steel Detailing Model' like the member ID, and member properties (section size, grade, length) detailed welding and bolting information, information about holes and member camber, etc. for all main and minor members. The model also includes detailed design of all required connections including safety connections.</p>
+<p class="std">Optional information: erection sequences and erection views, 4D simulated schedule. 4. Example software used: Revit Structure, SmartPlant3D, FrameWorks-Plus, SDS/2, Tekla, StruCAD.</p>
+
+<p class="std">
+
+Passing information from detailing software to shop floor for automated fabrication.</p>
+<p class="std">
+
+&nbsp;</p>
+<p class="std">
+
+A sample beam is shown to illustrate the type of data exchanged:</p>
+<p class="std">
+
+</p>
+<img src="../../../img/beam.png" />
+<p class="std">
+
+&nbsp;</p>
+<p class="std">
+
+&nbsp;</p>
+<p></p>
+<table class="exchange">
+<tr><th colspan="5"><img src="../../../img/mvd-final-steel-detailing-model.png" />&nbsp; Final Steel Detailing Model</th></tr>
+<tr><th>Entity/Concept</th><th>Attributes</th><th>Constraints</th><th>I</th><th>E</th></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_castellation.htm">AISC_EM11_Pset_Castellation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+<tr><td>TubeChamfer</td><td>Represents an instance of a Tube Chamfer</td></tr>
+<tr><td>TubeSaddle</td><td>Represents an instance of a Tube Saddle</td></tr>
+<tr><td>TubeEdgeSaddle</td><td>Represents an instance of a Tube Edge Saddle</td></tr>
+<tr><td>TubeCrossingSaddle</td><td>Represents an instance of a Tube Crossing Saddle</td></tr>
+<tr><td>TubeHoleSetIn</td><td>Represents an instance of a Tube Hole Set In</td></tr>
+<tr><td>TubeHoleSetOut</td><td>Represents an instance of a Tube Hole Set Out</td></tr>
+<tr><td>TubeMitreHole</td><td>Represents an instance of a Tube Hole Mitre Hole</td></tr>
+<tr><td>TubeMitreSaddle</td><td>Represents an instance of a Tube Hole Mitre Saddle</td></tr>
+<tr><td>TubeOblongHole</td><td>Represents an instance of a Tube Oblong Hole</td></tr>
+<tr><td>TubeOffshoreSaddle</td><td>Represents an instance of a Tube Offshore Saddle</td></tr>
+<tr><td>TubeOffshoreChamfer</td><td>Represents an instance of a Tube Offshore Chamfer</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/element-decomposition.htm">Element Decomposition</a></td><td>IsDecomposedBy</td><td><table class="gridtable">
+<tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td>Represents each plate for 3-Plate structural piece</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-composition.htm">Spatial Composition</a></td><td>Decomposes</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a></td><td>IsDecomposedBy</td><td></td><td>R</td><td>R</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-composition.htm">Spatial Composition</a></td><td>Decomposes</td><td><table class="gridtable">
+<tr><th><b>RelatingObject</b></th></tr>
+<tr><td><a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a></td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a></td></tr>
+</table>
+</td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-container.htm">Spatial Container</a></td><td>ContainsElements</td><td></td><td>R</td><td>R</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_castellation.htm">AISC_EM11_Pset_Castellation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-geometry.htm">Body Geometry</a></td><td>Representation</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+<tr><td>TubeChamfer</td><td>Represents an instance of a Tube Chamfer</td></tr>
+<tr><td>TubeSaddle</td><td>Represents an instance of a Tube Saddle</td></tr>
+<tr><td>TubeEdgeSaddle</td><td>Represents an instance of a Tube Edge Saddle</td></tr>
+<tr><td>TubeCrossingSaddle</td><td>Represents an instance of a Tube Crossing Saddle</td></tr>
+<tr><td>TubeHoleSetIn</td><td>Represents an instance of a Tube Hole Set In</td></tr>
+<tr><td>TubeHoleSetOut</td><td>Represents an instance of a Tube Hole Set Out</td></tr>
+<tr><td>TubeMitreHole</td><td>Represents an instance of a Tube Hole Mitre Hole</td></tr>
+<tr><td>TubeMitreSaddle</td><td>Represents an instance of a Tube Hole Mitre Saddle</td></tr>
+<tr><td>TubeOblongHole</td><td>Represents an instance of a Tube Oblong Hole</td></tr>
+<tr><td>TubeOffshoreSaddle</td><td>Represents an instance of a Tube Offshore Saddle</td></tr>
+<tr><td>TubeOffshoreChamfer</td><td>Represents an instance of a Tube Offshore Chamfer</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/element-decomposition.htm">Element Decomposition</a></td><td>IsDecomposedBy</td><td><table class="gridtable">
+<tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td>Represents each plate for 3-Plate structural piece</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcproductextension/lexical/ifccovering.htm">IfcCovering</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_surfacetreatment.htm">AISC_EM11_Pset_SurfaceTreatment</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/geometry.htm">Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-profile-extruded-area-solid.htm">Body Profile Extruded Area Solid</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-brep-geometry-polyloop.htm">Body Brep Geometry PolyLoop</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+<tr><td>TubeChamfer</td><td>Represents an instance of a Tube Chamfer</td></tr>
+<tr><td>TubeSaddle</td><td>Represents an instance of a Tube Saddle</td></tr>
+<tr><td>TubeEdgeSaddle</td><td>Represents an instance of a Tube Edge Saddle</td></tr>
+<tr><td>TubeCrossingSaddle</td><td>Represents an instance of a Tube Crossing Saddle</td></tr>
+<tr><td>TubeHoleSetIn</td><td>Represents an instance of a Tube Hole Set In</td></tr>
+<tr><td>TubeHoleSetOut</td><td>Represents an instance of a Tube Hole Set Out</td></tr>
+<tr><td>TubeMitreHole</td><td>Represents an instance of a Tube Hole Mitre Hole</td></tr>
+<tr><td>TubeMitreSaddle</td><td>Represents an instance of a Tube Hole Mitre Saddle</td></tr>
+<tr><td>TubeOblongHole</td><td>Represents an instance of a Tube Oblong Hole</td></tr>
+<tr><td>TubeOffshoreSaddle</td><td>Represents an instance of a Tube Offshore Saddle</td></tr>
+<tr><td>TubeOffshoreChamfer</td><td>Represents an instance of a Tube Offshore Chamfer</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/element-composition.htm">Element Composition</a></td><td>Decomposes</td><td><table class="gridtable">
+<tr><th><b>RelatingObject</b></th><th><b>Description</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a></td><td>Attached to Beam</td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a></td><td>Attached to Column</td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcmember.htm">IfcMember</a></td><td>Attached to Member</td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td>Attached to Plate</td></tr>
+</table>
+</td><td>R</td><td>R</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_assemblyidentification.htm">AISC_EM11_Pset_AssemblyIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_drawingnumber.htm">AISC_EM11_Pset_DrawingNumber</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_schedulinginformation.htm">AISC_EM11_Pset_SchedulingInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-containment.htm">Spatial Containment</a></td><td>ContainedInStructure</td><td><table class="gridtable">
+<tr><th><b>RelatingSpatialStructure</b></th></tr>
+<tr><td><a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a></td></tr>
+</table>
+</td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/grid-placement.htm">Grid Placement</a></td><td>ObjectPlacement</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm">IfcFastener</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcsharedcomponentelements/pset/aisc_em11_pset_weld.htm">AISC_EM11_Pset_Weld</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/simple-path-geometry.htm">Simple Path Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/realizing-connection.htm">Realizing Connection</a></td><td>IsConnectionRealization</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/realizing-connection-singular.htm">Realizing Connection Singular</a></td><td>ConnectedFrom</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm">IfcMechanicalFastener</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurences-with-type.htm">Properties on Occurences With Type</a></td><td>ObjectType<br/>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>ObjectType</b></th><th><b>Property</b></th></tr>
+<tr><td>Bolt</td><td><a href="../../ifcsharedcomponentelements/pset/aisc_em11_pset_bolt.htm">AISC_EM11_Pset_Bolt</a></td></tr>
+<tr><td>Washer</td><td><a href="../../ifcsharedcomponentelements/pset/aisc_em11_pset_washer.htm">AISC_EM11_Pset_Washer</a></td></tr>
+<tr><td>Nut</td><td><a href="../../ifcsharedcomponentelements/pset/aisc_em11_pset_nut.htm">AISC_EM11_Pset_Nut</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/geometric-curve-set-geometry.htm">Geometric Curve Set Geometry</a></td><td>Representation</td><td><table class="gridtable">
+<tr><th><b>GeometricSet</b></th></tr>
+<tr><td>IfcPolyline</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/polyline-path-geometry.htm">Polyline Path Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/element-decomposition.htm">Element Decomposition</a></td><td>IsDecomposedBy</td><td><table class="gridtable">
+<tr><th><b>RelatedObjects</b></th></tr>
+<tr><td><a href="../../ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm">IfcMechanicalFastener</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/realizing-connection.htm">Realizing Connection</a></td><td>IsConnectionRealization</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/realizing-connection-singular.htm">Realizing Connection Singular</a></td><td>ConnectedFrom</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifcmember.htm">IfcMember</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_castellation.htm">AISC_EM11_Pset_Castellation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-geometry.htm">Body Geometry</a></td><td>Representation</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+<tr><td>TubeChamfer</td><td>Represents an instance of a Tube Chamfer</td></tr>
+<tr><td>TubeSaddle</td><td>Represents an instance of a Tube Saddle</td></tr>
+<tr><td>TubeEdgeSaddle</td><td>Represents an instance of a Tube Edge Saddle</td></tr>
+<tr><td>TubeCrossingSaddle</td><td>Represents an instance of a Tube Crossing Saddle</td></tr>
+<tr><td>TubeHoleSetIn</td><td>Represents an instance of a Tube Hole Set In</td></tr>
+<tr><td>TubeHoleSetOut</td><td>Represents an instance of a Tube Hole Set Out</td></tr>
+<tr><td>TubeMitreHole</td><td>Represents an instance of a Tube Hole Mitre Hole</td></tr>
+<tr><td>TubeMitreSaddle</td><td>Represents an instance of a Tube Hole Mitre Saddle</td></tr>
+<tr><td>TubeOblongHole</td><td>Represents an instance of a Tube Oblong Hole</td></tr>
+<tr><td>TubeOffshoreSaddle</td><td>Represents an instance of a Tube Offshore Saddle</td></tr>
+<tr><td>TubeOffshoreChamfer</td><td>Represents an instance of a Tube Offshore Chamfer</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/element-decomposition.htm">Element Decomposition</a></td><td>IsDecomposedBy</td><td><table class="gridtable">
+<tr><th><b>RelatedObjects</b></th><th><b>Description</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td>Represents each plate for 3-Plate structural piece</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcproductextension/lexical/ifcopeningelement.htm">IfcOpeningElement</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurences-with-type.htm">Properties on Occurences With Type</a></td><td>ObjectType<br/>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>ObjectType</b></th><th><b>Property</b></th></tr>
+<tr><td>BoltHole</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td>BoltHole</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_bolthole.htm">AISC_EM11_Pset_BoltHole</a></td></tr>
+<tr><td>SlotHole</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td>SlotHole</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_cope.htm">AISC_EM11_Pset_Cope</a></td></tr>
+<tr><td>Cope</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td>Cope</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_slothole.htm">AISC_EM11_Pset_SlotHole</a></td></tr>
+<tr><td>Opening</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td>Opening</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_opening.htm">AISC_EM11_Pset_Opening</a></td></tr>
+<tr><td>SkewedEnd</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td>SkewedEnd</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_skewedend.htm">AISC_EM11_Pset_SkewedEnd</a></td></tr>
+<tr><td>WeldPreparation</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td>WeldPreparation</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_weldingpreparation.htm">AISC_EM11_Pset_WeldingPreparation</a></td></tr>
+<tr><td>TubeChamfer</td><td>AIsC_EM11_Pset_TubeChamfer</td></tr>
+<tr><td>TubeSaddle</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubesaddle.htm">AISC_EM11_Pset_TubeSaddle</a></td></tr>
+<tr><td>TubeEdgeSaddle</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubeedgesaddle.htm">AISC_EM11_Pset_TubeEdgeSaddle</a></td></tr>
+<tr><td>TubeCrossingSaddle</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubecrossingsaddle.htm">AISC_EM11_Pset_TubeCrossingSaddle</a></td></tr>
+<tr><td>TubeHoleSetIn</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubeholesetin.htm">AISC_EM11_Pset_TubeHoleSetIn</a></td></tr>
+<tr><td>TubeHoleSetOn</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubeholeseton.htm">AISC_EM11_Pset_TubeHoleSetOn</a></td></tr>
+<tr><td>TubeMitreHole</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubemitrehole.htm">AISC_EM11_Pset_TubeMitreHole</a></td></tr>
+<tr><td>TubeMitreSaddle</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubemitresaddle.htm">AISC_EM11_Pset_TubeMitreSaddle</a></td></tr>
+<tr><td>TubeOblongHole</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubeoblonghole.htm">AISC_EM11_Pset_TubeOblongHole</a></td></tr>
+<tr><td>TubeOffshoreSaddle</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubeoffshoresaddle.htm">AISC_EM11_Pset_TubeOffshoreSaddle</a></td></tr>
+<tr><td>TubeOffshoreChamfer</td><td><a href="../../ifcproductextension/pset/aisc_em11_pset_tubeoffshorechamfer.htm">AISC_EM11_Pset_TubeOffshoreChamfer</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-geometry.htm">Body Geometry</a></td><td>Representation</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/material-solid.htm">Material Solid</a></td><td>HasAssociations</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/project-representation-context.htm">Project Representation Context</a></td><td>RepresentationContexts</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/si-units.htm">SI Units</a></td><td>UnitsInContext</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/conversion-units.htm">Conversion Units</a></td><td>UnitsInContext</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/derived-units.htm">Derived Units</a></td><td>UnitsInContext</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifcrailing.htm">IfcRailing</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_surfacetreatment.htm">AISC_EM11_Pset_SurfaceTreatment</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-geometry.htm">Body Geometry</a></td><td>Representation</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcproductextension/lexical/ifcsite.htm">IfcSite</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-composition.htm">Spatial Composition</a></td><td>Decomposes</td><td><table class="gridtable">
+<tr><th><b>RelatingObject</b></th></tr>
+<tr><td><a href="../../ifckernel/lexical/ifcproject.htm">IfcProject</a></td></tr>
+</table>
+</td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/spatial-decomposition.htm">Spatial Decomposition</a></td><td>IsDecomposedBy</td><td><table class="gridtable">
+<tr><th><b>RelatedOjbects</b></th></tr>
+<tr><td><a href="../../ifcproductextension/lexical/ifcbuilding.htm">IfcBuilding</a></td></tr>
+</table>
+</td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_surfacetreatment.htm">AISC_EM11_Pset_SurfaceTreatment</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-brep-geometry-polyloop.htm">Body Brep Geometry PolyLoop</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/element-decomposition.htm">Element Decomposition</a></td><td>IsDecomposedBy</td><td><table class="gridtable">
+<tr><th><b>RelatedObjects</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a></td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcrailing.htm">IfcRailing</a></td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td colspan="5"><b><a href="../../ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a></td><td>IsDefinedBy</td><td><table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_feature.htm">AISC_EM11_Pset_Feature</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_surfacetreatment.htm">AISC_EM11_Pset_SurfaceTreatment</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/placement.htm">Placement</a></td><td>ObjectPlacement</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/body-geometry.htm">Body Geometry</a></td><td>Representation</td><td></td><td>R</td><td>R</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/feature-substraction.htm">Feature Substraction</a></td><td>HasOpenings</td><td><table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+</table>
+</td><td>O</td><td>O</td></tr>
+<tr><td>&nbsp;&nbsp;<a href="../../templates/mapped-geometry.htm">Mapped Geometry</a></td><td>Representation</td><td></td><td>O</td><td>O</td></tr>
+</table>
+</p>

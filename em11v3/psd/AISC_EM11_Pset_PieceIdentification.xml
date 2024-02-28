@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="ae9b5f8b5103439dbfce0d9d0a7bf788" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_PieceIdentification</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="00fe7af09993432182f1886dc4142e3b">
+      <Name>PieceMark</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Piece Mark</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">A short text reference for the piece. A means of identifying the piece within the fabrication shop</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4a8aeca756804a3d969f5fce334f9cc3">
+      <Name>IndicationMark</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Indication Mark</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Mark for indication on part (may differ from Piece or assembly mark)</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="f9443efa3e1d429db4f5b56090ae8141">
+      <Name>MainPieceTag</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Main Piece Tag</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Indicates if it is main piece or not</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="4b091de7d7ad4a79b5ac2b2f72e677ea">
+      <Name>PrelimMark</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Prelim Mark</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">A short text reference that may be used to identify the located_part (piece) at the bidding or tender stages of its production life.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="220e78fc239042a9be10c0d9ac5737fb">
+      <Name>BarCode</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Barcode</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">A numerical interpretaion of the bar code associated with the located_part (piece). The bar code is sometime used to identify the piece in the fabrication shop, during transportation, and during erection using a bar code scanner.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7157a68a5d4b4f01ac5cbb9e6204e78f">
+      <Name>CustomType</Name>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Custom Type</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Indicate if the piece has custom profile that can be either user defined custom profile such as I type, or custom multi plates piece. This property is only needed if it is a custom piece and the value should be 'true'.
+When representing a custom multi plates piece, either individual piece can be modeled as a geometrical object or as a plate object. Representing as a collection of geometrical objects should only be used if receiving application does not need to process individual pieces, such as use of bought out item. Representing as a collection of plate object should be should in all other cases when fabrication information of each component of the  custom piece is required.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">A piece can have identification information</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

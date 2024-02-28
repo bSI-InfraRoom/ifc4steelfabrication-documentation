@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="3ef747d9968440df80ad2f20f0005f35" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_BoltHole</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="a3bb2cc2ec854d3ca67923b1a520c2ff">
+      <Name>FeatureSubType</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Feature Sub Type</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Feature subtype further specifies the type of hole. 
+Possible values are predefined as in AISC_EM11_FeatureSubType enumerated type.
+Value  can be one of:
+			&lt;ul&gt;
+				&lt;li&gt;BeveledHole&lt;/li&gt;
+				&lt;li&gt;TappedHole&lt;/li&gt;
+				&lt;li&gt;ThreadedHole&lt;/li&gt;
+			&lt;/ul&gt; </DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="5d7c846f55894cea9f20b82145815d70">
+      <Name>BoltHoleDiameter</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Bolt Hole Diameter</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Additional parameterized mapping through IfcPropertySet for diameter.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="64cb575626c9489d84173457e57e86d6">
+      <Name>PartialHoleIndicator</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Partial Hole Indicator</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Identification of partial depth hole if the value is set to True.</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="13fe473a58eb4d88ba52014a268eaa4b">
+      <Name>PartialHoleDepth</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Partial Hole Depth</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">The depth of partial depth hole. </DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">Bolt hole represents a hole mainly used for bolt connection. Propeties can be used for additional information.
+</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

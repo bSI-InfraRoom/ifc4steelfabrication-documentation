@@ -1,0 +1,347 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../details-shim.css">
+    <script type="text/javascript" src="../details-shim.js"></script>
+    <title>Fundamental concepts and assumptions</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 3 index2 0 index3 0 index4 -1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("toc-4.htm#");
+//-->
+</script>
+
+<h1 class="num" id="scope">Fundamental concepts and assumptions</h1>
+<table class="gridtable">
+<tr><th>Template</th>
+<th>AISC Model View</th>
+</tr>
+<tr><td>
+<a href="../schema/templates/project.htm">Project</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/project-units.htm">Project Units</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/si-units.htm">SI Units</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/conversion-units.htm">Conversion Units</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/derived-units.htm">Derived Units</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/project-representation-context.htm">Project Representation Context</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/definition.htm">Definition</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/property-sets.htm">Property Sets</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/properties-on-occurrences.htm">Properties on Occurrences</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/properties-on-occurences-with-type.htm">Properties on Occurences With Type</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/quantity-sets.htm">Quantity Sets</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/quantities-on-occurrences.htm">Quantities on Occurrences</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/association.htm">Association</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/material.htm">Material</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/material-solid.htm">Material Solid</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/product.htm">Product</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/placement.htm">Placement</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/grid-placement.htm">Grid Placement</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/geometry.htm">Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/body-geometry.htm">Body Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/body-sweptsolid-geometry.htm">Body SweptSolid Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/body-profile-extruded-area-solid.htm">Body Profile Extruded Area Solid</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/body-brep-geometry.htm">Body Brep Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/body-brep-geometry-polyloop.htm">Body Brep Geometry PolyLoop</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/body-advancedsweptsolid-geometry.htm">Body AdvancedSweptSolid Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/path-geometry.htm">Path Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/polyline-path-geometry.htm">Polyline Path Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/simple-path-geometry.htm">Simple Path Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/geometric-curve-set-geometry.htm">Geometric Curve Set Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/footprint-geometry.htm">Footprint Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="../schema/templates/patch-geometry.htm">Patch Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/mapped-geometry.htm">Mapped Geometry</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/composition.htm">Composition</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/aggregation.htm">Aggregation</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/element-composition.htm">Element Composition</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/element-decomposition.htm">Element Decomposition</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/spatial-composition.htm">Spatial Composition</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/spatial-decomposition.htm">Spatial Decomposition</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/voiding.htm">Voiding</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/feature-substraction.htm">Feature Substraction</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+<a href="../schema/templates/connectivity.htm">Connectivity</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/spatial-structure.htm">Spatial Structure</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/spatial-container.htm">Spatial Container</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+&nbsp;
+<a href="../schema/templates/spatial-containment.htm">Spatial Containment</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/realizing-connection.htm">Realizing Connection</a>
+</td>
+<td>X</td>
+</tr>
+<tr><td>
+&nbsp;
+<a href="../schema/templates/realizing-connection-singular.htm">Realizing Connection Singular</a>
+</td>
+<td>X</td>
+</tr>
+</table>
+<p>
+</p>
+<p><a href="../link/chapter-4.htm" target="_top" ><img src="../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

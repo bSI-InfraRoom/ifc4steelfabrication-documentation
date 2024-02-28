@@ -1,0 +1,564 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcBuildingElement</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 3 index4 1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.3.2");
+//-->
+</script>
+
+<h4 class="num">IfcBuildingElement</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+    <p>
+      <u>Definition from ISO 6707-1:1989</u>: Major functional
+      part of a building, examples are foundation, floor, roof,
+      wall.
+    </p>
+    <p>
+       The building element comprises
+      all elements that are primarily part of the construction of
+      a building, i.e., its structural and space separating
+      system.
+    </p>
+    <blockquote>
+      <small>EXAMPLEs of building elements are walls, beams, or
+      doors, they are all physically existent and tangible
+      things.</small>
+    </blockquote>
+    <p>
+      The <span class="self-ref">IfcBuildingElement</span> utilizes the following
+      capabilities mainly through inverse attributes referencing
+      objectified relationships:
+    </p>
+    <ol>
+      <li>Grouping - being part of a logical group of objects
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelAssignsToGroup</i>
+          </li>
+          <li>inverse attribute: <i>HasAssignment</i>
+          </li>
+        </ul>
+      </li>
+      <li>Work processes - reference to work tasks, in which this
+      building element is used
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelAssignsToProcess</i>
+          </li>
+          <li>inverse attribute: <i>HasAssignments</i>
+          </li>
+        </ul>
+      </li>
+      <li>Aggregation - aggregated together with other elements
+      to form an aggregate
+        <ul>
+          <li>objectified relationship: <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>
+          </li>
+          <li>inverse attribute (for container):
+          <i>IsDecomposedBy</i>
+          </li>
+          <li>inverse attribute (for contained parts):
+          <i>Decomposes</i>
+          </li>
+        </ul>
+      </li>
+      <li>Material - assignment of material used by this building
+      element
+        <ul>
+          <li>objectified relationship:
+          <a href="../../ifcproductextension/lexical/ifcrelassociatesmaterial.htm">IfcRelAssociatesMaterial</a>
+          </li>
+          <li>inverse attribute: <i>HasAssociations</i>
+          </li>
+        </ul>
+      </li>
+      <li>Classification - assigned reference to an external
+      classification
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelAssociatesClassification</i>
+          </li>
+          <li>inverse attribute: <i>HasAssociations</i>
+          </li>
+        </ul>
+      </li>
+      <li>Documentation - assigned reference to an external
+      documentation
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelAssociatesDocumentation</i>
+          </li>
+          <li>inverse attribute: <i>HasAssociations</i>
+          </li>
+        </ul>
+      </li>
+      <li>Type - reference to the common product type information
+      for the element occurrence
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelDefinesByType</i>
+          </li>
+          <li>inverse attribute: <i>IsDefinedBy</i>
+          </li>
+        </ul>
+      </li>
+      <li>Properties - reference to all attached properties,
+      including quantities
+        <ul>
+          <li>objectified relationship:
+          <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a>
+          </li>
+          <li>inverse attribute: <i>IsDefinedBy</i>
+          </li>
+        </ul>
+      </li>
+      <li>Connection - connectivity to other elements, including
+      the definition of the joint
+        <ul>
+          <li>objectified relationship:
+          <a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a>
+          </li>
+          <li>inverse attribute: <i>ConnectedTo</i>
+          </li>
+          <li>inverse attribute: <i>ConnectedFrom</i>
+          </li>
+        </ul>
+      </li>
+      <li>Realization - information, whether the building element
+      is used to realize a connection (e.g. as a weld in a
+      connection between two members)
+        <ul>
+          <li>objectified relationship:
+          <a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a>
+          </li>
+          <li>inverse attribute: <i>IsConnectionRealization</i>
+          </li>
+        </ul>
+      </li>
+      <li>Ports - information, whether the building element has
+      ports for system connections (note: normally not used, this
+      relationship is inherited from <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> and mainly
+      applicable to <i>IfcDistributionElement</i>'s)
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelConnectsPortToElement</i>
+          </li>
+          <li>inverse attribute: <i>HasPorts</i>
+          </li>
+        </ul>
+      </li>
+      <li>Assignment to spatial structure - hierarchical
+      assignment to the right level within the spatial structure
+        <ul>
+          <li>objectified relationship:
+          <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>
+          </li>
+          <li>inverse attribute: <i>ContainedInStructure</i>
+          </li>
+        </ul>
+      </li>
+      <li>Reference to spatial structure(s) - non hierarchical
+      reference to one or more elements within the spatial
+      structure (e.g. a curtain wall, being contained in the
+      building, references several stories)
+        <ul>
+          <li>objectified relationship:
+          <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>
+          </li>
+          <li>inverse attribute: <i>ContainedInStructure</i>
+          </li>
+        </ul>
+      </li>
+      <li>Boundary - provision of space boundaries by this
+      building element
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelSpaceBoundary</i>
+          </li>
+          <li>inverse attribute: <i>ProvidesBoundaries</i>
+          </li>
+        </ul>
+      </li>
+      <li>Coverings - assignment of covering elements to this
+      building element (note: normally covering elements are
+      assigned to the space, only used for special cases)
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelCoversBldgElements</i>
+          </li>
+          <li>inverse attribute: <i>HasCoverings</i>
+          </li>
+        </ul>
+      </li>
+      <li>Voids - information, whether the building element
+      includes openings, recesses or other voids
+        <ul>
+          <li>objectified relationship: <a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a>
+          </li>
+          <li>inverse attribute: <i>HasOpenings</i>
+          </li>
+        </ul>
+      </li>
+      <li>Projection - information, whether the building element
+      has projections (such as a fascia)
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelProjectsElement</i>
+          </li>
+          <li>inverse attribute: <i>HasProjections</i>
+          </li>
+        </ul>
+      </li>
+      <li>Filling - information whether the building element is
+      used to fill openings
+        <ul>
+          <li>objectified relationship: <i>IfcRelFillsElement</i>
+          </li>
+          <li>inverse attribute: <i>FillsVoids</i>
+          </li>
+        </ul>
+      </li>
+      <li>Structural member reference - information whether the
+      building element is represented in a structural analysis
+      model by a structural member
+        <ul>
+          <li>objectified relationship:
+          <i>IfcRelConnectsStructuralElement</i>
+          </li>
+          <li>inverse attribute: <i>HasStructuralMember</i>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <blockquote>
+      <p>
+        <font color="#0000FF" size="-1">HISTORY New entity in IFC
+        Release 1.0</font>
+      </p>
+    </blockquote>
+    <p>
+      <u><b>Quantity Use Definition</b></u>:
+    </p>
+    <p>
+      The quantities relating to the <span class="self-ref">IfcBuildingElement</span>
+      are defined by the <a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a> and attached
+      by the <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a>. A detailed
+      specification for individual quantities is introduced at
+      the level of subtypes of <span class="self-ref">IfcBuildingElement</span>.
+    </p>
+    <p>
+      <u><b>Geometry Use Definitions</b></u>
+    </p>
+    <p>
+      The geometric representation of any
+      <span class="self-ref">IfcBuildingElement</span> is given by the
+      <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a> and
+      <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> allowing multiple geometric
+      representations.
+    </p>
+    <p>
+      <b>Local Placement</b>
+    </p>
+    <p>
+      The local placement for any <span class="self-ref">IfcBuildingElement</span> is
+      defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined
+      by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local
+      coordinate system that is referenced by all geometric
+      representations. Further constraints are defined at the
+      level of its subtypes.
+    </p>
+    <p>
+      <b><i>Geometric Representations</i></b>
+    </p>
+		<p>Any <span class="self-ref">IfcBuildingElement</span> can be represented by one
+    or several geometric representations. A detailed
+    specification is introduced at the level of subtypes. Only
+    the general representation types 'BoundingBox',
+    'SurfaceModel', 'Brep', and 'MappedRepresentation' are
+    defined here.</p>
+    <p>
+      <b>Bounding Box Representation</b>
+    </p>
+    <p>
+      Any <span class="self-ref">IfcBuildingElement</span> may be represented as a
+      bounding box, which shows the maximum extend of the body
+      within the coordinated system established by the
+      <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>. The bounding box representation
+      is the simplest geometric representation available. The
+      following attribute values for the
+      <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric
+      representation shall be used:
+    </p>
+    <ul>
+      <li>
+        <i>RepresentationIdentifier</i> : 'Box'
+        <strike>Body</strike>
+      </li>
+      <li>
+        <i>RepresentationType</i> : 'BoundingBox'
+      </li>
+    </ul>
+    <table>
+      <tbody>
+        <tr valign="top">
+          <td align="left" valign="top">
+            <a href=
+            "drawings/IfcBuildingElement-BoundingBox-Layout1.dwf">
+            <img src=
+            "figures/IfcBuildingElement-BoundingBox-Layout1.gif"
+            alt="bounding box" border="0" height="275" width=
+            "400"></a>
+          </td>
+          <td align="left" valign="top">
+            <p>
+              <font size="-1">The bounding box representation is
+              given by an <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, which
+              includes a single item, an
+              <i>IfcBoundingBox</i>.</font>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <b>SurfaceModel Representation</b>
+    </p>
+    <p>
+      Any <span class="self-ref">IfcBuildingElement</span> (so far no further
+      constraints are defined at the level of its subtypes) may
+      be represented as a single or multiple surface models,
+      based on either shell or face based models. The following
+      attribute values for the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>
+      holding this geometric representation shall be used:
+    </p>
+    <ul>
+      <li>
+        <i>RepresentationIdentifier</i> : 'Body'
+      </li>
+      <li>
+        <i>RepresentationType</i> : 'SurfaceModel'
+      </li>
+    </ul>
+    <p>
+      In some cases it may be useful to also expose a simple
+      representation as a bounding box representation of the same
+      complex shape.
+    </p>
+    <table>
+      <tbody>
+        <tr valign="top">
+          <td align="left" valign="top">
+            <a href=
+            "drawings/IfcBuildingElement-SurfaceModel-Layout1.dwf">
+            <img src=
+            "figures/IfcBuildingElement-SurfaceModel-Layout1.gif"
+            alt="bounding box" border="0" height="275" width=
+            "400"></a>
+          </td>
+          <td align="left" valign="top">
+            <p>
+              <font size="-1">The surface model representation is
+              given by an IfcShapeRepresentation, which includes
+              a single item, which is either:</font>
+            </p>
+            <ul>
+              <li>
+                <font size="-1"><i>IfcShellBasedSurfaceModel</i>,
+                or</font>
+              </li>
+              <li>
+                <font size=
+                "-1"><i>IfcFaceBasedSurfaceModel</i>.</font>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <b>Brep Representation</b>
+    </p>
+    <p>
+      Any <span class="self-ref">IfcBuildingElement</span> (so far no further
+      constraints are defined at the level of its subtypes) may
+      be represented as a single or multiple Boundary
+      Representation elements (which are restricted to faceted
+      Brep with or without voids). The Brep representation allows
+      for the representation of complex element shape. The
+      following attribute values for the
+      <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric
+      representation shall be used:
+    </p>
+    <ul>
+      <li>
+        <i>RepresentationIdentifier</i> : 'Body'
+      </li>
+      <li>
+        <i>RepresentationType</i> : 'Brep'
+      </li>
+    </ul>
+    <p>
+      In some cases it may be useful to also expose a simple
+      representation as a bounding box representation of the same
+      complex shape.
+    </p>
+    <table cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr valign="top">
+          <td align="left" valign="top">
+            <a href=
+            "drawings/IfcBuildingElement-BRep-Layout1.dwf"><img src="figures/ifcbuildingelement-brep-layout1.gif"
+            alt="Brep representation" border="0" height="275"
+            width="400"></a>
+          </td>
+          <td align="left" valign="top">
+            TheBrep representation is given by an
+            IfcShapeRepresentation, which includes one or more
+            items, all of type IfcManifoldSolidBrep.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <b>MappedRepresentation</b>
+    </p>
+    <p>
+      Any <span class="self-ref">IfcBuildingElement</span> (so far no further
+      constraints are defined at the level of its subtypes) may
+      be represented using the MappedRepresentation. This shall
+      be supported as it allows for reusing the geometry
+      definition of a type at all occurrences of the same type.
+      The following attribute values for the
+      <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> holding this geometric
+      representation shall be used:
+    </p>
+    <ul>
+      <li>
+        <i>RepresentationIdentifier</i> : 'Body'
+      </li>
+      <li>
+        <i>RepresentationType</i> : 'MappedRepresentation'
+      </li>
+    </ul>
+    <p>
+      The same constraints, as given for the 'SurfaceModel' and
+      the 'Brep' geometric representation, shall apply to the
+      <i>MappedRepresentation</i> of the
+      <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>.
+    </p></details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcbuildingelement.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="78,150,266,162" href="../../../schema/ifcsharedbldgelements/lexical/ifcbeam.htm" alt="IfcBeam" />
+<area shape="rect" coords="78,174,266,186" href="../../../schema/ifcsharedbldgelements/lexical/ifccolumn.htm" alt="IfcColumn" />
+<area shape="rect" coords="78,198,266,210" href="../../../schema/ifcproductextension/lexical/ifccovering.htm" alt="IfcCovering" />
+<area shape="rect" coords="78,222,266,234" href="../../../schema/ifcsharedbldgelements/lexical/ifcmember.htm" alt="IfcMember" />
+<area shape="rect" coords="78,246,266,258" href="../../../schema/ifcsharedbldgelements/lexical/ifcplate.htm" alt="IfcPlate" />
+<area shape="rect" coords="78,270,266,282" href="../../../schema/ifcsharedbldgelements/lexical/ifcrailing.htm" alt="IfcRailing" />
+<area shape="rect" coords="78,294,266,306" href="../../../schema/ifcsharedbldgelements/lexical/ifcstair.htm" alt="IfcStair" />
+<area shape="rect" coords="78,318,266,330" href="../../../schema/ifcsharedbldgelements/lexical/ifcstairflight.htm" alt="IfcStairFlight" />
+<area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,326,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,338,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></i></td></tr>
+<tr><td>8</td><td>Tag</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ConnectedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element to which this element is connected to.
+</td><td></td></tr>
+<tr><td></td><td><i>HasOpenings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatingBuildingElement</td><td>S[0:?]</td><td>Reference to the Voids Relationship that creates an opening in an element. An element can incorporate zero-to-many openings.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsConnectionRealization</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a><br/>@RealizingElements</td><td>S[0:?]</td><td>Reference to the connection relationship with realizing element. The relationship then refers to the realizing element which provides the physical manifestation of the connection relationship.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ConnectedFrom</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatedElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element that is connected to this element.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Containment relationship to the spatial structure element, to which the element is primarily associated.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a></i></td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcBuildingElement&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcbuildingelement.htm">IfcBuildingElement</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcBuildingElement&quot; abstract=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcBuildingElement<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a>, <a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a>, <a href="../../ifcproductextension/lexical/ifccovering.htm">IfcCovering</a>, <a href="../../ifcsharedbldgelements/lexical/ifcmember.htm">IfcMember</a>, <a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a>, <a href="../../ifcsharedbldgelements/lexical/ifcrailing.htm">IfcRailing</a>, <a href="../../ifcsharedbldgelements/lexical/ifcstair.htm">IfcStair</a>, <a href="../../ifcsharedbldgelements/lexical/ifcstairflight.htm">IfcStairFlight</a>))<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0005.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcbuildingelement.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

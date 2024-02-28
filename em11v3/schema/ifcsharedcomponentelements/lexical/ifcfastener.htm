@@ -1,0 +1,342 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcFastener</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 2 index3 2 index4 2 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.2.2.3");
+//-->
+</script>
+
+<h4 class="num">IfcFastener</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+<P>
+
+   Representations of fixing parts which are used as fasteners to connect or join elements with 
+   other elements.
+</P>
+
+<BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1">
+   HISTORY New entity in IFC Release 2x2
+</FONT></BLOCKQUOTE>
+
+<P><B>General usage</B></P>
+
+<P>
+  The exact type information of the <span class="self-ref">IfcFastener</span> is given in the <I>ObjectType</I> attribute
+  inherited from <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>. Standard type designations are provided for guideline below. Note
+  that mechanical fasteners are represented by instances of the subtype <a href="../../ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm">IfcMechanicalFastener</a>.
+</P>
+
+<TABLE BORDER="1">
+
+   <TR>
+       <TD><I><B>Standard fastener type designation</B></I></TD>
+       <TD><I><B>Description</B></I></TD>
+   </TR>
+   <TR>
+       <TD>'Glue'</TD>
+       <TD>A fastening connection where glue is used to join together elements.</TD>
+   </TR>
+   <TR>
+       <TD>'Weld'</TD>
+       <TD>A weld seam used to join together building elements.</TD>
+   </TR>
+   <TR>
+       <TD>'Jointing mortar'</TD>
+       <TD>Mortar used to join together building elements.
+           The strength of the joint may be taken into consideration in calculations.</TD>
+   </TR>
+
+</TABLE>
+
+<P><B>Geometry Use Definitions:</B></P>
+
+<P>
+  The geometric representation of <span class="self-ref">IfcFastener</span> is given by the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>,
+  allowing multiple geometric representations. Included are:
+</P>
+
+<P><U>Local Placement</U><BR>
+   The use of local placement is defined in the supertype <a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>.
+</P>
+
+<P><U>Standard Geometric Representation</U><BR>
+  The use of Standard Geometric Representations is defined in the supertype
+  <a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>.
+</P>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcfastener.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="90,174,278,186" href="../../../schema/ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm" alt="IfcMechanicalFastener" />
+<area shape="rect" coords="66,126,302,138" href="../../../schema/ifcsharedcomponentelements/lexical/ifcelementcomponent.htm" alt="IfcElementComponent" />
+<area shape="rect" coords="54,102,314,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,326,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,338,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,350,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,362,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></i></td></tr>
+<tr><td>8</td><td>Tag</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ConnectedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element to which this element is connected to.
+</td><td></td></tr>
+<tr><td></td><td><i>HasOpenings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatingBuildingElement</td><td>S[0:?]</td><td>Reference to the Voids Relationship that creates an opening in an element. An element can incorporate zero-to-many openings.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsConnectionRealization</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a><br/>@RealizingElements</td><td>S[0:?]</td><td>Reference to the connection relationship with realizing element. The relationship then refers to the realizing element which provides the physical manifestation of the connection relationship.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ConnectedFrom</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatedElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element that is connected to this element.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Containment relationship to the spatial structure element, to which the element is primarily associated.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm">IfcFastener</a></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifcfastener.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<details>
+<summary>Concept usage</summary>
+<a id="properties-on-occurrences" />
+<p class="use-head">Properties on Occurrences</p>
+<p>The <a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a> concept applies to this entity as shown in Table 35.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcsharedcomponentelements/pset/aisc_em11_pset_weld.htm">AISC_EM11_Pset_Weld</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 35 &mdash; IfcFastener Properties on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="placement" />
+<p class="use-head">Placement</p>
+<p>The <a href="../../templates/placement.htm">Placement</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="simple-path-geometry" />
+<p class="use-head">Simple Path Geometry</p>
+<p>The <a href="../../templates/simple-path-geometry.htm">Simple Path Geometry</a> concept applies to this entity.</p><p>Welding path is a theoretical contact line between the two parts to be joined. But it does not need to be precise information and the approximation is acceptable. The Curve for welding path should be either Polyline (IfcPolyline) or Composite Curve (IfcCompositeCurve). Segments of Composit Curve should be Polyline (IfcPolyline),   Line (IfcLine), or Trimmed Curve(IfcTrimmedCurve). The Basis Curve of Trimmed Curve should  be either Polyine, Line, or Circle (IfcCircle).</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="mapped-geometry" />
+<p class="use-head">Mapped Geometry</p>
+<p>The <a href="../../templates/mapped-geometry.htm">Mapped Geometry</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="realizing-connection" />
+<p class="use-head">Realizing Connection</p>
+<p>The <a href="../../templates/realizing-connection.htm">Realizing Connection</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="realizing-connection-singular" />
+<p class="use-head">Realizing Connection Singular</p>
+<p>The <a href="../../templates/realizing-connection-singular.htm">Realizing Connection Singular</a> concept applies to this entity.</p>There are case where weld on one piece a steel plate, which is wrapped to form a circle hollow profile column (see picture below). The seam of the column is welded. This single piece welding utilizes 'Realizing Connection Singular' concept.
+<p><img src="../../../img/selfweld.jpg"></p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="material-solid" />
+<p class="use-head">Material Solid</p>
+<p>The <a href="../../templates/material-solid.htm">Material Solid</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm">IfcFastener</a></td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#properties-on-occurrences">Properties on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#placement">Placement</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#simple-path-geometry">Simple Path Geometry</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#mapped-geometry">Mapped Geometry</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#realizing-connection">Realizing Connection</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#realizing-connection-singular">Realizing Connection Singular</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm#material-solid">Material Solid</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcFastener&quot; type=&quot;ifc:<a href="../../ifcsharedcomponentelements/lexical/ifcfastener.htm">IfcFastener</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcFastener&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcFastener<br/>
+&nbsp;<span class="keyword">SUPERTYPE OF</span>(<a href="../../ifcsharedcomponentelements/lexical/ifcmechanicalfastener.htm">IfcMechanicalFastener</a>)<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcsharedcomponentelements/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcfastener.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

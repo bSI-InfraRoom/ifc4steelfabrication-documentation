@@ -1,0 +1,201 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcElementQuantity</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 3 index4 6 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.3.7");
+//-->
+</script>
+
+<h4 class="num">IfcElementQuantity</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+    <p>
+       An <span class="self-ref">IfcElementQuantity</span>
+      defines a set of derived measures of an element's physical
+      property. Elements could be spatial structure elements
+      (like buildings, storeys, or spaces) or building elements
+      (like walls, slabs, finishes). The
+      <span class="self-ref">IfcElementQuantity</span> gets assigned to the element by
+      using the <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a> relationship.
+    </p>
+    <p>
+      The optional <i>MethodOfMeasurement</i> attribute defines
+      the code, e.g. from a standard method of measurement, which
+      had been used to calculate the element quantity.
+    </p>
+    <blockquote>
+      <p>
+        <small>NOTE The recognizable values for the name and the
+        method of measurement attributes have to be agreed upon
+        in further agreement documents, such as implementers
+        agreements. Some of these agreements might be limited to
+        a certain region, to which the method of measurement
+        applies.</small>
+      </p>
+    </blockquote>
+    <p>
+      The name attribute, given at the individual
+      <i>Quantities</i> provides a recognizable semantic meaning
+      of the element quantity. Both information is needed to
+      establish a precise meaning for the measure value. An
+      optional description may be assigned to each of the
+      <i>Quantities</i>. All quantities assigned by a single
+      instance of <span class="self-ref">IfcElementQuantity</span> are deemed to have
+      been generated according to the same method of measurement.
+      However several instances of <span class="self-ref">IfcElementQuantity</span> are
+      assignable to an element, thus allowing for an element
+      having quantities generated according to several methods of
+      measurement.
+    </p>
+    <blockquote>
+      <p>
+        <small>EXAMPLE1 To exchange the net floor area of spaces
+        in the German region (as <i>IfcSpace</i>), the name might
+        be 'HNF1' (area of main function type 1), and the method
+        of measurement might be accordingly 'DIN277' (German
+        industry norm no. 277)</small>
+      </p>
+    </blockquote>
+    <blockquote>
+      <p>
+        <small>EXAMPLE2 The same instance of <i>IfcSpace</i> may
+        have a different area measure assigned in the German
+        region according to a housing regulation, the name would
+        be 'Wohnfl&auml;che' and the method of measurement would
+        be '2.BV'. It would be attached to the <i>IfcSpace</i> by
+        a separate <a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a>
+        relationship.</small>
+      </p>
+    </blockquote>
+    <p>
+      The <span class="self-ref">IfcElementQuantity</span> can have the following
+      subtypes of <a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a> within its SET of
+      <i>Quantities</i>, which count for the basis measure types
+      used:
+    </p>
+    <ul>
+      <li>count measure
+      </li>
+      <li>weight measure
+      </li>
+      <li>length measure
+      </li>
+      <li>area measure
+      </li>
+      <li>volume measure
+      </li>
+      <li>time measure
+      </li>
+    </ul>
+    <blockquote>
+      <p>
+        <small><font color="#0000FF">HISTORY New entity in IFC
+        Release 2x. NOTE: It replaces the calcXxx attributes used
+        in previous IFC Releases.</font></small>
+      </p>
+    </blockquote></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>5</td><td>MethodOfMeasurement</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>Quantities</td><td><a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a></td><td>S[1:?]</td><td>
+The individual quantities for the element, can be a set of length, area, volume, weight or count based quantities.</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcelementquantity.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifckernel/lexical/ifcpropertysetdefinition.htm" alt="IfcPropertySetDefinition" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifckernel/lexical/ifcpropertydefinition.htm" alt="IfcPropertyDefinition" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertydefinition.htm">IfcPropertyDefinition</a></i></td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship IfcRelAssociates and thus to those externally defined concepts, like classifications, documents, or library information, which are associated to the property definition.</td><td></td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a></i></td></tr>
+<tr><td></td><td><i>PropertyDefinitionOf</i></td><td><a href="../../ifckernel/lexical/ifcreldefinesbyproperties.htm">IfcRelDefinesByProperties</a><br/>@RelatingPropertyDefinition</td><td>S[0:1]</td><td>Reference to the relation to one or many objects that are characterized by the property definition. The reference may be omitted, if the property definition is used to define a style library and no instances, to which the particular style of property set is associated, exist yet.</td><td></td></tr>
+<tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a></td></tr>
+<tr><td>5</td><td>MethodOfMeasurement</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>6</td><td>Quantities</td><td><a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a></td><td>S[1:?]</td><td>
+The individual quantities for the element, can be a set of length, area, volume, weight or count based quantities.</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcElementQuantity&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelementquantity.htm">IfcElementQuantity</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcElementQuantity&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;Quantities&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;set&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcElementQuantity<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcpropertysetdefinition.htm">IfcPropertySetDefinition</a>)<b>;</b><br/>
+&nbsp;&nbsp;MethodOfMeasurement : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;Quantities : <span class="keyword">SET</span> [1:?] <span class="keyword">OF</span> <a href="../../ifcquantityresource/lexical/ifcphysicalquantity.htm">IfcPhysicalQuantity</a>;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0010.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcelementquantity.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

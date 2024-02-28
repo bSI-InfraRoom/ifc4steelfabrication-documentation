@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="06729b7c6115416884245d5533001d76" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_TubeNc</Name>
+  <Definition>Every macro of a part contains a ‘clturn’ and ‘clorigin’ parameter, these parameters determine the position of a macro. The rotation and distance values are relative to the first macro of the part.
+The ‘clturn’ parameter is the rotation angle between the centerlines of the macros.
+The ‘clorigin’ is the distance between the centerline intersections of the macros.
+The section below gives a detailed description of the rotational and translation sign agreement.
+The definition of the position parameters is explained with the use of a mono sketch of the position that you want to create. A mono sketch is a drawing that shows the part that you want to cut and all the parts or surfaces where the tube has to be connected to. All parameters needed for programming, could be determined using this mono sketch.</Definition>
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="04c15468e2b04437b8921ede44ff3aef">
+      <Name>CanOrder</Name>
+      <Definition>Order of the part in a can group. Only useful when a part is part of a can group</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="796552a8a5c44f69892308e8ea365416">
+      <Name>HeatNumber</Name>
+      <Definition>Identifying number issued to the original cast of a metal from which a component is manufactured</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="8dbcd20d96204ab7914ad405b7770883">
+      <Name>MaxLength</Name>
+      <Definition>The maximum length of the tube. After cutting the part is never longer than this value.
+</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="973f00de0cfb45249839f7317edab15f">
+      <Name>SeamRotation</Name>
+      <Definition>Angle between seam and the IfcAxis2Placement2D\RefDirection of the profile</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPlaneAngleMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases />
+</PropertySetDef>

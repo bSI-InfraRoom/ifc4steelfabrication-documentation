@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcCoveringTypeEnum</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 2 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.2.1");
+//-->
+</script>
+
+<h4 class="num">IfcCoveringTypeEnum</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type Definition</summary>
+    <p>
+       This enumeration defines the
+      range of different types of covering that can
+      further specify an <a href="../../ifcproductextension/lexical/ifccovering.htm">IfcCovering</a> or an <i>IfcCoveringType</i>.
+    </p>
+    <blockquote>
+      <small><font color="#0000FF">HISTORY New enumeration in
+      IFC Release 1.0</font></small>
+    </blockquote>
+    <blockquote>
+      <small><font color="#FF0000">IFC2x PLATFORM CHANGE  The
+      enumerators of the <span class="self-ref">IfcCoveringTypeEnum</span> has been
+      extended by adding <i>INSULATION, SLEEVING</i> and
+      <i>WRAPPING</i> with upward compatibility for file based
+      exchange.</font></small>
+    </blockquote>
+    <p>
+      <u>Enumeration</u>
+    </p>
+    <ul>
+      <li><small><b>CEILING</b></small>: the covering is used to represent a ceiling
+      </li>
+      <li><small><b>FLOORING</b></small>: the covering is used to represent a flooring
+      </li>
+      <li><small><b>CLADDING</b></small>: the covering is used to represent a cladding
+      </li>
+      <li><small><b>ROOFING</b></small>: the covering is used to represent a roof
+      </li>
+      <li><small><b>INSULATION</b></small>: the covering is used to insulate an
+      element for thermal or acoustic purposes.
+      </li>
+      <li><small><b>MEMBRANE</b></small>: an impervious layer that could be used for
+      e.g. roof covering (below tiling - that may be known as
+      sarking etc.) or as a damp proof course membrane
+      </li>
+      <li><small><b>SLEEVING</b></small>: the covering is used to isolate a
+      distribution element from a space in which it is contained.
+      </li>
+      <li><small><b>WRAPPING</b></small>: the covering is used for wrapping
+      particularly of distribution elements using tape.
+      </li>
+      <li><small><b>USERDEFINED</b></small>: user defined type of covering
+      </li>
+      <li><small><b>NOTDEFINED</b></small>: undefined type of covering
+      </li>
+    </ul></details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;IfcCoveringTypeEnum&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;ceiling&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;flooring&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;cladding&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;roofing&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;insulation&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;membrane&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;sleeving&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;wrapping&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;userdefined&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;notdefined&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+*)<br/>
+<span class="keyword">TYPE</span> IfcCoveringTypeEnum = <span class="keyword">ENUMERATION OF</span> (<br/>
+&nbsp;CEILING, <br/>&nbsp;FLOORING, <br/>&nbsp;CLADDING, <br/>&nbsp;ROOFING, <br/>&nbsp;INSULATION, <br/>&nbsp;MEMBRANE, <br/>&nbsp;SLEEVING, <br/>&nbsp;WRAPPING, <br/>&nbsp;USERDEFINED, <br/>&nbsp;NOTDEFINED);<br/><span class="keyword">END_TYPE;</span><br/>
+(*<br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0010.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifccoveringtypeenum.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

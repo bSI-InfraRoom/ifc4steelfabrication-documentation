@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcSimpleValue</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 6 index3 2 index4 20 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.6.2.21");
+//-->
+</script>
+
+<h4 class="num">IfcSimpleValue</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type definition</summary>
+
+<P> A select type for selecting between simple value types.
+
+<P>SELECT</P> 
+	<UL>
+	<LI><B>IfcInteger</B> Defined type of simple type INTEGER.</LI> 
+	<LI><B>IfcReal</B>  Defined type of simple type REAL.</LI> 
+	<LI><B>IfcBoolean</B> Defined type of simple type BOOLEAN.</LI>
+	<LI><B>IfcLogical</B> Defined type of simple type LOGICAL.</LI> 
+	<LI><B>IfcIdentifier</B> Defined type of simple type STRING for identification purposes.</LI> 
+	<LI><B>IfcLabel</B> Defined type of simple type STRING for naming purposes.</LI>
+	<LI><B>IfcText</B> Defined type of simple type STRING for descriptive purposes.</LI>
+	</UL>
+
+<BLOCKQUOTE> <FONT SIZE="-1" COLOR="#0000FF">HISTORY New type in IFC Release 2x.
+</FONT>
+</BLOCKQUOTE>
+</details>
+<details open="open"><summary>Enumeration definition</summary><table class="attributes">
+<tr><th>Constant</th><th>Description</th></tr>
+<tr><td>IfcInteger</td><td></td></tr><tr><td>IfcReal</td><td></td></tr><tr><td>IfcBoolean</td><td></td></tr><tr><td>IfcIdentifier</td><td></td></tr><tr><td>IfcText</td><td></td></tr><tr><td>IfcLabel</td><td></td></tr><tr><td>IfcLogical</td><td></td></tr></table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:group name=&quot;IfcSimpleValue&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:choice&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcBoolean-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcIdentifier-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcInteger-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcLabel-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcReal-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<span class="self-ref">IfcText-wrapper</span>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:choice&gt;<br/>
+&nbsp;&lt;/xs:group&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">TYPE</span> IfcSimpleValue = <span class="keyword">SELECT</span> (<br/>
+&nbsp;<a href="../../ifcmeasureresource/lexical/ifcinteger.htm">IfcInteger</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcreal.htm">IfcReal</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcboolean.htm">IfcBoolean</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifcidentifier.htm">IfcIdentifier</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a>, <br/>&nbsp;<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>);<br/><span class="keyword">END_TYPE;</span><br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcmeasureresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcsimplevalue.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="5eb7db9fecc045888656511038d8fed4" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_VersionInformation</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="526a1bd5a34f45c5b42056b95d499f3d">
+      <Name>VersionNumber</Name>
+      <Definition>Version number is optional value that can be assoicated with entire export or individual assembly</Definition>
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Version Number</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Version number is optional value that can be assoicated with entire export or individual assembly</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">This occurence driven property set represents simplified way of assigning version information instead of using dedicated IFC entities</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

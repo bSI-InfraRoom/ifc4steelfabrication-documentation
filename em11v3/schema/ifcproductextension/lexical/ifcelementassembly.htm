@@ -1,0 +1,502 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcElementAssembly</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 3 index4 5 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.3.6");
+//-->
+</script>
+
+<h4 class="num">IfcElementAssembly</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+    <p>
+       A container class that
+      represents complex element assemblies aggregated from
+      several elements, such as discrete elements, building
+      elements, or other elements.
+    </p>
+    <blockquote>
+      <p>
+        <small>EXAMPLE Steel construction assemblies, such as
+        trusses and different kinds of frames, can be represented
+        by the <span class="self-ref">IfcElementAssembly</span> entity. Other examples
+        include slab fields aggregated from a number of precast
+        concrete slabs or reinforcement units made from several
+        reinforcement bars.</small>
+      </p>
+    </blockquote>
+    <blockquote>
+      <p>
+        <font color="#0000FF"><small>HISTORY New Entity for
+        Release IFC2x Edition 2.</small></font>
+      </p>
+    </blockquote>
+    <p>
+      <u><b>Containment Use Definition</b></u>
+    </p>
+    <p>
+      The <span class="self-ref">IfcElementAssembly</span> should have (and in most
+      implementation scenarios it is mandatory) a relationship
+      for its hierarchical containment in the spatial structure of
+      the project.
+    </p>
+    <ul>
+      <li>The <span class="self-ref">IfcElementAssembly</span> is placed within the
+      project spatial hierarchy using the objectified
+      relationship <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a>,
+      referring to it by its inverse attribute
+      <i>SELF\IfcElement.ContainedInStructure</i>. Subtypes
+      of <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> are valid spatial
+      containers, with <a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a> being the default
+      container.
+      </li>
+    </ul>
+    <p>
+      The <span class="self-ref">IfcElementAssembly</span> shall represent an aggregate,
+      i.e. it should have other elements, being subtypes of
+      <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>, as contained (sub)parts.
+    </p>
+    <ul>
+      <li>The <span class="self-ref">IfcElementAssembly</span> is an aggregate i.e.
+      being composed by other elements and acting as an assembly
+      using the objectified relationship <a href="../../ifckernel/lexical/ifcrelaggregates.htm">IfcRelAggregates</a>,
+      referring to it by its inverse attribute
+      <i>SELF\IfcObjectDefinition.IsDecomposedBy</i>. Components
+      of an assembly are described by instances of subtypes of
+      <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>.
+      </li>
+      <li>In this case, the contained subtypes of
+      <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a> shall not be additionally contained in
+      the project spatial hierarchy, i.e. the inverse attribute
+      <i>SELF\IfcElement.ContainedInStructure</i> of those
+      <a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>'s shall be <i>NIL.</i>
+      </li>
+    </ul>
+    <table border="0" cellpadding="2" cellspacing="2" summary=
+    "containment">
+      <tr>
+        <td>
+          <img src="figures/ifcelementassembly-containment.png"
+          alt="containment relationships" width="501" height=
+          "250" border="0">
+        </td>
+        <td valign="bottom">
+          <p>
+            <small>FIGURE spatial containment and element
+            aggregation relationships for
+            <span class="self-ref">IfcElementAssembly</span></small>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <u><b>Geometry Use Definitions</b></u>
+    </p>
+    <p>
+      The geometric representation of <span class="self-ref">IfcElementAssembly</span>
+      is given by the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, allowing
+      multiple geometric representations.
+    </p>
+    <p>
+      <b>Local Placement</b>
+    </p>
+    <p>
+      The local placement for <span class="self-ref">IfcElementAssembly</span> is
+      defined in its supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined
+      by the <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local
+      coordinate system that is referenced by all geometric
+      representations.
+    </p>
+    <ul>
+      <li>The <i>PlacementRelTo</i> relationship of
+      <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if given) to the
+      local placement of the same
+      <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a> that is used in the
+      <i>ContainedInStructure</i> inverse attribute or to a
+      referenced spatial structure element at a higher level.
+      </li>
+      <li>If the relative placement is not used, the absolute
+      placement is defined within the world coordinate system.
+      </li>
+    </ul>
+    <p>
+      <u><b>Geometric Representations</b></u>
+    </p>
+    <p>
+      The geometry of an <span class="self-ref">IfcElementAssembly</span> is generally
+      formed from its components, in which case it does not need
+      to have an explicit geometric representation. In some cases
+      it may be useful to also expose a simple explicit
+      representation as a bounding box representation of the
+      complex composed shape independently.
+    </p>
+    <p>
+      <u>Informal proposition</u>
+    </p>
+    <ol>
+      <li>The <span class="self-ref">IfcElementAssembly</span> shall have an aggregation
+      relationship to the contained parts, i.e. the
+      (INV) <i>IsDecomposedBy</i> relationship shall be utilized.
+      </li>
+    </ol></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>9</td><td>AssemblyPlace</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>10</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a></td><td>[1:1]</td><td>
+Predefined generic types for a element assembly that are specified in an enumeration.</td><td>X</td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR1</td><td>The attribute ObjectType shall be given, if the predefined type is set to USERDEFINED.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcelementassembly.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="54,102,266,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,278,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,290,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,302,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,314,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></i></td></tr>
+<tr><td>8</td><td>Tag</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ConnectedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element to which this element is connected to.
+</td><td></td></tr>
+<tr><td></td><td><i>HasOpenings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatingBuildingElement</td><td>S[0:?]</td><td>Reference to the Voids Relationship that creates an opening in an element. An element can incorporate zero-to-many openings.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsConnectionRealization</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a><br/>@RealizingElements</td><td>S[0:?]</td><td>Reference to the connection relationship with realizing element. The relationship then refers to the realizing element which provides the physical manifestation of the connection relationship.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ConnectedFrom</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatedElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element that is connected to this element.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Containment relationship to the spatial structure element, to which the element is primarily associated.</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a></td></tr>
+<tr><td>9</td><td>AssemblyPlace</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td>10</td><td>PredefinedType</td><td><a href="../../ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a></td><td>[1:1]</td><td>
+Predefined generic types for a element assembly that are specified in an enumeration.</td><td>X</td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifcelementassembly.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<p>An assembly represents a fabricated steel element consists of a main piece with attached sub pieces. An assembly belongs to a spatial structure through  Contained in Spatial Structure Relationship (IfcRelContainedInSpatialStructure). Assembly's local coordinate becomes the reference placement for   pieces, of which local coordinate becomes the reference placement for attached accessories respectively. </p>
+<p>An assembly's geometric representation should be derived from its main piece and sub pieces and should not have its own geometric representation.</p>
+<p>Assembly marks of  adjacent assemblies are not explictily defined, it can be listed from the other assemblies listed in the   Contained in Spatial Structure Relationship, or should be calculated with the users' own adjacency specification from the location of the other assemblies in the relationship. <br>
+</p>
+<p><span class="std">Assembly may have attributes listed below should use Defines By Property Set (IfcRelDefinesByPropertyies) in order to represent required information items listed below and  are described in the corresponding sections of this document.</span></p>
+<p><strong>Assembly Identification</strong></p>
+<ul>
+  <li>GUID</li>
+  <li>Assembly name</li>
+  <li>Assembly mark</li>
+  <li>Client mark</li>
+  <li>Prelim mark</li>
+  <li>Shipping mark</li>
+  <li>Bar code</li>
+</ul>
+<p><strong>Status Information</strong></p>
+<ul>
+  <li>Status flags</li>
+</ul>
+<p>
+  <strong>Scheduling information</strong>
+</p>
+<ul>
+  <li>Sequence ID</li>
+  <li>Sequence level</li>
+  <li>On site by date</li>
+</ul>
+<p><strong>Drawing Information</strong></p>
+<ul>
+  <li>Drawing numbers</li>
+</ul>
+<p><strong>Quantity Information </strong></p>
+<ul>
+  <li>Count</li>
+</ul>
+<p><strong>Version</strong></p>
+<ul>
+  <li>Version number</li>
+</ul>
+<p><strong>Finish/ Treatment</strong></p>
+<ul>
+  <li>Surface treatment</li>
+</ul>
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="220"><strong>Steel Detailing Information</strong></td>
+    <td width="220"><strong>IFC Entity\Attribute</strong></td>
+    <td><strong>Note</strong></td>
+  </tr>
+  <tr>
+    <td width="220">Spatial Location</td>
+    <td width="220">IfcRelContainedInSpatialStructure</td>
+    <td>Assembly is belong to Spatial Structure</td>
+  </tr>
+  <tr>
+    <td width="220">Components</td>
+    <td width="220">IfcRelAggregates</td>
+    <td>Pieces belong to Assembly</td>
+  </tr>
+  <tr>
+    <td width="220">Spatial structure</td>
+    <td width="220">IfcRelContainedInSpatialStructure</td>
+    <td>&nbsp;</td>
+  </tr>
+
+</table><details>
+<summary>Concept usage</summary>
+<a id="properties-on-occurrences" />
+<p class="use-head">Properties on Occurrences</p>
+<p>The <a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a> concept applies to this entity as shown in Table 3.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_assemblyidentification.htm">AISC_EM11_Pset_AssemblyIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_drawingnumber.htm">AISC_EM11_Pset_DrawingNumber</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_schedulinginformation.htm">AISC_EM11_Pset_SchedulingInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 3 &mdash; IfcElementAssembly Properties on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="spatial-containment" />
+<p class="use-head">Spatial Containment</p>
+<p>The <a href="../../templates/spatial-containment.htm">Spatial Containment</a> concept applies to this entity as shown in Table 4.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>RelatingSpatialStructure</b></th></tr>
+<tr><td><a href="../../ifcproductextension/lexical/ifcbuildingstorey.htm">IfcBuildingStorey</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 4 &mdash; IfcElementAssembly Spatial Containment</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="quantities-on-occurrences" />
+<p class="use-head">Quantities on Occurrences</p>
+<p>The <a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a> concept applies to this entity as shown in Table 5.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 5 &mdash; IfcElementAssembly Quantities on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="grid-placement" />
+<p class="use-head">Grid Placement</p>
+<p>The <a href="../../templates/grid-placement.htm">Grid Placement</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="placement" />
+<p class="use-head">Placement</p>
+<p>The <a href="../../templates/placement.htm">Placement</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="material-solid" />
+<p class="use-head">Material Solid</p>
+<p>The <a href="../../templates/material-solid.htm">Material Solid</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelementassembly.htm#properties-on-occurrences">Properties on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelementassembly.htm#spatial-containment">Spatial Containment</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelementassembly.htm#quantities-on-occurrences">Quantities on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelementassembly.htm#grid-placement">Grid Placement</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelementassembly.htm#placement">Placement</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcelementassembly.htm#material-solid">Material Solid</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcElementAssembly&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelementassembly.htm">IfcElementAssembly</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcElementAssembly&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;PredefinedType&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a>&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcElementAssembly<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a>)<b>;</b><br/>
+&nbsp;&nbsp;AssemblyPlace : <span class="keyword">OPTIONAL</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;&nbsp;PredefinedType : <a href="../../ifcproductextension/lexical/ifcelementassemblytypeenum.htm">IfcElementAssemblyTypeEnum</a>;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR1 : (PredefinedType &lt;&gt; IfcElementAssemblyTypeEnum.USERDEFINED) OR ((PredefinedType = IfcElementAssemblyTypeEnum.USERDEFINED) AND EXISTS(SELF\IfcObject.ObjectType)) ;<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0010.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcelementassembly.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcShapeRepresentation</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 10 index3 3 index4 7 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.10.3.8");
+//-->
+</script>
+
+<h4 class="num">IfcShapeRepresentation</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+<p><u>Definition
+from ISO/CD 10303-42:1992</u>: The
+shape representation is a specific kind of representation that
+represents a shape. </p>
+<p><u>Definition
+from IAI</u>: The <span class="self-ref">IfcShapeRepresentation</span>
+represents the concept of a particular geometric representation of a
+product or a product component within a specific geometric
+representation context. The inherited attribute <i>RepresentationType</i>
+is used to define the geometric model used for the shape
+representation, the inherited attribute <i>RepresentationIdentifier</i>
+is used to denote the part of the representation captured by the <span class="self-ref">IfcShapeRepresentation</span>
+(e.g. Axis, Body, etc.). <br>
+</p><p>Several representation types for shape
+representation are included as predefined types: </p>
+<table cellpadding="2" cellspacing="2"> <tbody><tr>
+<td colspan="2" align="left" valign="top"
+ width="20"><b>Curve2D</b></td> <td
+ align="left" valign="top">2
+dimensional curves </td> </tr> <tr> <td
+ colspan="2" align="left" valign="top" width="20"><b>GeometricSet
+</b></td> <td align="left" valign="top">points,
+curves, surfaces (2 or 3 dimensional)</td> </tr> <tr>
+<td align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="20"><b>GeometricCurveSet</b></td>
+<td align="left" valign="top">points,
+curves (2 or 3 dimensional)</td> </tr> <tr> <td></td>
+<td><b>Annotation2D</b></td> <td>points,
+curves (2 or 3 dimensional), hatches and text (2 dimensional) </td>
+</tr> <tr> <td colspan="2" align="left"
+ valign="top" width="20"><b>SurfaceModel </b></td>
+<td align="left" valign="top">face
+based and shell based surface model</td> </tr> <tr>
+<td colspan="2" align="left" valign="top"
+ width="20"><b>SolidModel </b></td> <td
+ align="left" valign="top">including
+swept solid, Boolean results and Brep bodies<br>
+more specific types are:</td> </tr> <tr> <td
+ align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="130"><b>SweptSolid</b></td>
+<td align="left" valign="top">swept
+area solids, by extrusion and revolution</td> </tr> <tr>
+<td align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="130"><b>Brep</b></td>
+<td align="left" valign="top">faceted
+Brep's with and without voids</td> </tr> <tr> <td
+ align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="130"><b>CSG</b></td>
+<td align="left" valign="top">Boolean
+results of operations between solid models, half spaces and Boolean
+results</td> </tr> <tr> <td align="left"
+ valign="top" width="20">&nbsp;</td> <td
+ align="left" valign="top" width="130"><b>Clipping</b></td>
+<td align="left" valign="top">Boolean
+differences between swept area solids, half spaces and Boolean results</td>
+</tr> <tr> <td align="left" valign="top"
+ width="20">&nbsp;</td> <td align="left"
+ valign="top" width="130"><b>AdvancedSweptSolid</b></td>
+<td align="left" valign="top">swept
+area solids created by sweeping a profile along a directrix</td> </tr>
+<tr> <td colspan="2" align="left" valign="top"
+ width="20"><i>additional
+types</i> </td> <td align="left" valign="top">some
+additional representation types are given:</td> </tr> <tr>
+<td align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="130"><b>BoundingBox</b></td>
+<td align="left" valign="top">simplistic
+3D representation by a bounding box</td> </tr> <tr>
+<td align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="130"><b>SectionedSpine</b></td>
+<td align="left" valign="top">cross
+section based representation of a spine curve and planar cross
+sections. It can represent a surface or a solid and the interpolations
+of the between the cross sections is not defined</td> </tr>
+<tr> <td align="left" valign="top" width="20">&nbsp;</td>
+<td align="left" valign="top" width="130"><b>MappedRepresentation</b></td>
+<td align="left" valign="top">representation
+based on mapped item(s), referring to a representation map. Note: it
+can
+be seen as an inserted block reference. The shape representation of the
+mapped item has a representation type declaring the type of its
+representation items.</td> </tr> </tbody>
+</table><p>Table 1: string values for the inherited
+attribute '<i>RepresentationType</i>'.</p>
+<blockquote><small>NOTE&nbsp; The definition of
+this entity relates to the STEP entity shape_representation. Please
+refer to ISO/IS
+10303-41:1994 for the final definition of the formal standard. </small></blockquote>
+<blockquote><small><font color="#0000ff">HISTORY&nbsp;
+New entity in IFC Release 1.5. </font></small></blockquote></details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR21</td><td>The context to which the IfcShapeRepresentation is assign, shall be of type IfcGeometricRepresentationContext.</td></tr>
+<tr><td>WR22</td><td>No topological representation item shall be directly used for shape representations, with the exception of IfcVertexPoint, IfcEdgeCurve, IfcFaceSurface.</td></tr>
+<tr><td>WR23</td><td>A representation type should be given to the shape representation.</td></tr>
+<tr><td>WR24</td><td>Checks the proper use of Items according to the RepresentationType.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcshaperepresentation.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="18,30,230,42" href="../../../schema/ifcrepresentationresource/lexical/ifcshapemodel.htm" alt="IfcShapeModel" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcrepresentationresource/lexical/ifcrepresentation.htm" alt="IfcRepresentation" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcrepresentation.htm">IfcRepresentation</a></td></tr>
+<tr><td>1</td><td>ContextOfItems</td><td><a href="../../ifcrepresentationresource/lexical/ifcrepresentationcontext.htm">IfcRepresentationContext</a></td><td>[1:1]</td><td>
+Definition of the representation context for which the different subtypes of representation are valid.</td><td>X</td></tr>
+<tr><td>2</td><td>RepresentationIdentifier</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+The optional identifier of the representation as used within a project.</td><td>X</td></tr>
+<tr><td>3</td><td>RepresentationType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The description of the type of a representation context. The representation type defines the type of geometry or topology used for representing the product representation. More information is given at the subtypes <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a> and <i>IfcTopologyRepresentation</i>.<br>
+The supported values for context type are to be specified by implementers agreements.</td><td>X</td></tr>
+<tr><td>4</td><td>Items</td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></td><td>S[1:?]</td><td>
+Set of geometric representation items that are defined for this representation.</td><td>X</td></tr>
+<tr><td></td><td><i>RepresentationMap</i></td><td><a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a><br/>@MappedRepresentation</td><td>S[0:1]</td><td>
+Use of the representation within an <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a>. If used, this <span class="self-ref">IfcRepresentation</span> may be assigned to many representations as one of its <i>Items</i> using an <a href="../../ifcgeometryresource/lexical/ifcmappeditem.htm">IfcMappedItem</a>. Using <a href="../../ifcgeometryresource/lexical/ifcrepresentationmap.htm">IfcRepresentationMap</a> is the way to share one representation (often of type <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>) by many products.  
+</td><td></td></tr>
+<tr><td></td><td><i>OfProductRepresentation</i></td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a><br/>@Representations</td><td>S[0:1]</td><td>Reference to the product shape, for which it is the shape representation.</td><td></td></tr>
+<tr><td colspan="6"><i><a href="../../ifcrepresentationresource/lexical/ifcshapemodel.htm">IfcShapeModel</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a></td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcShapeRepresentation&quot; type=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcshapemodel.htm">IfcShapeModel</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcShapeRepresentation&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcrepresentationresource/lexical/ifcshapemodel.htm">IfcShapeModel</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcShapeRepresentation<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcrepresentationresource/lexical/ifcshapemodel.htm">IfcShapeModel</a>)<b>;</b><br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR21 : 'IFCREPRESENTATIONRESOURCE.IFCGEOMETRICREPRESENTATIONCONTEXT' 
+IN TYPEOF(SELF\IfcRepresentation.ContextOfItems);<br/>&nbsp;&nbsp;WR22 : SIZEOF(QUERY(temp &lt;* Items | 
+  ('IFCTOPOLOGYRESOURCE.IFCTOPOLOGICALREPRESENTATIONITEM' IN TYPEOF(temp))
+    AND (NOT(SIZEOF(
+      ['IFCTOPOLOGYRESOURCE.IFCVERTEXPOINT',
+       'IFCTOPOLOGYRESOURCE.IFCEDGECURVE',
+       'IFCTOPOLOGYRESOURCE.IFCFACESURFACE'] * TYPEOF(temp)) = 1))
+)) = 0;<br/>&nbsp;&nbsp;WR23 : EXISTS(SELF\IfcRepresentation.RepresentationType);<br/>&nbsp;&nbsp;WR24 : IfcShapeRepresentationTypes(SELF\IfcRepresentation.RepresentationType, SELF\IfcRepresentation.Items);<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcrepresentationresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcshaperepresentation.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

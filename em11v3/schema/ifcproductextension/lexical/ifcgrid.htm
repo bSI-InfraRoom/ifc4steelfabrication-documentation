@@ -1,0 +1,401 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcGrid</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 3 index4 9 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.3.10");
+//-->
+</script>
+
+<h4 class="num">IfcGrid</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+    <p>
+       <span class="self-ref">IfcGrid</span> ia a planar
+      design grid defined in 3D space used as an aid in locating
+      structural and design elements. The position of the grid
+      (<i>ObjectPlacement</i>) is defined by a 3D coordinate
+      system (and thereby the design grid can be used in plan,
+      section or in any position relative to the world coordinate
+      system). The position can be relative to the object
+      placement of other products or grids. The XY plane of the
+      3D coordinate system is used to place the grid axes, which
+      are 2D curves (e.g., line, circle, trimmed curve, polyline,
+      or composite curve).
+    </p>
+    <p>
+      The inherited attributes <i>Name</i> and <i>Description</i>
+      can be used to define a descriptive name of the grid and to
+      indicate the grid's purpose. A grid is defined by
+      (normally) two, or (in case of a triangular grid) three
+      lists of grid axes. The following table shows some
+      examples.
+    </p>
+    <table cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td width="320">
+            <img src="figures/ifcdesigngrid-type1.gif" alt="1"
+            border="0" height="211" width="306">
+          </td>
+          <td align="left" valign="top" width="320">
+            <img src="figures/ifcdesigngrid-type2.gif" alt="2"
+            border="0" height="211" width="306">
+          </td>
+          <td width="320">
+            <img src="figures/ifcdesigngrid-type3.gif" alt="3"
+            border="0" height="211" width="306">
+          </td>
+        </tr>
+        <tr>
+          <td width="320">
+            rectangular grid
+          </td>
+          <td align="left" valign="top" width="320">
+            radial grid
+          </td>
+          <td valign="top" width="320">
+            triangular grid
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      The grid axes, defined within the design grid, are those
+      elements to which project objects will be placed relatively
+      using the <a href="../../ifcgeometricconstraintresource/lexical/ifcgridplacement.htm">IfcGridPlacement</a>.
+    </p>
+    <blockquote>
+      <font color="#0000FF" size="-1">HISTORY New entity in IFC
+      Release 1.0.</font>
+    </blockquote>
+    <p>
+      <u>Informal Proposition</u>
+    </p>
+    <ol>
+      <li>Grid axes, which are referenced in different lists of
+      axes (UAxes, VAxes, WAxes) shall not be parallel.
+      </li>
+      <li>Grid axes should be defined such as there are no two
+      grid axes which intersect twice.
+      </li>
+    </ol>
+    <table cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr valign="top">
+          <td align="left" valign="top" width="320">
+            <img src="figures/ifcdesigngrid-ip2.gif" alt="IP2"
+            border="0" height="97" width="306">
+          </td>
+          <td align="left" valign="top">
+            Informal Proposition #2
+            <ul>
+              <li>left side: ambiguous intersections A1 and A2, a
+              grid containing such grid axes is not a valid
+              design grid.
+              </li>
+              <li>right side: the conflict can be resolved by
+              splitting one grid axis in a way, such as no
+              ambiguous intersections exist.
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <b><u>Geometry Use Definitions</u></b>
+    </p>
+    <p>
+      The geometric representation of <span class="self-ref">IfcGrid</span> is given by
+      the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, allowing geometric
+      representations. Included are:
+    </p>
+    <p>
+      <b>Local Placement</b>
+    </p>
+    <p>
+      The local placement for <span class="self-ref">IfcGrid</span> is defined in its
+      supertype <a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>. It is defined by the
+      <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a>, which defines the local
+      coordinate system that is referenced by all geometric
+      representations.
+    </p>
+    <ul>
+      <li>The <i>PlacementRelTo</i> relationship of
+      <a href="../../ifcgeometricconstraintresource/lexical/ifclocalplacement.htm">IfcLocalPlacement</a> shall point (if given) to the
+      local placement of the same
+      <a href="../../ifcproductextension/lexical/ifcspatialstructureelement.htm">IfcSpatialStructureElement</a>, which is used in the <i>
+        ContainedInStructure</i> inverse attribute, or to a
+        spatial structure element at a higher level, referenced
+        by that.
+      </li>
+      <li>If the relative placement is not used, the absolute
+      placement is defined within the world coordinate system.
+      </li>
+    </ul>
+    <p>
+      <b><i>Geometric Representations</i></b>
+    </p>
+    <p>
+      Currently, the use of a 2D 'FootPrint' representation of
+      type 'GeometricCurveSet' is supported.
+    </p>
+    <p>
+      <b>GeometricCurveSet representation</b>
+    </p>
+    <p>
+      The 2D geometric representation of <span class="self-ref">IfcGrid</span> is
+      defined using the 'GeometricCurveSet' geometry. The
+      following attribute values should be inserted
+    </p>
+    <ul>
+      <li>
+        <i>IfcShapeRepresentation.RepresentationIdentifier</i> =
+        'FootPrint'.
+      </li>
+      <li>
+        <i>IfcShapeRepresentation.RepresentationType</i> =
+        'GeometricCurveSet' .
+      </li>
+    </ul>
+    <p>
+      The following constraints apply to the 2D representation:
+    </p>
+    <ul>
+      <li>The <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> shall be an (and the
+      only) <i>Item</i> of the <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>. It
+      should contain an <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> containing
+      subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>, each representing a grid axis.
+      Applicable subtypes of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> are:
+      <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>, <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>,
+      <a href="../../ifcgeometryresource/lexical/ifctrimmedcurve.htm">IfcTrimmedCurve</a> (based on <i>BaseCurve</i>
+      referencing <a href="../../ifcgeometryresource/lexical/ifcline.htm">IfcLine</a> or <a href="../../ifcgeometryresource/lexical/ifccircle.htm">IfcCircle</a>). 
+      </li>
+      <li>Each subtype of <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> may have a curve style
+      assigned, using <i>IfcAnnotationCurveOccurrence</i>
+      referencing <i>IfcCurveStyle</i>.
+      </li>
+      <li>Optionally the grid axis labels may be added as
+      <i>IfcTextLiteral</i>, and they may have text styles
+      assigned, using <i>IfcAnnotationTextOccurrence</i>
+      referencing <i>IfcTextStyle</i>.
+      </li>
+    </ul>
+    <p>
+      <i>Illustrations</i>
+    </p>
+    <table cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td>
+            <a href=
+            "drawings/IfcDesignGrid-Layout1.dwf"><img src="figures/ifcdesigngrid-layout1.gif"
+            alt="design grid" border="0" height="300" width=
+            "400"></a>
+          </td>
+          <td align="left" valign="bottom">
+            <p>
+              <small>The <span class="self-ref">IfcGrid</span> defines a placement
+              coordinate system using the <i>ObjectPlacement</i>.
+              The XY plane of the coordinate system is used to
+              place the 2D grid axes. The <i>Representation</i>
+              of <span class="self-ref">IfcGrid</span> is defined using
+              <a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a>, referencing an
+              <a href="../../ifcrepresentationresource/lexical/ifcshaperepresentation.htm">IfcShapeRepresentation</a>, that
+              includes <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> as
+              <i>Items</i>. All grid axes are added as
+              <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a> to the
+              <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a>.</small>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="figures/ifcgrid-representation.png" alt=
+            "representation of a design grid" width="501" height=
+            "621" border="0">
+          </td>
+          <td align="left" valign="bottom">
+            <p>
+              <small>The attributes <i>UAxes</i> and <i>VAxes</i>
+              define lists of <a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a> within the
+              context of the grid. Each instance of
+              <a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a> refers to the same instance of
+              <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a> (here the subtype
+              <a href="../../ifcgeometryresource/lexical/ifcpolyline.htm">IfcPolyline</a>) that is contained within the
+              <a href="../../ifcgeometricmodelresource/lexical/ifcgeometriccurveset.htm">IfcGeometricCurveSet</a> that represents the
+              <span class="self-ref">IfcGrid</span>.</small>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table></details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>8</td><td>UAxes</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a></td><td>~L[1:?]</td><td>
+List of grid axes defining the first row of grid lines.</td><td>X</td></tr>
+<tr><td>9</td><td>VAxes</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a></td><td>~L[1:?]</td><td>
+List of grid axes defining the second row of grid lines.</td><td>X</td></tr>
+<tr><td>10</td><td>WAxes</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Relationship to a spatial structure element, to which the grid is primarily associated.
+</td><td></td></tr>
+</table>
+</details>
+<details open="open"><summary>Formal Propositions</summary><table class="propositions">
+<tr><th>Rule</th><th>Description</th></tr>
+<tr><td>WR41</td><td>The placement for the grid has to be given.</td></tr>
+</table>
+
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcgrid.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="42,78,254,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,266,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,278,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,290,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a></td></tr>
+<tr><td>8</td><td>UAxes</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a></td><td>~L[1:?]</td><td>
+List of grid axes defining the first row of grid lines.</td><td>X</td></tr>
+<tr><td>9</td><td>VAxes</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a></td><td>~L[1:?]</td><td>
+List of grid axes defining the second row of grid lines.</td><td>X</td></tr>
+<tr><td>10</td><td>WAxes</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Relationship to a spatial structure element, to which the grid is primarily associated.
+</td><td></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifcgrid.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<details>
+<summary>Concept usage</summary>
+<a id="placement" />
+<p class="use-head">Placement</p>
+<p>The <a href="../../templates/placement.htm">Placement</a> concept applies to this entity.</p><br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a></td></tr><tr><td> </td><td><a href="../../ifcproductextension/lexical/ifcgrid.htm#placement">Placement</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcGrid&quot; type=&quot;ifc:<a href="../../ifcproductextension/lexical/ifcgrid.htm">IfcGrid</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcGrid&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;UAxes&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;list-unique&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;VAxes&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element ref=&quot;ifc:<a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>&quot; maxOccurs=&quot;unbounded&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:itemType&quot; fixed=&quot;ifc:<a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:cType&quot; fixed=&quot;list-unique&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute ref=&quot;ifc:arraySize&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:complexType&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:element&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcGrid<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a>)<b>;</b><br/>
+&nbsp;&nbsp;UAxes : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>;<br/>
+&nbsp;&nbsp;VAxes : <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <a href="../../ifcgeometricconstraintresource/lexical/ifcgridaxis.htm">IfcGridAxis</a>;<br/>
+&nbsp;&nbsp;WAxes : <span class="keyword">OPTIONAL</span> <span class="keyword">LIST</span> [1:?] <span class="keyword">OF</span> <span class="keyword">UNIQUE</span> <span class="self-ref">IfcStrippedOptional</span>;<br/>
+&nbsp;<span class="keyword">INVERSE</span><br/>
+&nbsp;&nbsp;ContainedInStructure : <span class="keyword">SET</span> [0:1] OF <a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a> <span class="keyword">FOR</span> RelatedElements;<br/>
+&nbsp;<span class="keyword">WHERE</span><br/>
+&nbsp;&nbsp;WR41 : EXISTS(SELF\IfcProduct.ObjectPlacement);<br/><span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcproductextension/diagram_0006.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcgrid.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

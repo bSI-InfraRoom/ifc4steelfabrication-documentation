@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="3f5ca676fd134109828685902952870f" templatetype="" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_Weld</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="8b25ff6d727c4af4b7b8ed027b969730">
+      <Name>Type1</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Type1</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">&lt;p&gt;Type of weld according to ISO. It could be any of the following values:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Square Groove Weld&lt;/li&gt;&lt;li&gt;Single V Groove Weld&lt;/li&gt;&lt;li&gt;Single Bevel Groove Weld&lt;/li&gt;&lt;li&gt;Single V Groove Weld with Broad Root Face&lt;/li&gt;&lt;li&gt;Single Bevel Groove Weld with Broad Root Face&lt;/li&gt;&lt;li&gt;Single U Groove Weld&lt;/li&gt;&lt;li&gt;Single J Groove Weld&lt;/li&gt;&lt;li&gt;Double V Groove Weld&lt;/li&gt;&lt;li&gt;Double Bevel Groove Weld&lt;/li&gt;&lt;li&gt;Double U Groove Weld&lt;/li&gt;&lt;li&gt;Double J Groove Weld&lt;/li&gt;&lt;li&gt;Backing Weld, Fillet Weld&lt;/li&gt;&lt;li&gt;Plug/Slot Weld, Spot Weld&lt;/li&gt;&lt;li&gt;Seam Weld&lt;/li&gt;&lt;li&gt;Edge Weld&lt;/li&gt;&lt;li&gt;Surfacing&lt;/li&gt;&lt;li&gt;Peripheral Weld&lt;/li&gt;&lt;li&gt;Spot weld&lt;/li&gt;&lt;li&gt;Seam Weld&lt;/li&gt;&lt;li&gt;Plug Weld&lt;/li&gt;&lt;li&gt;Slot Weld&lt;/li&gt;&lt;/ul&gt;</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0748bfef16a4409fbfd9a88de8dc95fc">
+      <Name>Intermittent</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Intermittent</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">If intermittent or not</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="7826e79a71384f28a96472fe159e839b">
+      <Name>Staggered</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcBoolean" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Staggered</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">If staggered or not</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e1a20ce9d6f64755be929726bd32fe22">
+      <Name>Process</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcInteger" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Process</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Reference number of the welding process according to ISO 4063</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="655087be9f5444c0b43be450772485c0">
+      <Name>ProcessName</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Process Name</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Name of the welding process according to ISO</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="e024a01192d04061b9332c8288c23538">
+      <Name>a</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">a</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Throat thickness- Measure a according to ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="72b3f0197edd42d09ab7f783616fa279">
+      <Name>c</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">c</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">	
+
+Width of weld- Measure c according to ISO 2553
+</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="0572c1881b2143fc91291cef9d9903a0">
+      <Name>d</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">d</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Spot diameter/ diameter of the hole - Measure d according to ISO 2553 </DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="5794cfae86874797be99ec1dbecad8d9">
+      <Name>e</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">e</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Spacing- Measure e according to ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="78e09db47e864516a111a813cf73cd1d">
+      <Name>l</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">l</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Length of weld- Measure l according to ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="921538fd80b14759bcc482749d3e015c">
+      <Name>n</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcCountMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">n</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Number of weld elements- Count n according to ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="c144e9aabc484e31aa97f6475b6249f6">
+      <Name>s</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">s</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Weld thickness, minimum distance from the external surface of the weld to the bottom of the penetration- Measure s according to ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="99ac4b416e0b46e3abe7b4ae5edf2d26">
+      <Name>z</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcPositiveLengthMeasure" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">z</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Leg length- Measure z according to ISO 2553</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="20102cc3e97f4555b26c244636f2276c">
+      <Name>WPSCode</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases />
+      <DefinitionAliases />
+    </PropertyDef>
+    <PropertyDef ifdguid="1e63696e091048ecab2c3ab5b3c72844">
+      <Name>WeldGrade</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcIdentifier" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Weld Grades</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">List of weld grades
+</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="73fde628a91648239cc3acfc3a1297da">
+      <Name>WeldID</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Weld ID</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Name or number to identify the weld in the model</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="b5bdbeafa800435a88873c99bf3fe33d">
+      <Name>WeldDescription</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Weld Description</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Textual description for weld</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="78395118a448422cbbe2112906f12c27">
+      <Name>WeldCategory</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Weld Category</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">WeldCategory represents Test methods for NDT (Non Destructive Test). The value is one of listed value below but not limited to the listed value
+&lt;ul&gt;
+&lt;li&gt;Acoustic Emission Testing&lt;/li&gt;
+&lt;li&gt;Blue Etch Anodize&lt;/li&gt;
+&lt;li&gt;Dye Penetrant Inspection Liquid Penetrant&lt;/li&gt; 
+&lt;li&gt;Testing&lt;/li&gt;
+&lt;li&gt;Electromagnetic Testing&lt;/li&gt;
+&lt;li&gt;Ellipsometry&lt;/li&gt;
+&lt;li&gt;Endoscope Inspection&lt;/li&gt;
+&lt;li&gt;Guided Wave Testing&lt;/li&gt;
+&lt;li&gt;Hardness Testing&lt;/li&gt;
+&lt;li&gt;Impulse Excitation Technique&lt;/li&gt;
+&lt;li&gt;Infrared And Thermal Testing&lt;/li&gt;
+&lt;li&gt;Laser Testing&lt;/li&gt;
+&lt;li&gt;Electronic Speckle Pattern Interferometry&lt;/li&gt;
+&lt;li&gt;Holographic Interferometry&lt;/li&gt;
+&lt;li&gt;Low Coherence Interferometry&lt;/li&gt;
+&lt;li&gt;Profilometry&lt;/li&gt;
+&lt;li&gt;Shearography&lt;/li&gt;
+&lt;li&gt;Leak Testing&lt;/li&gt;
+&lt;li&gt;Magnetic Resonance Imaging&lt;/li&gt;
+&lt;li&gt;Metallographic Replicas&lt;/li&gt;
+&lt;li&gt;Near-Infrared Spectroscopy&lt;/li&gt;
+&lt;li&gt;Optical Microscopy&lt;/li&gt;
+&lt;li&gt;Positive Material Identification&lt;/li&gt;
+&lt;li&gt;Radiographic Testing&lt;/li&gt;
+&lt;li&gt;Scanning Electron Microscopy&lt;/li&gt;
+&lt;li&gt;Surface Temper Etch&lt;/li&gt;
+&lt;li&gt;Ultrasonic Testing&lt;/li&gt;
+&lt;li&gt;Vibration Analysis&lt;/li&gt;
+&lt;li&gt;Visual Inspection&lt;/li&gt;
+&lt;li&gt;Corroscan/C-Scan&lt;/li&gt;
+&lt;li&gt;Internal Rotary Inspection System&lt;/li&gt;
+&lt;li&gt;3D Computed Tomography&lt;/li&gt;
+&lt;li&gt;Heat Exchanger Life Assessment System&lt;/li&gt;
+&lt;li&gt;Rtj Flange Special Ultrasonic Testing&lt;/li&gt;
+&lt;/ul&gt;</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="28a239a5f46a49f4852e74d43f20c674">
+      <Name>FieldWeld</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Field Weld</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">If it is field weld or not</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">&lt;p class="std"&gt;Weld property set is assigned to an instance of Weld. Weld shall use Fastener (IfcFastener) for representing location and use Connects With Realizing Elements (IfcRelConnectWsithRealizingElements) for relation between connecting piece. Weld for rolled plate pipe cannot use Connects With Realizing Elements as it violates IFC schema definition. Therefore, it should use Connects Elements (IfcRelConnectsElements) and set IfcFastener as Related Element. Geometric Representation of welding should be curve that shows welding path.&lt;/p&gt;
+&lt;p class="std"&gt;Weld Size of weld. Physical extents and dimensions of weld. Weld is modeled and shown as a theoretical physical object using throat/size etc so that a weight and estimate can be produced from the model.&lt;/p&gt;
+&lt;img src="../../../img/convexfilletweld.png"&gt;
+&lt;p&gt;image source : CIS/2&lt;/p&gt;</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>

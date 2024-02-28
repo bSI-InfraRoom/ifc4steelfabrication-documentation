@@ -1,0 +1,128 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcGeometricRepresentationItem</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 4 index3 3 index4 14 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.4.3.15");
+//-->
+</script>
+
+<h4 class="num">IfcGeometricRepresentationItem</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary> 
+	 <P><U>Definition from ISO/CD 10303-43:1992</U>: An geometric representation
+		item is a representation item that has the additional meaning of having
+		geometric position or orientation or both. This meaning is present by virtue
+		of: </P> 
+	 <UL> 
+		<LI>being a Cartesian point or a direction </LI> 
+		<LI> referencing directly a Cartesian point or direction </LI> 
+		<LI>referencing indirectly a Cartesian point or direction </LI> 
+	 </UL> 
+	 <P>An indirect reference to a Cartesian point or direction means that a
+		given geometric item references the Cartesian point or direction through one or
+		more intervening geometry or topology items. </P> 
+	 <BLOCKQUOTE> 
+		<P><FONT SIZE="-1">EXAMPLE: Consider a circle. It gains its geometric
+		  position and orientation by virtue of a reference to axis2_placement
+		  (IfcAxis2Placement) that is turn references a cartesian_point
+		  (IfcCartesianPoint) and several directions (IfcDirection). <BR>EXAMPLE:
+		  Consider a manifold brep. A manifold_solid_brep (<a href="../../ifcgeometricmodelresource/lexical/ifcmanifoldsolidbrep.htm">IfcManifoldSolidBrep</a>)
+		  is a geometric_representation_item (<span class="self-ref">IfcGeometricRepresentationItem</span>) that
+		  through several layers of topological_representation_item's
+		  (<a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a>) references poly loops
+		  (<a href="../../ifctopologyresource/lexical/ifcpolyloop.htm">IfcPolyLoop</a>). Through additional intervening entities poly loops
+		  reference cartesian_point's (<a href="../../ifcgeometryresource/lexical/ifccartesianpoint.htm">IfcCartesianPoint</a>).
+		  </FONT></P></BLOCKQUOTE> 
+	 <P> The derivation of the dimensionality of the
+		<span class="self-ref">IfcGeometricRepresentationItem</span> is different to STEP, there is a specific
+		derived attribute at each class that defines the dimensionality, whereas STEP
+		does it for the representation_context and requires all
+		geometric_representation_item's to have the same dimensionality therein. </P> 
+	 <P>The definition of swept area solids as geometric representation items is
+		different to STEP, it is based on a set of predefined profiles (or cross
+		sections), i.e. a set of parameterized geometric primitives widely supported in
+		the industry. Those profiles are used to create volumes through extrusion,
+		revolution and cross section based sweep operations. This method was called
+		attribute driven geometric representation and it was formerly known as implicit
+		geometry in IFC. </P> 
+	 <BLOCKQUOTE> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">NOTE: Corresponding STEP entity:
+		  geometric_representation_item. Please refer to ISO/IS 10303-42:1994, p. 22 for
+		  the final definition of the formal standard. The following changes have been
+		  made: It does not inherit from ISO/IS 10303-43:1994 entity representation_item.
+		  The derived attribute Dim is demoted to the appropriate subtypes. The WR1 has
+		  not been incorporated. Not all subtypes that are in ISO/IS 10303-42:1994 have
+		  been added to the current IFC Release . </FONT></P> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">HISTORY: New entity in IFC Release
+		  1.5</FONT></P></BLOCKQUOTE></details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcgeometricrepresentationitem.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,218,66" href="../../../schema/ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm" alt="IfcCartesianTransformationOperator" />
+<area shape="rect" coords="30,78,218,90" href="../../../schema/ifcgeometryresource/lexical/ifccompositecurvesegment.htm" alt="IfcCompositeCurveSegment" />
+<area shape="rect" coords="30,102,218,114" href="../../../schema/ifcgeometryresource/lexical/ifccurve.htm" alt="IfcCurve" />
+<area shape="rect" coords="30,126,218,138" href="../../../schema/ifcgeometryresource/lexical/ifcdirection.htm" alt="IfcDirection" />
+<area shape="rect" coords="30,150,218,162" href="../../../schema/ifcgeometricmodelresource/lexical/ifcgeometricset.htm" alt="IfcGeometricSet" />
+<area shape="rect" coords="30,174,218,186" href="../../../schema/ifcgeometryresource/lexical/ifcplacement.htm" alt="IfcPlacement" />
+<area shape="rect" coords="30,198,218,210" href="../../../schema/ifcgeometryresource/lexical/ifcpoint.htm" alt="IfcPoint" />
+<area shape="rect" coords="30,222,218,234" href="../../../schema/ifcgeometricmodelresource/lexical/ifcsolidmodel.htm" alt="IfcSolidModel" />
+<area shape="rect" coords="30,246,218,258" href="../../../schema/ifcgeometryresource/lexical/ifcsurface.htm" alt="IfcSurface" />
+<area shape="rect" coords="30,270,218,282" href="../../../schema/ifcgeometryresource/lexical/ifcvector.htm" alt="IfcVector" />
+<area shape="rect" coords="6,6,242,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a></i></td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcGeometricRepresentationItem&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcgeometricrepresentationitem.htm">IfcGeometricRepresentationItem</a>&quot; abstract=&quot;true&quot; substitutionGroup=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcGeometricRepresentationItem&quot; abstract=&quot;true&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcGeometricRepresentationItem<br/>
+&nbsp;<span class="keyword">ABSTRACT</span> <span class="keyword">SUPERTYPE OF</span>(<span class="keyword">ONEOF</span>(<a href="../../ifcgeometryresource/lexical/ifccartesiantransformationoperator.htm">IfcCartesianTransformationOperator</a>, <a href="../../ifcgeometryresource/lexical/ifccompositecurvesegment.htm">IfcCompositeCurveSegment</a>, <a href="../../ifcgeometryresource/lexical/ifccurve.htm">IfcCurve</a>, <a href="../../ifcgeometryresource/lexical/ifcdirection.htm">IfcDirection</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcgeometricset.htm">IfcGeometricSet</a>, <a href="../../ifcgeometryresource/lexical/ifcplacement.htm">IfcPlacement</a>, <a href="../../ifcgeometryresource/lexical/ifcpoint.htm">IfcPoint</a>, <a href="../../ifcgeometricmodelresource/lexical/ifcsolidmodel.htm">IfcSolidModel</a>, <a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a>, <a href="../../ifcgeometryresource/lexical/ifcvector.htm">IfcVector</a>))<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcgeometricrepresentationitem.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

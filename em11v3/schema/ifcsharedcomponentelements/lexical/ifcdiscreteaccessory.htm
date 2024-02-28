@@ -1,0 +1,778 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcDiscreteAccessory</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 6 index2 2 index3 2 index4 0 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-6.htm#6.2.2.1");
+//-->
+</script>
+
+<h4 class="num">IfcDiscreteAccessory</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+	 <P>  Representation of different kinds of
+		accessories included in or added to elements. </P> 
+	 <BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1"> HISTORY New entity in IFC
+		Release 2x2 </FONT></BLOCKQUOTE> 
+	 <P><B>General usage</B></P> 
+	 <P> The exact type information of the <span class="self-ref">IfcDiscreteAccessory</span> is given
+		in the <I>ObjectType</I> attribute inherited from <a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a>. Standard
+		type designations are provided for guideline below. The list is not exhaustive
+		and the list of definitions may be extended based on local national extensions.
+		</P> 
+	 <TABLE BORDER="1"> 
+		<TR> 
+		  <TD><I><B>Accessory type</B></I></TD> 
+		  <TD><I><B>Standard type designation</B></I></TD> 
+		  <TD><I><B>Description</B></I></TD> 
+		</TR> 
+		<TR>
+		  <TD>Shading devices:</TD>
+		  <TD>'Shading device'</TD>
+		  <TD>Elements specifically designed to provide shading, often fixed
+			 externally and sometimes moving (e.g. by rotation)</TD>
+		</TR>
+		<TR> 
+		  <TD>Corbels as separate components:</TD> 
+		  <TD>'Hidden steel corbel'</TD> 
+		  <TD>Corbel system made from steel components embedded into the master
+			 element</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Visible steel corbel'</TD> 
+		  <TD>Corbel system made from steel components protruding from the master
+			 element</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Visible concrete corbel'</TD> 
+		  <TD>Corbel system made as a separate precast concrete component added
+			 to the master element</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Anchor bolts:</TD> 
+		  <TD>'Foundation bolt'</TD> 
+		  <TD>Fixture with bolt embedded into concrete structures for securing
+			 columns or for machine foundations</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Ribbed bar bolt'</TD> 
+		  <TD>Fixture with bolt and one or several anchoring ribbed
+			 (reinforcement) bars embedded into concrete structures for securing columns or
+			 for machine foundations. </TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Extension bolt'</TD> 
+		  <TD>Fixture with bolt for extension joints between usually precast
+			 elements.</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Connecting accessories, for example for sandwich wall panels:</TD> 
+		  <TD>'Diagonal truss connector'</TD> 
+		  <TD>A fixing device in truss form with diagonal cross bars holding two
+			 precast concrete panels together in a sandwich wall panel.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Ladder truss connector'</TD> 
+		  <TD>A fixing device in truss form with straight cross bars in ladder
+			 form holding two precast conrete panels together in a sandwich wall panel.</TD>
+		  
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Panel suspender'</TD> 
+		  <TD>A straight fixing device holding two precast conrete panels
+			 together in a sandwich wall panel.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Bracket'</TD> 
+		  <TD>A bracket for supporting various precast concrete components.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Pipe Bracket'</TD> 
+		  <TD>A bracket for supporting various pipes.</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Electrical accessories for precast concrete elements:</TD> 
+		  <TD>'Conduit'</TD> 
+		  <TD>Conduit for cabling embedded in element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Electrical box'</TD> 
+		  <TD>Electrical box embedded in element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Double electrical box'</TD> 
+		  <TD>A double electrical box embedded in element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Roof box'</TD> 
+		  <TD>Roof box embedded in element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Junction box'</TD> 
+		  <TD>Junction box embedded in element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Splice'</TD> 
+		  <TD>Splice embedded in element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Protective plug'</TD> 
+		  <TD>Protective plug used in element for protecting electrical
+			 accessories during manufacturing, transportation and assembly.</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Fixing parts:</TD> 
+		  <TD>'Standard fixing plate'</TD> 
+		  <TD>Standard fixing plate.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Edge fixing plate'</TD> 
+		  <TD>Fixing plate attached to the edge of an element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Corner fixing plate'</TD> 
+		  <TD>Fixing plate attached to the corner of an element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Slab fixing plate'</TD> 
+		  <TD>Fixing plate for slabs.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Balcony hinge'</TD> 
+		  <TD>Accessory supporting and fixing balconies.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Frame shoe'</TD> 
+		  <TD>Fixing shoe for frames.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Thermo frame'</TD> 
+		  <TD>Thermo frame.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Column shoe'</TD> 
+		  <TD>Fixing shoe for columns.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Wall shoe'</TD> 
+		  <TD>Fixing shoe for walls.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Fixing socket'</TD> 
+		  <TD>Fixing socket.</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Joint accessories:</TD> 
+		  <TD>'Neoprene bearing plate'</TD> 
+		  <TD>Rubber plate used as a bearing in, for example, joints between
+			 column corbels and beams.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Working joint reinforcement'</TD> 
+		  <TD>Reinforcement accessory used in working joints.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Expansion joint reinforcement'</TD> 
+		  <TD>Reinforcement accessory used in expansion joints.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Ribbed steel bar extension'</TD> 
+		  <TD>Extension accessory made of a ribbed (reinforcement) bar used in
+			 joints.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Steel pin bolt'</TD> 
+		  <TD>Pin bolt used to join together, for example, columns and
+			 beams.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Concrete dowel'</TD> 
+		  <TD>Dowel pin used in joints.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Concrete groove'</TD> 
+		  <TD>A groove made in a joint.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Steel plate'</TD> 
+		  <TD>A steel plate used as an accessory in a joint.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Wire loop'</TD> 
+		  <TD>A joint connector accessory made from a wire loop.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Steel loop'</TD> 
+		  <TD>A joint connector accessory made from a steel bar loop.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Sealing strip'</TD> 
+		  <TD>A strip sealing the joint.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Sealing compound'</TD> 
+		  <TD>Sealing compound protecting and sealing the joint.</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Lifting accessories:</TD> 
+		  <TD>'Wire lifting hook'</TD> 
+		  <TD>A lifting aid in the form of a wire loop.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Steel lifting hook'</TD> 
+		  <TD>A lifting aid in the form of a steel bar loop.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Lifting socket'</TD> 
+		  <TD>A lifting aid in the form of a socket.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Steel lifting anchor'</TD> 
+		  <TD>A lifting aid in the form of a steel lifting anchor.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Lifting hole'</TD> 
+		  <TD>A lifting aid in the form of a hole.</TD> 
+		</TR> 
+		<TR> 
+		  <TD>Accessories mainly used in the building services domain:</TD> 
+		  <TD>'Antivibration'</TD> 
+		  <TD>An isolating device to prevent other elements to be effected by
+			 vibrations.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Bracket'</TD> 
+		  <TD>A bracket wich is used to support pipes or cables.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Drop rod'</TD> 
+		  <TD>A length of material providing a hanging support to a bracket. Note
+			 that a drop rod is considered to include nuts and washers required for
+			 securing.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Duct foot'</TD> 
+		  <TD>A base support used to receive a vertical pipe (BS6100 330 3309 -
+			 duct foot).</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Framing'</TD> 
+		  <TD>A frame placed around a penetration to prevent scraping against the
+			 building surface or structure.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Grommet'</TD> 
+		  <TD>An element placed within a penetration that seals the penetration
+			 for a particular reason.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Rack'</TD> 
+		  <TD>A set of shelving for the purposes of storage that may be
+			 freestanding or bolted to a structure.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Safety part'</TD> 
+		  <TD>A part, typically installed in vertical shafts at each level, to
+			 ensure safety from falling when entering the shaft.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Sleeve'</TD> 
+		  <TD>A thin barrier placed between a penetration and a penetrating
+			 element.</TD> 
+		</TR> 
+		<TR> 
+		  <TD></TD> 
+		  <TD>'Support section'</TD> 
+		  <TD>A section of material that is used as an intermediate support upon
+			 which multiple brackets can be mounted.</TD> 
+		</TR> 
+	 </TABLE> 
+	 <P><B>Geometry Use Definitions:</B></P> 
+	 <P> The geometric representation of <span class="self-ref">IfcDiscreteAccessory</span> is given by
+		the <a href="../../ifcrepresentationresource/lexical/ifcproductdefinitionshape.htm">IfcProductDefinitionShape</a>, allowing multiple geometric
+		representations. Included are: </P> 
+	 <P><U>Local Placement</U><BR> The use of local placement is defined at the
+		supertype <a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>. </P> 
+	 <P><U>Standard Geometric Representation</U><BR> The use of Standard
+		Geometric Representations is defined at the supertype
+		<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>. If the accessory is composed from several
+		individual components it is represented through the
+		<I>IfcShapeRepresentation.Items</I> with multiple geometry items. </P></details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcdiscreteaccessory.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="66,126,278,138" href="../../../schema/ifcsharedcomponentelements/lexical/ifcelementcomponent.htm" alt="IfcElementComponent" />
+<area shape="rect" coords="54,102,290,114" href="../../../schema/ifcproductextension/lexical/ifcelement.htm" alt="IfcElement" />
+<area shape="rect" coords="42,78,302,90" href="../../../schema/ifckernel/lexical/ifcproduct.htm" alt="IfcProduct" />
+<area shape="rect" coords="30,54,314,66" href="../../../schema/ifckernel/lexical/ifcobject.htm" alt="IfcObject" />
+<area shape="rect" coords="18,30,326,42" href="../../../schema/ifckernel/lexical/ifcobjectdefinition.htm" alt="IfcObjectDefinition" />
+<area shape="rect" coords="6,6,338,18" href="../../../schema/ifckernel/lexical/ifcroot.htm" alt="IfcRoot" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcroot.htm">IfcRoot</a></i></td></tr>
+<tr><td>1</td><td>GlobalId</td><td><a href="../../ifcutilityresource/lexical/ifcgloballyuniqueid.htm">IfcGloballyUniqueId</a></td><td>[1:1]</td><td>
+Assignment of a globally unique identifier within the entire software world.
+</td><td>X</td></tr>
+<tr><td>2</td><td>OwnerHistory</td><td><a href="../../ifcutilityresource/lexical/ifcownerhistory.htm">IfcOwnerHistory</a></td><td>[1:1]</td><td>
+Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object, NOTE: only the last modification in stored.
+</td><td>X</td></tr>
+<tr><td>3</td><td>Name</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.
+</td><td>X</td></tr>
+<tr><td>4</td><td>Description</td><td><a href="../../ifcmeasureresource/lexical/ifctext.htm">IfcText</a></td><td>[0:1]</td><td>
+Optional description, provided for exchanging informative comments.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobjectdefinition.htm">IfcObjectDefinition</a></i></td></tr>
+<tr><td></td><td><i>IsDecomposedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatingObject</td><td>S[0:?]</td><td>Reference to the decomposition relationship, that allows this object to be the composition of other objects. An object can be decomposed by several other objects.</td><td>X</td></tr>
+<tr><td></td><td><i>Decomposes</i></td><td><a href="../../ifckernel/lexical/ifcreldecomposes.htm">IfcRelDecomposes</a><br/>@RelatedObjects</td><td>S[0:1]</td><td>References to the decomposition relationship, that allows this object to be a part of the decomposition. An object can only be part of a single decomposition (to allow hierarchical strutures only).
+</td><td>X</td></tr>
+<tr><td></td><td><i>HasAssociations</i></td><td><a href="../../ifckernel/lexical/ifcrelassociates.htm">IfcRelAssociates</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcobject.htm">IfcObject</a></i></td></tr>
+<tr><td>5</td><td>ObjectType</td><td><a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a></td><td>[0:1]</td><td>
+
+The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute <i>PredefinedType</i> is set to USERDEFINED. 
+<br></td><td>X</td></tr>
+<tr><td></td><td><i>IsDefinedBy</i></td><td><a href="../../ifckernel/lexical/ifcreldefines.htm">IfcRelDefines</a><br/>@RelatedObjects</td><td>S[0:?]</td><td>
+Set of relationships to type or property (statically or dynamically defined) information that further define the object. In case of type information, the associated <i>IfcTypeObject</i> contains the specific information (or type, or style), that is common to all instances of <span class="self-ref">IfcObject</span> referring to the same type.
+<br></td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifckernel/lexical/ifcproduct.htm">IfcProduct</a></i></td></tr>
+<tr><td>6</td><td>ObjectPlacement</td><td><a href="../../ifcgeometricconstraintresource/lexical/ifcobjectplacement.htm">IfcObjectPlacement</a></td><td>[0:1]</td><td>
+Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the  transformation for the object coordinate system.</td><td>X</td></tr>
+<tr><td>7</td><td>Representation</td><td><a href="../../ifcrepresentationresource/lexical/ifcproductrepresentation.htm">IfcProductRepresentation</a></td><td>[0:1]</td><td>
+Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcproductextension/lexical/ifcelement.htm">IfcElement</a></i></td></tr>
+<tr><td>8</td><td>Tag</td><td><span class="self-ref">-</span></td><td></td><td>
+<i>This attribute is out of scope for this model view definition and shall not be set.</i></td><td></td></tr>
+<tr><td></td><td><i>ConnectedTo</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatingElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element to which this element is connected to.
+</td><td></td></tr>
+<tr><td></td><td><i>HasOpenings</i></td><td><a href="../../ifcproductextension/lexical/ifcrelvoidselement.htm">IfcRelVoidsElement</a><br/>@RelatingBuildingElement</td><td>S[0:?]</td><td>Reference to the Voids Relationship that creates an opening in an element. An element can incorporate zero-to-many openings.
+</td><td>X</td></tr>
+<tr><td></td><td><i>IsConnectionRealization</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectswithrealizingelements.htm">IfcRelConnectsWithRealizingElements</a><br/>@RealizingElements</td><td>S[0:?]</td><td>Reference to the connection relationship with realizing element. The relationship then refers to the realizing element which provides the physical manifestation of the connection relationship.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ConnectedFrom</i></td><td><a href="../../ifcproductextension/lexical/ifcrelconnectselements.htm">IfcRelConnectsElements</a><br/>@RelatedElement</td><td>S[0:?]</td><td>Reference to the element connection relationship. The relationship then refers to the other element that is connected to this element.
+</td><td>X</td></tr>
+<tr><td></td><td><i>ContainedInStructure</i></td><td><a href="../../ifcproductextension/lexical/ifcrelcontainedinspatialstructure.htm">IfcRelContainedInSpatialStructure</a><br/>@RelatedElements</td><td>S[0:1]</td><td>
+Containment relationship to the spatial structure element, to which the element is primarily associated.</td><td>X</td></tr>
+<tr><td colspan="6"><i><a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a></td></tr>
+</table>
+</details>
+<section>
+<h5 class="num">Definitions applying to AISC Model View</h5>
+<p><a href="../../../annex/annex-d/aisc-model-view/ifcdiscreteaccessory.htm"><img style="border: 0px" src="../../../img/diagram.png" />&nbsp;Instance diagram</a></p><hr />
+<p>Accessory shall be mapped to Discrete Accessory (IfcDiscreteAccessory) noted othewise and shall represent steel elements associated with a piece. It include clip angle, stiffener, or any other elements that is not mapped to piece, stair or external element.</p>
+
+
+<p>IfcObject\ObjectType indcates type of accessories :</p>
+<ul>
+  <li>the value is set to <b>Stiffener</b> for a stiffner and Section / plate size (IfcArbitraryProfileDef) is its property or</li>
+  <li>the value is set to <b>Clip Angle</b> for a clip angle and Profile dimension (IfcParameterizedProfileDef) is its property</li>
+</ul>
+<p><span class="std">An Accessory may have attributes listed below should use Defines By Property Set (IfcRelDefinesByPropertyies) in order to represent required information items listed below and  are described in the corresponding sections of this document.</span></p>
+<p><strong>Piece Identification</strong></p>
+<ul>
+  <li>GUID</li>
+  <li>Part name</li>
+  <li>Piece mark</li>
+<li>Indication mark</li>
+</ul>
+<p><strong>Material Information </strong></p>
+<ul>
+  <li>Material class</li>
+  <li>Material ID</li>
+  <li>Material certification</li>
+  <li>Material grade</li>
+  <li>Material type</li>
+</ul>
+<p><strong>Status Information</strong></p>
+<ul>
+  <li>Status flags</li>
+</ul>
+
+<p><strong>Version</strong></p>
+<ul>
+  <li>Version number</li>
+</ul>
+
+<p><strong>Quantity Information </strong></p>
+<ul>
+  <li>Count</li>
+</ul>
+
+<p><strong>Finish/ Treatment</strong></p>
+<ul>
+  <li>Surface treatment</li>
+</ul>
+
+<p><strong>Tolerance for Layout </strong></p>
+<ul>
+  <li>Tolerance</li>
+</ul>
+<p><strong>Information Item Mapping</strong></p>
+
+<table width="100%" border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <td width="220"><strong>Steel Detailing Information</strong></td>
+    <td width="220"><strong>IFC Entity\Attribute</strong></td>
+    <td><strong>Note</strong></td>
+  </tr>
+  <tr>
+    <td width="220">Host Element</td>
+    <td width="220">IfcRelAggregates</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Critical end point</td>
+    <td width="220">IfcDiscreteAccessory \ Representation</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Angle of end cuts</td>
+    <td width="220">IfcOpeningElement \ Representation</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Location in Assembly</td>
+    <td width="220">IfcProduct \ ObjectPlacement</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Profile</td>
+    <td width="220">IfcParameterizedProfileDef</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="220">Length</td>
+    <td width="220">IfcExtrudedAreaSolid \ Depth</td>
+    <td>&nbsp;</td>
+  </tr>
+
+</table>
+<details>
+<summary>Concept usage</summary>
+<a id="properties-on-occurrences" />
+<p class="use-head">Properties on Occurrences</p>
+<p>The <a href="../../templates/properties-on-occurrences.htm">Properties on Occurrences</a> concept applies to this entity as shown in Table 30.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Property</b></th></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_pieceidentification.htm">AISC_EM11_Pset_PieceIdentification</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_toleranceforlayout.htm">AISC_EM11_Pset_ToleranceForLayout</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_material.htm">AISC_EM11_Pset_Material</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_statusinformation.htm">AISC_EM11_Pset_StatusInformation</a></td></tr>
+<tr><td><a href="../../ifcproductextension/pset/aisc_em11_pset_versioninformation.htm">AISC_EM11_Pset_VersionInformation</a></td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 30 &mdash; IfcDiscreteAccessory Properties on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="placement" />
+<p class="use-head">Placement</p>
+<p>The <a href="../../templates/placement.htm">Placement</a> concept applies to this entity.</p><table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="body-profile-extruded-area-solid" />
+<p class="use-head">Body Profile Extruded Area Solid</p>
+<p>The <a href="../../templates/body-profile-extruded-area-solid.htm">Body Profile Extruded Area Solid</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="body-brep-geometry-polyloop" />
+<p class="use-head">Body Brep Geometry PolyLoop</p>
+<p>The <a href="../../templates/body-brep-geometry-polyloop.htm">Body Brep Geometry PolyLoop</a> concept applies to this entity as shown in Table 31.<table>
+<tr><td>
+</td></tr>
+<tr><td><p class="table">Table 31 &mdash; IfcDiscreteAccessory Body Brep Geometry PolyLoop</td></tr></table>
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="mapped-geometry" />
+<p class="use-head">Mapped Geometry</p>
+<p>The <a href="../../templates/mapped-geometry.htm">Mapped Geometry</a> concept applies to this entity.</p>
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="feature-substraction" />
+<p class="use-head">Feature Substraction</p>
+<p>The <a href="../../templates/feature-substraction.htm">Feature Substraction</a> concept applies to this entity as shown in Table 32.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>FeatureObjectType</b></th><th><b>Description</b></th></tr>
+<tr><td>BoltHole</td><td>Represents an instance of Bolt Hole</td></tr>
+<tr><td>SlotHole</td><td>Represents an instance of a Slot Hole</td></tr>
+<tr><td>Cope</td><td>Represents an instance of a Cope</td></tr>
+<tr><td>Opening</td><td>Represents an instance of an Opening</td></tr>
+<tr><td>SkewedEnd</td><td>Represents an instance of a Skewed End, which has two axis of rotation</td></tr>
+<tr><td>WeldPreparation</td><td>Represents an instance of a Weld Preparation</td></tr>
+<tr><td>TubeChamfer</td><td>Represents an instance of a Tube Chamfer</td></tr>
+<tr><td>TubeSaddle</td><td>Represents an instance of a Tube Saddle</td></tr>
+<tr><td>TubeEdgeSaddle</td><td>Represents an instance of a Tube Edge Saddle</td></tr>
+<tr><td>TubeCrossingSaddle</td><td>Represents an instance of a Tube Crossing Saddle</td></tr>
+<tr><td>TubeHoleSetIn</td><td>Represents an instance of a Tube Hole Set In</td></tr>
+<tr><td>TubeHoleSetOut</td><td>Represents an instance of a Tube Hole Set Out</td></tr>
+<tr><td>TubeMitreHole</td><td>Represents an instance of a Tube Hole Mitre Hole</td></tr>
+<tr><td>TubeMitreSaddle</td><td>Represents an instance of a Tube Hole Mitre Saddle</td></tr>
+<tr><td>TubeOblongHole</td><td>Represents an instance of a Tube Oblong Hole</td></tr>
+<tr><td>TubeOffshoreSaddle</td><td>Represents an instance of a Tube Offshore Saddle</td></tr>
+<tr><td>TubeOffshoreChamfer</td><td>Represents an instance of a Tube Offshore Chamfer</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 32 &mdash; IfcDiscreteAccessory Feature Substraction</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="quantities-on-occurrences" />
+<p class="use-head">Quantities on Occurrences</p>
+<p>The <a href="../../templates/quantities-on-occurrences.htm">Quantities on Occurrences</a> concept applies to this entity as shown in Table 33.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>Qset</b></th><th><b>Quantity</b></th><th><b>Description</b></th></tr>
+<tr><td>AISC_EM11_Qto_Quantity</td><td>SameTypeCount</td><td>Number of assemblies with same assembly mark. Used on occuerrence, even though it should be used for type count for implementation convenience</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 33 &mdash; IfcDiscreteAccessory Quantities on Occurrences</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>O</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<a id="element-composition" />
+<p class="use-head">Element Composition</p>
+<p>The <a href="../../templates/element-composition.htm">Element Composition</a> concept applies to this entity as shown in Table 34.<table>
+<tr><td>
+<table class="gridtable">
+<tr><th><b>RelatingObject</b></th><th><b>Description</b></th></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcbeam.htm">IfcBeam</a></td><td>Attached to Beam</td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifccolumn.htm">IfcColumn</a></td><td>Attached to Column</td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcmember.htm">IfcMember</a></td><td>Attached to Member</td></tr>
+<tr><td><a href="../../ifcsharedbldgelements/lexical/ifcplate.htm">IfcPlate</a></td><td>Attached to Plate</td></tr>
+</table>
+</td></tr>
+<tr><td><p class="table">Table 34 &mdash; IfcDiscreteAccessory Element Composition</td></tr></table>
+
+
+<table class="exchange">
+<tr>
+<th>Exchange</th>
+<th><a href="../../views/aisc-model-view/final-steel-detailing-model.htm"><img width="16" src="../../../img/mvd-final-steel-detailing-model.png" title="Final Steel Detailing Model"/></a></th>
+</tr>
+<tr>
+<td>Import</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>R</td>
+</tr>
+</table>
+
+<br/><br/>
+
+</details>
+<section>
+<details>
+<summary>Concept inheritance</summary>
+<p><table class="attributes">
+<tr><th><b>#</b></th><th><b>Concept</b></td><th><b>Model View</b></th></tr>
+<tr><td colspan="3"><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a></td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#properties-on-occurrences">Properties on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#placement">Placement</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#body-profile-extruded-area-solid">Body Profile Extruded Area Solid</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#body-brep-geometry-polyloop">Body Brep Geometry PolyLoop</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#mapped-geometry">Mapped Geometry</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#feature-substraction">Feature Substraction</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#quantities-on-occurrences">Quantities on Occurrences</a></td><td>AISC Model View</td></tr><tr><td> </td><td><a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm#element-composition">Element Composition</a></td><td>AISC Model View</td></tr>
+</table>
+</details>
+</section>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcDiscreteAccessory&quot; type=&quot;ifc:<a href="../../ifcsharedcomponentelements/lexical/ifcdiscreteaccessory.htm">IfcDiscreteAccessory</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcDiscreteAccessory&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcDiscreteAccessory<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifcsharedcomponentelements/lexical/ifcelementcomponent.htm">IfcElementComponent</a>)<b>;</b><br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifcsharedcomponentelements/diagram_0001.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcdiscreteaccessory.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

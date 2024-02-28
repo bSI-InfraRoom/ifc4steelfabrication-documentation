@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcTransitionCode</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 4 index3 2 index4 1 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.4.2.2");
+//-->
+</script>
+
+<h4 class="num">IfcTransitionCode</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the type</h5>
+<details open="open"><summary>Type definition</summary>
+	 <P><U>Definition from ISO/CD 10303-42:1992</U>: This type conveys the
+		continuity properties of a composite curve or surface. The continuity referred
+		to is geometric, not parametric continuity. For example, in ContSameGradient
+		the tangent vectors of successive segments will have the same direction, but
+		may have different magnitude. </P> 
+	 <BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1">NOTE Corresponding STEP type:
+		transition_code, please refer to ISO/IS 10303-42:1994, p. 14 for the final
+		definition of the formal standard.</FONT> </BLOCKQUOTE> 
+	 <BLOCKQUOTE><FONT COLOR="#0000FF" SIZE="-1">HISTORY New Type in IFC Release
+		1.0 </FONT></BLOCKQUOTE> 
+	 <P><IMG SRC="figures/ifctransitioncode.gif" ALT="transition code"
+		WIDTH="457" HEIGHT="247" BORDER="0"></P>
+	 <P><FONT SIZE="-1">Figure quoted from ISO/CD 10303-42:1992, p.
+		55</FONT></P>
+	 <P>ENUMERATION</P> 
+	 <UL>
+		<LI><B>Discontinuous</B>: The segments do not join. This is permitted
+		  only at the boundary of the curve or surface to indicate that it is not closed.
+		  </LI>
+		<LI><B>Continuous</B>: The segments join but no condition on their
+		  tangents is implied. </LI>
+		<LI><B>ContSameGradient</B>: The segments join and their tangent vectors
+		  or tangent planes are parallel and have the same direction at the joint:
+		  equality of derivatives is not required. </LI>
+		<LI><B>ContSameGradientSameCurvature</B>: For a curve, the segments join,
+		  their tangent vectors are parallel and in the same direction and their
+		  curvatures are equal at the joint: equality of derivatives is not required. For
+		  a surface this implies that the principle curvatures are the same and the
+		  principle directions are coincident along the common boundary. </LI> 
+	 </UL></details>
+<details open="open"><summary>Enumeration definition</summary><table class="attributes">
+<tr><th>Constant</th><th>Description</th></tr>
+<tr><td>DISCONTINUOUS</td><td></td></tr><tr><td>CONTINUOUS</td><td></td></tr><tr><td>CONTSAMEGRADIENT</td><td></td></tr><tr><td>CONTSAMEGRADIENTSAMECURVATURE</td><td></td></tr></table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:simpleType name=&quot;IfcTransitionCode&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:restriction base=&quot;xs:string&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;discontinuous&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;continuous&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;contsamegradient&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:enumeration value=&quot;contsamegradientsamecurvature&quot;/&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:restriction&gt;<br/>
+&nbsp;&lt;/xs:simpleType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">TYPE</span> IfcTransitionCode = <span class="keyword">ENUMERATION OF</span> (<br/>
+&nbsp;DISCONTINUOUS, <br/>&nbsp;CONTINUOUS, <br/>&nbsp;CONTSAMEGRADIENT, <br/>&nbsp;CONTSAMEGRADIENTSAMECURVATURE);<br/><span class="keyword">END_TYPE;</span><br/>
+</p>
+<p class="std"><a href="../../../annex/annex-d/ifcgeometryresource/diagram_0006.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifctransitioncode.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

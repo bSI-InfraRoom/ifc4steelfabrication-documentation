@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>AISC_EM11_Pset_Feature</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 5 index2 2 index3 4 index4 11 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-5.htm#5.2.4.12");
+//-->
+</script>
+
+<h4 class="std">5.2.4.12 AISC_EM11_Pset_Feature</h4>
+<table>
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b> Feature:</b> Features modify the shape and appearance of the associated host element. Features in EM11 are further specialized based on its type. Features are Bolt Hole, Slot Hole, Opening, Cope, and Skewed End. A Feature  has  their own geometry representation and subtract its geometry from  the shape of the master element through Voids Element (IfcRelVoidsElement). Features should not and cannot directly manipulate geometry of the host element using Boolean Operation (IfcBooleanResult) or Boundary Representation.</td></tr>
+</table>
+<p><a href="http://lookup.bsdd.buildingsmart.com/api/4.0/IfdPSet/25hUthL1v8bPJAQQzFaOer/ifcVersion/2x4" target="ifd"><img border="0" src="../../../img/external.png" title="Link to IFD"/> buildingSMART Data Dictionary</a></p>
+
+<p><a href="../../../psd/AISC_EM11_Pset_Feature.xml"><img border="0" src="../../../img/diagram.png" title="Link to PSD-XML"/> PSD-XML</a></p>
+
+
+<table class="gridtable">
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+<tr><td>CriticalFace</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcproductextension/pset/aisc_em11_criticalface.htm">AISC_EM11_CriticalFace</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Critical Face</b></td><td>Critical Face indicates where this specific feature is applied to according to the predefined enumeration type AISC_EM11_CriticalFace.
+    Value should use one of enumerated value: 
+			<ul>
+			  <li>Front</li>
+			  <li>Top</li>
+			  <li>Bottom</li>
+			  <li>Behind</li>
+<li>Left</li>
+			  <li>Right</li>
+			</ul></td></tr>
+</table>
+
+
+</td></tr>
+<tr><td>FabricationMethod</td><td>
+<span class="self-ref">P_ENUMERATEDVALUE</span>
+/
+<a href="../../ifcproductextension/pset/aisc_em11_fabricationmethod.htm">AISC_EM11_FabricationMethod</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Fabrication Method</b></td><td>Fabrication Methods of the applied feature can have multiple values if needed. Possible values are predefined in AISC_EM11_FabricationMethod enumerated type.
+<ul>
+<li>Punching</li>
+<li>Sub-PunchingAndReaming</li>
+<li>Drilling</li>
+<li>HoleSawing</li>
+<li>FlamePiercingAndReaming</li>
+<li>FlameCutting</li>
+<li>Milling</li>
+<li>FaceMachining</li>
+<li>Planing</li>
+<li>Grinding</li>
+<li>Sawing</li>
+<li>FrictionSawing</li>
+<li>ColdSawing</li>
+<li>Oxygen-AcetyleneFlameCutting</li>
+<li>PlasmaCutting</li>
+<li>LaserCutting</li>
+<li>Shearing</li>
+</ul></td></tr>
+</table>
+
+</td></tr>
+<tr><td>DesignConstraint</td><td>
+<span class="self-ref">P_SINGLEVALUE</span>
+/
+<a href="../../ifcmeasureresource/lexical/ifclabel.htm">IfcLabel</a>
+</td><td>
+<table class="gridtable">
+<tr><td><img src="../../../img/locale-en.png" /></td><td><b>Design Constraint</b></td><td>Describes special treatment, such as rounded rectangle</td></tr>
+</table>
+
+</td></tr>
+</table>
+<p><a href="../../../link/aisc_em11_pset_feature.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

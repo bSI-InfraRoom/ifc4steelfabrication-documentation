@@ -1,0 +1,134 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../../../ifc-styles.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../details-shim.css">
+    <script type="text/javascript" src="../../../details-shim.js"></script>
+    <title>IfcFaceSurface</title>
+
+    <style type="text/css">
+      body { counter-reset: index1 8 index2 11 index3 3 index4 5 index5 0; }
+    </style>
+  </head>
+
+  <body>
+
+
+<script type="text/javascript">
+<!--
+    parent.index.location.replace("../../toc-8.htm#8.11.3.6");
+//-->
+</script>
+
+<h4 class="num">IfcFaceSurface</h4>
+<details>
+<summary>Natural language names</summary>
+<table>
+</table>
+</details>
+<section>
+<h5 class="num">Semantic definitions at the entity</h5>
+<details open="open"><summary>Entity definition</summary>
+	 <P><U>Definition from ISO/CD 10303-42:1992</U>: A face surface
+		(IfcFaceSurface) is a subtype of face in which the geometry is defined by an
+		associated surface. The portion of the surface used by the face shall be
+		embeddable in the plane as an open disk, possibly with holes. However, the
+		union of the face with the edges and vertices of its bounding loops need not be
+		embeddable in the plane. It may, for example, cover an entire sphere or torus.
+		As both a face and a geometric surface have defined normal directions, a
+		BOOLEAN flag (the orientation attribute) is used to indicate whether the
+		surface normal agrees with (TRUE) or is opposed to (FALSE) the face normal
+		direction. The geometry associated with any component of the loops of the face
+		shall be consistent with the surface geometry, in the sense that the domains of
+		all the vertex points and edge curves are contained in the face geometry
+		surface. A surface may be referenced by more than one face surface.</P> 
+	 <BLOCKQUOTE> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">NOTE Corresponding STEP entity:
+		  face_surface. Please refer to ISO/IS 10303-42:1994, p. 204 for the final
+		  definition of the formal standard. Due to the general IFC model specification
+		  rule not to use multiple inheritance, the subtype relationship to
+		  geometric_representation_item is not included.</FONT></P> 
+		<P><FONT COLOR="#0000FF" SIZE="-1">HISTORY New class in IFC Release 2.x
+		  </FONT></P></BLOCKQUOTE> 
+	 <P><U>Informal propositions</U>: </P> 
+	 <OL> 
+		<LI>The domain of the face surface is formally defined to be the domain
+		  of its face geometry as trimmed by the loops, this domain does not include the
+		  bounding loops.</LI> 
+		<LI>A face surface has non zero finite extent.</LI> 
+		<LI>A face surface is a manifold.</LI> 
+		<LI>A face surface is arcwise connected.</LI> 
+		<LI>A face surface has surface genus 0.</LI>
+		<LI>The loops are not part of the face domain.</LI>
+		<LI>Loop geometry shall be consistent with face geometry. This implies
+		  that any edge - curves or vertex points used in defining the loops bounding the
+		  face surface shall lie on the face geometry.</LI>
+		<LI>The loops of the face shall not intersect.</LI>
+	 </OL> </details>
+<details open="open"><summary>Attribute definitions</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th>
+<th>A</th></tr>
+<tr><td>2</td><td>FaceSurface</td><td><a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a></td><td>[1:1]</td><td>
+The surface which defines the internal shape of the face. This surface may be unbounded. The domain of the face is defined by this surface and the bounding loops in the inherited attribute SELF\FaceBounds.</td><td>X</td></tr>
+<tr><td>3</td><td>SameSense</td><td><span class="self-ref">BOOLEAN</span></td><td>[1:1]</td><td>
+This flag indicates whether the sense of the surface normal agrees with (TRUE), or opposes (FALSE), the sense of the topological normal to the face.</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Inherited definitions from supertypes</h5>
+<details open="open"><summary>Entity inheritance</summary><img src="../../../diagrams/ifcfacesurface.png" usemap="#f"/>
+<map name="f">
+<area shape="rect" coords="30,54,242,66" href="../../../schema/ifctopologyresource/lexical/ifcface.htm" alt="IfcFace" />
+<area shape="rect" coords="18,30,254,42" href="../../../schema/ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm" alt="IfcTopologicalRepresentationItem" />
+<area shape="rect" coords="6,6,266,18" href="../../../schema/ifcgeometryresource/lexical/ifcrepresentationitem.htm" alt="IfcRepresentationItem" />
+</map>
+</details>
+<details><summary>Attribute inheritance</summary><table class="attributes">
+<tr><th>#</th><th>Attribute</th><th>Type</th><th>Cardinality</th><th>Description</th><th>A</th></tr>
+<tr><td colspan="6"><i><a href="../../ifcgeometryresource/lexical/ifcrepresentationitem.htm">IfcRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><i><a href="../../ifctopologyresource/lexical/ifctopologicalrepresentationitem.htm">IfcTopologicalRepresentationItem</a></i></td></tr>
+<tr><td colspan="6"><a href="../../ifctopologyresource/lexical/ifcface.htm">IfcFace</a></td></tr>
+<tr><td>1</td><td>Bounds</td><td><a href="../../ifctopologyresource/lexical/ifcfacebound.htm">IfcFaceBound</a></td><td>S[1:?]</td><td>
+Boundaries of the face.
+</td><td>X</td></tr>
+<tr><td colspan="6"><a href="../../ifctopologyresource/lexical/ifcfacesurface.htm">IfcFaceSurface</a></td></tr>
+<tr><td>2</td><td>FaceSurface</td><td><a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a></td><td>[1:1]</td><td>
+The surface which defines the internal shape of the face. This surface may be unbounded. The domain of the face is defined by this surface and the bounding loops in the inherited attribute SELF\FaceBounds.</td><td>X</td></tr>
+<tr><td>3</td><td>SameSense</td><td><span class="self-ref">BOOLEAN</span></td><td>[1:1]</td><td>
+This flag indicates whether the sense of the surface normal agrees with (TRUE), or opposes (FALSE), the sense of the topological normal to the face.</td><td>X</td></tr>
+</table>
+</details>
+</section>
+<section>
+<h5 class="num">Formal representations</h5>
+<details><summary>XSD Specification</summary><div class="xsd"><code class="xsd">&nbsp;&lt;xs:element name=&quot;IfcFaceSurface&quot; type=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifcfacesurface.htm">IfcFaceSurface</a>&quot; substitutionGroup=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifcface.htm">IfcFace</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&lt;xs:complexType name=&quot;IfcFaceSurface&quot;&gt;<br/>
+&nbsp;&nbsp;&lt;xs:complexContent&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;xs:extension base=&quot;ifc:<a href="../../ifctopologyresource/lexical/ifcface.htm">IfcFace</a>&quot;&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:element name=&quot;FaceSurface&quot; type=&quot;ifc:<a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a>&quot; nillable=&quot;true&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xs:sequence&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;xs:attribute name=&quot;SameSense&quot; type=&quot;xs:boolean&quot; use=&quot;optional&quot;/&gt;<br/>
+&nbsp;&nbsp;&nbsp;&lt;/xs:extension&gt;<br/>
+&nbsp;&nbsp;&lt;/xs:complexContent&gt;<br/>
+&nbsp;&lt;/xs:complexType&gt;<br/>
+</code></div></details>
+<details><summary>EXPRESS Specification</summary><div class="express"><code class="express">
+<span class="keyword">ENTITY</span> IfcFaceSurface<br/>
+&nbsp;<span class="keyword">SUBTYPE OF</span> (<a href="../../ifctopologyresource/lexical/ifcface.htm">IfcFace</a>)<b>;</b><br/>
+&nbsp;&nbsp;FaceSurface : <a href="../../ifcgeometryresource/lexical/ifcsurface.htm">IfcSurface</a>;<br/>
+&nbsp;&nbsp;SameSense : <span class="self-ref">BOOLEAN</span>;<br/>
+<span class="keyword">END_ENTITY;</span><br/>
+<p class="std"><a href="../../../annex/annex-d/ifctopologyresource/diagram_0002.htm" ><img src="../../../img/diagram.png" style="border: 0px" title="Link to EXPRESS-G diagram" alt="Link to EXPRESS-G diagram">&nbsp;EXPRESS-G diagram</a></p>
+</code></div>
+</details>
+</section>
+<p><a href="../../../link/ifcfacesurface.htm" target="_top" ><img src="../../../img/permlink.png" style="border: 0px" title="Link to this page" alt="Link to this page"/>&nbsp; Link to this page</a></p>
+<p></p>
+  </body>
+</html>

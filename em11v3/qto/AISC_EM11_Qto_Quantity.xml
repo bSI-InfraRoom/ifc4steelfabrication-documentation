@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<QtoSetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.buildingsmart-tech.org/xml/qto/QTO_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Qto_Quantity</Name>
+  <Definition>&lt;p&gt;Quantity Information dictates number of the same type of objects, such as number of  pieces with the same Piece Mark.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Information Item Mapping&lt;/strong&gt;&lt;/p&gt;
+&lt;table width="100%" border="1" cellspacing="0" cellpadding="5"&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;&lt;strong&gt;Steel Detailing Information&lt;/strong&gt;&lt;/td&gt;
+    &lt;td width="220"&gt;&lt;strong&gt;IFC Entity \ Attribute&lt;/strong&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;strong&gt;Note&lt;/strong&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width="220"&gt;Same Type Count&lt;/td&gt;
+    &lt;td width="220"&gt;IfcElementQuantity \ IfcPhysicalQuantity&lt;/td&gt;
+    &lt;td&gt;Total count of same type&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</Definition>
+  <Applicability />
+  <ApplicableClasses />
+  <QtoDefs>
+    <QtoDef>
+      <Name>Same Type Count</Name>
+      <Definition />
+      <QtoType>Q_COUNT</QtoType>
+      <NameAliases />
+      <DefinitionAliases />
+    </QtoDef>
+  </QtoDefs>
+  <QtoDefinitionAliases />
+</QtoSetDef>

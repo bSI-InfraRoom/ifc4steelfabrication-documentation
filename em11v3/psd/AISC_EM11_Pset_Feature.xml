@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<PropertySetDef xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ifdguid="85adedeb541e489594ca69af4f918a35" templatetype="PSET_OCCURRENCEDRIVEN" xsi:noNamespaceSchemaLocation="http://buildingSMART-tech.org/xml/psd/PSD_IFC4.xsd">
+  <IfcVersion version="IFC4" />
+  <Name>AISC_EM11_Pset_Feature</Name>
+  <Definition />
+  <Applicability />
+  <ApplicableClasses />
+  <PropertyDefs>
+    <PropertyDef ifdguid="e31eb1eb0cd84664a41891e031b882f6">
+      <Name>CriticalFace</Name>
+      <Definition>
+</Definition>
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Critical Face</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Critical Face indicates where this specific feature is applied to according to the predefined enumeration type AISC_EM11_CriticalFace.
+    Value should use one of enumerated value: 
+			&lt;ul&gt;
+			  &lt;li&gt;Front&lt;/li&gt;
+			  &lt;li&gt;Top&lt;/li&gt;
+			  &lt;li&gt;Bottom&lt;/li&gt;
+			  &lt;li&gt;Behind&lt;/li&gt;
+&lt;li&gt;Left&lt;/li&gt;
+			  &lt;li&gt;Right&lt;/li&gt;
+			&lt;/ul&gt;</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="19abe4bd0871428a9ca32dbc651cf99c">
+      <Name>FabricationMethod</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertyEnumeratedValue>
+          <EnumList />
+        </TypePropertyEnumeratedValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Fabrication Method</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Fabrication Methods of the applied feature can have multiple values if needed. Possible values are predefined in AISC_EM11_FabricationMethod enumerated type.
+&lt;ul&gt;
+&lt;li&gt;Punching&lt;/li&gt;
+&lt;li&gt;Sub-PunchingAndReaming&lt;/li&gt;
+&lt;li&gt;Drilling&lt;/li&gt;
+&lt;li&gt;HoleSawing&lt;/li&gt;
+&lt;li&gt;FlamePiercingAndReaming&lt;/li&gt;
+&lt;li&gt;FlameCutting&lt;/li&gt;
+&lt;li&gt;Milling&lt;/li&gt;
+&lt;li&gt;FaceMachining&lt;/li&gt;
+&lt;li&gt;Planing&lt;/li&gt;
+&lt;li&gt;Grinding&lt;/li&gt;
+&lt;li&gt;Sawing&lt;/li&gt;
+&lt;li&gt;FrictionSawing&lt;/li&gt;
+&lt;li&gt;ColdSawing&lt;/li&gt;
+&lt;li&gt;Oxygen-AcetyleneFlameCutting&lt;/li&gt;
+&lt;li&gt;PlasmaCutting&lt;/li&gt;
+&lt;li&gt;LaserCutting&lt;/li&gt;
+&lt;li&gt;Shearing&lt;/li&gt;
+&lt;/ul&gt;</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+    <PropertyDef ifdguid="87063d451a5446928f2f94650717320d">
+      <Name>DesignConstraint</Name>
+      <Definition />
+      <PropertyType>
+        <TypePropertySingleValue>
+          <DataType type="IfcLabel" />
+        </TypePropertySingleValue>
+      </PropertyType>
+      <NameAliases>
+        <NameAlias lang="en">Design Constraint</NameAlias>
+      </NameAliases>
+      <DefinitionAliases>
+        <DefinitionAlias lang="en">Describes special treatment, such as rounded rectangle</DefinitionAlias>
+      </DefinitionAliases>
+    </PropertyDef>
+  </PropertyDefs>
+  <PsetDefinitionAliases>
+    <PsetDefinitionAlias lang="en">Features modify the shape and appearance of the associated host element. Features in EM11 are further specialized based on its type. Features are Bolt Hole, Slot Hole, Opening, Cope, and Skewed End. A Feature  has  their own geometry representation and subtract its geometry from  the shape of the master element through Voids Element (IfcRelVoidsElement). Features should not and cannot directly manipulate geometry of the host element using Boolean Operation (IfcBooleanResult) or Boundary Representation.</PsetDefinitionAlias>
+  </PsetDefinitionAliases>
+</PropertySetDef>
